@@ -1,0 +1,67 @@
+{
+  "header": {
+    "menu": [
+      { "name": "Dự án", "href": "/projects" },
+      { "name": "Thông tin", "href": "/about" },
+      { "name": "Bài viết", "href": "/blog" },
+      { "name": "Bộ sưu tập", "href": "/portfolio" }
+    ],
+    "location": "TP. Hồ Chí Minh, Việt Nam",
+    "contact": "Liên hệ",
+    "contactOptions": [
+      { "name": "Facebook", "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN" },
+      { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
+    ]
+  },
+  "home": {
+    "welcome": "Chào mừng đến với HiepPortfolio!",
+    "description": "Tôi là Hiệp, một lập trình viên đam mê công nghệ. Đây là nơi tôi chia sẻ các dự án, bài viết và hành trình phát triển của mình.",
+    "cta": "Xem thêm về tôi"
+  },
+  "about": {
+    "title": "Về tôi",
+    "description": "Tôi là Hiệp, một lập trình viên với 3 năm kinh nghiệm trong phát triển web. Tôi yêu thích xây dựng các ứng dụng thân thiện với người dùng và tối ưu hiệu suất.",
+    "skills": [
+      "ReactJS",
+      "Tailwind CSS",
+      "Node.js",
+      "JavaScript",
+      "HTML & CSS"
+    ],
+    "hobbies": "Tôi thích đọc sách, chơi cờ vua và khám phá công nghệ mới."
+  },
+  "portfolio": {
+    "title": "Bộ sưu tập",
+    "description": "Dưới đây là một số tác phẩm thiết kế và dự án cá nhân của tôi.",
+    "items": [
+      { "name": "Thiết kế UI App", "description": "Thiết kế giao diện cho một ứng dụng di động." },
+      { "name": "Logo Doanh nghiệp", "description": "Thiết kế logo cho một startup công nghệ." }
+    ]
+  },
+  "blog": {
+    "title": "Bài viết",
+    "description": "Chia sẻ kinh nghiệm và kiến thức của tôi về công nghệ và phát triển phần mềm.",
+    "posts": [
+      { "title": "Học React trong 30 ngày", "summary": "Hành trình học React từ cơ bản đến nâng cao." },
+      { "title": "Tối ưu hiệu suất website", "summary": "Mẹo tăng tốc độ tải trang cho website của bạn." }
+    ]
+  },
+  "projects": {
+    "title": "Dự án",
+    "description": "Một số dự án nổi bật mà tôi đã thực hiện.",
+    "items": [
+      { "name": "Website Thương mại", "description": "Xây dựng một website bán hàng với React và Node.js." },
+      { "name": "Ứng dụng Quản lý", "description": "Ứng dụng quản lý công việc với giao diện thân thiện." }
+    ]
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "description": "Hãy liên hệ với tôi qua biểu mẫu dưới đây hoặc qua các kênh mạng xã hội.",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "message": "Tin nhắn",
+      "submit": "Gửi"
+    }
+  }
+}

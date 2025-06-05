@@ -1,0 +1,67 @@
+{
+  "header": {
+    "menu": [
+      { "name": "Projects", "href": "/projects" },
+      { "name": "About", "href": "/about" },
+      { "name": "Blog", "href": "/blog" },
+      { "name": "Portfolio", "href": "/portfolio" }
+    ],
+    "location": "Ho Chi Minh City, Vietnam",
+    "contact": "Contact",
+    "contactOptions": [
+      { "name": "Facebook", "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN" },
+      { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
+    ]
+  },
+  "home": {
+    "welcome": "Welcome to HiepPortfolio!",
+    "description": "I’m Hiep, a passionate developer. This is where I share my projects, blog posts, and my development journey.",
+    "cta": "Learn more about me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I’m Hiep, a developer with 3 years of experience in web development. I love building user-friendly and performance-optimized applications.",
+    "skills": [
+      "ReactJS",
+      "Tailwind CSS",
+      "Node.js",
+      "JavaScript",
+      "HTML & CSS"
+    ],
+    "hobbies": "I enjoy reading books, playing chess, and exploring new technologies."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Here are some of my design works and personal projects.",
+    "items": [
+      { "name": "UI App Design", "description": "Designed a user interface for a mobile application." },
+      { "name": "Business Logo", "description": "Created a logo for a tech startup." }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Sharing my experiences and knowledge about technology and software development.",
+    "posts": [
+      { "title": "Learning React in 30 Days", "summary": "My journey of learning React from basics to advanced." },
+      { "title": "Optimizing Website Performance", "summary": "Tips to improve your website’s loading speed." }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Some notable projects I have worked on.",
+    "items": [
+      { "name": "E-commerce Website", "description": "Built an online store using React and Node.js." },
+      { "name": "Management App", "description": "A task management app with a user-friendly interface." }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out via the form below or through my social channels.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send"
+    }
+  }
+}
