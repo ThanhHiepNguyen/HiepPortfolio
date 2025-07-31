@@ -1,57 +1,181 @@
 {
   "header": {
     "menu": [
-      { "name": "Projects", "href": "/projects" },
       { "name": "About", "href": "/about" },
       { "name": "Blog", "href": "/blog" },
-      { "name": "Portfolio", "href": "/portfolio" }
+      { "name": "Projects", "href": "/projects" },
+
+      { "name": "Collection", "href": "/collection" }
     ],
     "location": "Ho Chi Minh City, Vietnam",
     "contact": "Contact",
     "contactOptions": [
-      { "name": "Facebook", "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN" },
+      {
+        "name": "Facebook",
+        "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN"
+      },
       { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
     ]
   },
   "home": {
-    "welcome": "Welcome to HiepPortfolio!",
-    "description": "I’m Hiep, a passionate developer. This is where I share my projects, blog posts, and my development journey.",
-    "cta": "Learn more about me"
+    "welcome": "Hi, I'm",
+    "name": "Thanh Hiep!",
+    "rolePrefix": "I'm a",
+    "titles": ["Mobile Developer", "Web Developer", "Software Engineer"],
+    "description": "I deliver impressive web solutions optimized for both performance and aesthetics. Let’s bring your ideas to life with a truly professional product.",
+    "build": "Build Website",
+    "explore": "Explore now"
   },
+
   "about": {
-    "title": "About Me",
-    "description": "I’m Hiep, a developer with 3 years of experience in web development. I love building user-friendly and performance-optimized applications.",
-    "skills": [
-      "ReactJS",
-      "Tailwind CSS",
-      "Node.js",
-      "JavaScript",
-      "HTML & CSS"
-    ],
-    "hobbies": "I enjoy reading books, playing chess, and exploring new technologies."
+    "name": "Thanh Hiep Nguyen",
+    "quote": "Be the best version of yourself.",
+    "Avatar": "../assets/Hiep.jpg",
+    "email": "nhiep3445@gmail.com",
+    "phone": "(+84) 393048626",
+    "Github": "ThanhHiepNguyen",
+    "education": "University of Transport Ho Chi Minh City",
+    "major": "Information Technology",
+    "skills": {
+      "languages": ["Javascript", "Java", "C++"],
+      "frameworks": ["Tailwind CSS", "Node.js", "React.js", "Bootstrap"],
+      "databases": ["PostgreSQL", "MySQL"],
+      "others": ["Vietnamese", "English"]
+    },
+    "summary": "I'm a passionate web developer who enjoys building modern web applications. I love working with React, Tailwind CSS, and constantly exploring new technologies.",
+    "timeline": [
+      {
+        "year": "2022 - Present",
+        "school": "University of Transport Ho Chi Minh City",
+        "role": "Undergraduate Student",
+        "major": "Information Technology"
+      },
+      {
+        "year": "2019 - 2022",
+        "school": "Ngo Le Tan High School",
+        "role": "High School Student"
+      },
+      {
+        "year": "2015 - 2019",
+        "school": "Cat Thanh Secondary School",
+        "role": "Secondary School Student"
+      },
+      {
+        "year": "2010 - 2015",
+        "school": "Chanh Thang Primary School",
+        "role": "Primary School Student"
+      }
+    ]
   },
   "portfolio": {
-    "title": "Portfolio",
+    "title": "Collection",
     "description": "Here are some of my design works and personal projects.",
     "items": [
-      { "name": "UI App Design", "description": "Designed a user interface for a mobile application." },
-      { "name": "Business Logo", "description": "Created a logo for a tech startup." }
+      {
+        "name": "UI App Design",
+        "description": "Designed a user interface for a mobile application."
+      },
+      {
+        "name": "Business Logo",
+        "description": "Created a logo for a tech startup."
+      }
     ]
   },
   "blog": {
     "title": "Blog",
     "description": "Sharing my experiences and knowledge about technology and software development.",
     "posts": [
-      { "title": "Learning React in 30 Days", "summary": "My journey of learning React from basics to advanced." },
-      { "title": "Optimizing Website Performance", "summary": "Tips to improve your website’s loading speed." }
+      {
+        "title": "Learn React in 30 Days",
+        "summary": "A journey from basic to advanced React skills.",
+        "category": "A comprehensive 30-day ReactJS learning roadmap for beginners and advanced developers.",
+        "date": "07/31/2025",
+        "image": "/src/assets/React_30days.png"
+      },
+      {
+        "title": "Website Performance Optimization",
+        "summary": "Tips to improve your website's loading speed.",
+        "category": "Techniques to enhance performance, reduce load time, and improve user experience on websites.",
+        "date": "07/31/2025",
+        "image": "/src/assets/TUHW.png"
+      },
+      {
+        "title": "Beginner’s Guide to Docker",
+        "summary": "Easily create consistent development environments with Docker.",
+        "category": "Basic introduction to Docker for packaging, deploying, and running applications consistently across environments.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Docker.png"
+      },
+      {
+        "title": "Understanding RESTful API",
+        "summary": "Concepts and how to build standard REST APIs for web apps.",
+        "category": "Basic knowledge and effective RESTful API design in modern web projects.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Rest.png"
+      },
+      {
+        "title": "Introduction to Next.js for React Developers",
+        "summary": "Why Next.js is a great choice for server-side React apps.",
+        "category": "Explore SSR, SSG, and SEO optimization features of Next.js for professional React apps.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Next.png"
+      },
+      {
+        "title": "SEO Optimization for React Websites",
+        "summary": "Techniques to improve your Google search rankings.",
+        "category": "SEO strategies and tools for frontend developers building React applications.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Seo.png"
+      },
+      {
+        "title": "State Management with Redux Toolkit",
+        "summary": "A simple and effective solution for managing state in React apps.",
+        "category": "How to use Redux Toolkit to efficiently manage state in modern React applications.",
+        "date": "07/31/2025",
+        "image": "/src/assets/React_30days.png"
+      },
+      {
+        "title": "Deploying Fullstack Apps with Firebase",
+        "summary": "Quickly build and deploy web apps using Firebase.",
+        "category": "Guide to integrating Firebase Authentication, Firestore, and Hosting for building complete fullstack apps.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Full.png"
+      },
+      {
+        "title": "Basic Security Techniques in Web Development",
+        "summary": "Principles and tools to build more secure applications.",
+        "category": "A collection of essential security knowledge for frontend and backend developers to protect against threats.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Security.png"
+      },
+      {
+        "title": "Basic Git Guide",
+        "summary": "Getting started with Git – the most popular source control tool.",
+        "category": "Basic Git commands to help you manage version control, collaborate, and track source code changes effectively.",
+        "date": "07/31/2025",
+        "image": "/src/assets/Git.png"
+      },
+      {
+        "title": "Creating a React Project in VSCode",
+        "summary": "Step-by-step guide to creating a new React project using CLI and VSCode.",
+        "category": "Set up a modern development environment for ReactJS using VSCode and specialized CLI tools.",
+        "date": "07/31/2025",
+        "image": "/src/assets/React_vscode.png"
+      }
     ]
   },
   "projects": {
     "title": "Projects",
     "description": "Some notable projects I have worked on.",
     "items": [
-      { "name": "E-commerce Website", "description": "Built an online store using React and Node.js." },
-      { "name": "Management App", "description": "A task management app with a user-friendly interface." }
+      {
+        "name": "E-commerce Website",
+        "description": "Built an online store using React and Node.js."
+      },
+      {
+        "name": "Management App",
+        "description": "A task management app with a user-friendly interface."
+      }
     ]
   },
   "contact": {
@@ -63,5 +187,13 @@
       "message": "Message",
       "submit": "Send"
     }
+  },
+  "footer": {
+    "description": "Web developer passionate about building high-quality products.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "email": "Email",
+    "rights": "All rights reserved.",
+    "name": "Thanh Hiep Nguyen"
   }
 }

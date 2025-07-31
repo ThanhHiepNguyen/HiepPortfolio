@@ -1,57 +1,183 @@
 {
   "header": {
     "menu": [
-      { "name": "Dự án", "href": "/projects" },
       { "name": "Thông tin", "href": "/about" },
       { "name": "Bài viết", "href": "/blog" },
-      { "name": "Bộ sưu tập", "href": "/portfolio" }
+      { "name": "Dự án", "href": "/projects" },
+      { "name": "Bộ sưu tập", "href": "/collection" }
     ],
     "location": "TP. Hồ Chí Minh, Việt Nam",
     "contact": "Liên hệ",
     "contactOptions": [
-      { "name": "Facebook", "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN" },
+      {
+        "name": "Facebook",
+        "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN"
+      },
       { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
     ]
   },
   "home": {
-    "welcome": "Chào mừng đến với HiepPortfolio!",
-    "description": "Tôi là Hiệp, một lập trình viên đam mê công nghệ. Đây là nơi tôi chia sẻ các dự án, bài viết và hành trình phát triển của mình.",
-    "cta": "Xem thêm về tôi"
+    "welcome": "Xin chào, Tôi là",
+    "name": "Thành Hiệp!",
+    "rolePrefix": "Tôi là một",
+    "titles": [
+      "Lập trình viên Di động",
+      "Lập trình viên Web",
+      "Kỹ sư Phần Mềm"
+    ],
+    "description": "Tôi mang đến những giải pháp web ấn tượng, tối ưu cả về hiệu suất lẫn thẩm mỹ. Cùng nhau hiện thực hóa ý tưởng của bạn thành sản phẩm chuyên nghiệp.",
+    "build": "Xây Dựng Website",
+    "explore": "Khám phá ngay"
   },
   "about": {
-    "title": "Về tôi",
-    "description": "Tôi là Hiệp, một lập trình viên với 3 năm kinh nghiệm trong phát triển web. Tôi yêu thích xây dựng các ứng dụng thân thiện với người dùng và tối ưu hiệu suất.",
-    "skills": [
-      "ReactJS",
-      "Tailwind CSS",
-      "Node.js",
-      "JavaScript",
-      "HTML & CSS"
-    ],
-    "hobbies": "Tôi thích đọc sách, chơi cờ vua và khám phá công nghệ mới."
+    "name": "Nguyễn Thành Hiệp",
+    "quote": "Hãy là phiên bản tốt nhất của chính bạn.",
+    "Avatar": "../assets/Hiep.jpg",
+    "email": "nhiep3445@gmail.com",
+    "phone": "(+84) 393048626",
+    "Github": "ThanhHiepNguyen",
+    "education": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
+    "major": "Công nghệ Thông tin",
+    "skills": {
+      "languages": ["Javascript", "Java", "C++"],
+      "frameworks": ["Tailwind CSS", "Node.js", "React.js", "Bootstrap"],
+      "databases": ["PostgreSQL", "MySQL"],
+      "others": ["Tiếng Việt", "Tiếng Anh"]
+    },
+    "summary": "Tôi là một lập trình viên với đam mê xây dựng các ứng dụng web hiện đại. Tôi yêu thích làm việc với React, Tailwind CSS và luôn không ngừng học hỏi những công nghệ mới.",
+    "timeline": [
+      {
+        "year": "2022 - Nay",
+        "school": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
+        "role": "Sinh viên",
+        "major": "Công nghệ Thông tin"
+      },
+      {
+        "year": "2019 - 2022",
+        "school": "Trường Trung học Phổ thông Ngô Lê Tân",
+        "role": "Học sinh"
+      },
+      {
+        "year": "2015 - 2019",
+        "school": "Trường Trung học Cơ sở Cát Thành",
+        "role": "Học sinh"
+      },
+      {
+        "year": "2010 - 2015",
+        "school": "Trường Tiểu học Chánh Thắng",
+        "role": "Học sinh"
+      }
+    ]
   },
   "portfolio": {
     "title": "Bộ sưu tập",
     "description": "Dưới đây là một số tác phẩm thiết kế và dự án cá nhân của tôi.",
     "items": [
-      { "name": "Thiết kế UI App", "description": "Thiết kế giao diện cho một ứng dụng di động." },
-      { "name": "Logo Doanh nghiệp", "description": "Thiết kế logo cho một startup công nghệ." }
+      {
+        "name": "Thiết kế UI App",
+        "description": "Thiết kế giao diện cho một ứng dụng di động."
+      },
+      {
+        "name": "Logo Doanh nghiệp",
+        "description": "Thiết kế logo cho một startup công nghệ."
+      }
     ]
   },
   "blog": {
     "title": "Bài viết",
     "description": "Chia sẻ kinh nghiệm và kiến thức của tôi về công nghệ và phát triển phần mềm.",
     "posts": [
-      { "title": "Học React trong 30 ngày", "summary": "Hành trình học React từ cơ bản đến nâng cao." },
-      { "title": "Tối ưu hiệu suất website", "summary": "Mẹo tăng tốc độ tải trang cho website của bạn." }
+      {
+        "title": "Học React trong 30 ngày",
+        "summary": "Hành trình học React từ cơ bản đến nâng cao.",
+        "category": "Lộ trình học ReactJS toàn diện trong 30 ngày dành cho người mới bắt đầu và lập trình viên nâng cao.",
+        "date": "31/07/2025",
+        "image": "/src/assets/React_30days.png"
+      },
+      {
+        "title": "Tối ưu hiệu suất website",
+        "summary": "Mẹo tăng tốc độ tải trang cho website của bạn.",
+        "category": "Các kỹ thuật cải thiện hiệu suất, giảm thời gian tải trang và nâng cao trải nghiệm người dùng trên website.",
+        "date": "31/07/2025",
+        "image": "/src/assets/TUHW.png"
+      },
+      {
+        "title": "Hướng dẫn sử dụng Docker cho người mới bắt đầu",
+        "summary": "Tạo môi trường lập trình dễ dàng và đồng nhất bằng Docker.",
+        "category": "Giới thiệu Docker căn bản để đóng gói, triển khai và chạy ứng dụng trên mọi môi trường một cách nhất quán.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Docker.png"
+      },
+      {
+        "title": "Tìm hiểu về RESTful API",
+        "summary": "Khái niệm và cách xây dựng API chuẩn REST trong ứng dụng web.",
+        "category": "Kiến thức cơ bản và cách thiết kế RESTful API hiệu quả trong các dự án web hiện đại.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Rest.png"
+      },
+      {
+        "title": "Giới thiệu về Next.js cho lập trình viên React",
+        "summary": "Tại sao Next.js là sự lựa chọn tốt cho ứng dụng React phía server.",
+        "category": "Khám phá tính năng SSR, SSG và tối ưu SEO của Next.js cho ứng dụng React chuyên nghiệp.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Next.png"
+      },
+      {
+        "title": "Tối ưu SEO cho website React",
+        "summary": "Các kỹ thuật giúp cải thiện thứ hạng tìm kiếm của bạn trên Google.",
+        "category": "Chiến lược và công cụ hỗ trợ SEO dành cho lập trình viên frontend khi xây dựng ứng dụng React.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Seo.png"
+      },
+      {
+        "title": "Quản lý trạng thái với Redux Toolkit",
+        "summary": "Giải pháp đơn giản và hiệu quả để quản lý trạng thái trong ứng dụng React.",
+        "category": "Cách sử dụng Redux Toolkit để tối ưu quản lý state trong ứng dụng React hiện đại một cách hiệu quả.",
+        "date": "31/07/2025",
+        "image": "/src/assets/React_30days.png"
+      },
+      {
+        "title": "Triển khai ứng dụng fullstack với Firebase",
+        "summary": "Sử dụng Firebase để xây dựng và deploy ứng dụng web một cách nhanh chóng.",
+        "category": "Hướng dẫn tích hợp Firebase Authentication, Firestore, Hosting để xây dựng ứng dụng fullstack hoàn chỉnh.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Full.png"
+      },
+      {
+        "title": "Các kỹ thuật bảo mật cơ bản trong lập trình web",
+        "summary": "Những nguyên tắc và công cụ giúp bạn xây dựng ứng dụng an toàn hơn.",
+        "category": "Tổng hợp các kiến thức bảo mật quan trọng dành cho lập trình viên frontend và backend để chống lại các mối nguy hại.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Security.png"
+      },
+      {
+        "title": "Hướng dẫn sử dụng Git cơ bản",
+        "summary": "Làm quen với Git – công cụ quản lý mã nguồn phổ biến nhất hiện nay.",
+        "category": "Các thao tác cơ bản trong Git giúp bạn quản lý phiên bản, làm việc nhóm và theo dõi lịch sử mã nguồn hiệu quả.",
+        "date": "31/07/2025",
+        "image": "/src/assets/Git.png"
+      },
+      {
+        "title": "Hướng dẫn tạo dự án React trên VSCode",
+        "summary": "Từng bước tạo một dự án React mới bằng công cụ dòng lệnh và Visual Studio Code.",
+        "category": "Thiết lập môi trường phát triển hiện đại cho ReactJS bằng cách sử dụng VSCode và công cụ CLI chuyên dụng.",
+        "date": "31/07/2025",
+        "image": "/src/assets/React_vscode.png"
+      }
     ]
   },
   "projects": {
     "title": "Dự án",
     "description": "Một số dự án nổi bật mà tôi đã thực hiện.",
     "items": [
-      { "name": "Website Thương mại", "description": "Xây dựng một website bán hàng với React và Node.js." },
-      { "name": "Ứng dụng Quản lý", "description": "Ứng dụng quản lý công việc với giao diện thân thiện." }
+      {
+        "name": "Website Thương mại",
+        "description": "Xây dựng một website bán hàng với React và Node.js."
+      },
+      {
+        "name": "Ứng dụng Quản lý",
+        "description": "Ứng dụng quản lý công việc với giao diện thân thiện."
+      }
     ]
   },
   "contact": {
@@ -63,5 +189,13 @@
       "message": "Tin nhắn",
       "submit": "Gửi"
     }
+  },
+  "footer": {
+    "description": "Lập trình viên web đam mê sáng tạo sản phẩm chất lượng.",
+    "navigation": "Điều hướng",
+    "connect": "Kết nối",
+    "email": "Email",
+    "rights": "Mọi quyền được bảo lưu.",
+    "name": "Nguyễn Thành Hiệp"
   }
 }
