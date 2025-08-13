@@ -16,7 +16,7 @@ function Blog() {
           {t.blog.posts.map((post, index) => (
             <div
               key={index}
-              onClick={() => alert("🚧 Đang cập nhật!")}
+              onClick={() => alert("Updating")}
               className="flex flex-col md:flex-row items-center bg-white rounded-lg shadow hover:shadow-md transition duration-300 overflow-hidden"
             >
               {post.image && (
