@@ -13,38 +13,38 @@ function About() {
   }, []);
 
   return (
-    <section className="bg-white min-h-screen pb-20">
+    <section className="bg-white dark:bg-dark-900 min-h-screen pb-20">
       <div className="relative bg-gradient-to-r from-pink-500 to-yellow-400 pt-20 pb-40 rounded-2xl max-w-6xl mx-auto px-4 mt-2 ">
         <div className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src={avatar}
             alt="Avatar"
-            className="w-32 h-32 rounded-full border-4 border-white shadow-xl"
+            className="w-32 h-32 rounded-full border-4 border-white dark:border-dark-700 shadow-xl"
           />
         </div>
       </div>
 
       <div className="text-center mt-16">
-        <h1 className="text-3xl font-bold text-gray-800">{about.name}</h1>
-        <p className="text-gray-500 italic text-sm">"{about.quote}"</p>
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-white">{about.name}</h1>
+        <p className="text-gray-500 dark:text-gray-400 italic text-sm">"{about.quote}"</p>
       </div>
 
       <div className="max-w-[76rem] mx-auto mt-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-20">
         <div className="space-y-6">
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-2 text-pink-600">About me</h2>
-            <p className="text-sm text-gray-700">{about.summary}</p>
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">About me</h2>
+            <p className="text-sm text-gray-700 dark:text-gray-300">{about.summary}</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-2 text-pink-600">Contact</h2>
-            <ul className="text-sm text-gray-700 space-y-1">
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">Contact</h2>
+            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
               <li className="flex items-center gap-2">
-                <FaEnvelope className="text-gray-800" />
+                <FaEnvelope className="text-gray-800 dark:text-gray-200" />
                 <span>{about.email}</span>
               </li>
               <li className="flex items-center gap-2">
-                <FaPhoneAlt className="text-gray-800" />
+                <FaPhoneAlt className="text-gray-800 dark:text-gray-200" />
                 <span>{about.phone}</span>
               </li>
               <li className="flex items-center gap-2">
@@ -53,7 +53,7 @@ function About() {
                   href="https://github.com/ThanhHiepNguyen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
                   {about.Github}
                 </a>
@@ -61,23 +61,23 @@ function About() {
             </ul>
           </div>
 
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-2 text-pink-600">Education</h2>
-            <p className="text-sm">{about.education}</p>
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">Education</h2>
+            <p className="text-sm text-gray-700 dark:text-gray-300">{about.education}</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-2 text-pink-600">Key Skills</h2>
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">Key Skills</h2>
             {Object.entries(about.skills).map(([cat, list]) => (
               <div key={cat} className="mb-2">
-                <h4 className="font-semibold text-sm text-gray-700 mb-1">
+                <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-1">
                   {cat}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {list.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs"
+                      className="bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-2 py-1 rounded-full text-xs"
                     >
                       {skill}
                     </span>
@@ -89,17 +89,17 @@ function About() {
         </div>
 
         <div className="md:col-span-2 space-y-6">
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-2 text-pink-600">Summary</h2>
-            <p className="text-sm text-gray-700">{about.summary}</p>
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">Summary</h2>
+            <p className="text-sm text-gray-700 dark:text-gray-300">{about.summary}</p>
           </div>
 
           {/* Timeline */}
-          <div className="bg-white rounded-xl shadow p-5">
-            <h2 className="text-lg font-bold mb-6 text-pink-600 ">Timeline</h2>
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-6 text-pink-600 dark:text-pink-400">Timeline</h2>
 
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-dark-600"></div>
 
               <div className="space-y-14">
                 {about.timeline.map((item, idx) => (
@@ -108,26 +108,26 @@ function About() {
                       <>
                         <div className="w-1/2 flex justify-end pr-8 text-right items-center">
                           <div>
-                            <p className="text-sm text-gray-500">{item.year}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">{item.year}</p>
                           </div>
                         </div>
 
                         <div className="relative z-10">
-                          <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center border-4 border-white shadow">
+                          <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center border-4 border-white dark:border-dark-700 shadow">
                             <MdOutlineEmojiPeople />
                           </div>
                         </div>
 
                         <div className="w-1/2 flex justify-start pl-8 text-left items-center">
                           <div>
-                            <p className="font-bold text-sm text-gray-800">
+                            <p className="font-bold text-sm text-gray-800 dark:text-white">
                               {item.role}
                             </p>
-                            <p className="text-sm text-pink-600 whitespace-nowrap">
+                            <p className="text-sm text-pink-600 dark:text-pink-400 whitespace-nowrap">
                               {item.school}
                             </p>
                             {item.major && (
-                              <p className="italic text-xs text-pink-500">
+                              <p className="italic text-xs text-pink-500 dark:text-pink-300">
                                 Major: {item.major}
                               </p>
                             )}
@@ -138,14 +138,14 @@ function About() {
                       <>
                         <div className="w-1/2 flex justify-end pr-8 text-right items-center">
                           <div>
-                            <p className="font-bold text-sm text-gray-800">
+                            <p className="font-bold text-sm text-gray-800 dark:text-white">
                               {item.role}
                             </p>
-                            <p className="text-sm text-pink-600">
+                            <p className="text-sm text-pink-600 dark:text-pink-400">
                               {item.school}
                             </p>
                             {item.major && (
-                              <p className="italic text-xs text-pink-500">
+                              <p className="italic text-xs text-pink-500 dark:text-pink-300">
                                 Major: {item.major}
                               </p>
                             )}
@@ -153,14 +153,14 @@ function About() {
                         </div>
 
                         <div className="relative z-10">
-                          <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center border-4 border-white shadow">
+                          <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center border-4 border-white dark:border-dark-700 shadow">
                             <MdOutlineEmojiPeople />
                           </div>
                         </div>
 
                         <div className="w-1/2 flex justify-start pl-8 text-left items-center">
                           <div>
-                            <p className="text-sm text-gray-500">{item.year}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">{item.year}</p>
                           </div>
                         </div>
                       </>

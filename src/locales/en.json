@@ -1,11 +1,22 @@
 {
   "header": {
     "menu": [
-      { "name": "About", "href": "/about" },
-      { "name": "Blog", "href": "/blog" },
-      { "name": "Projects", "href": "/projects" },
-
-      { "name": "Collection", "href": "/collection" }
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Projects",
+        "href": "/projects"
+      },
+      {
+        "name": "Collection",
+        "href": "/collection"
+      }
     ],
     "location": "Ho Chi Minh City, Vietnam",
     "contact": "Contact",
@@ -14,19 +25,25 @@
         "name": "Facebook",
         "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN"
       },
-      { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
+      {
+        "name": "Zalo",
+        "href": "https://zalo.me/+84393048626"
+      }
     ]
   },
   "home": {
     "welcome": "Hi, I'm",
     "name": "Thanh Hiep!",
     "rolePrefix": "I'm a",
-    "titles": ["Mobile Developer", "Web Developer", "Software Engineer"],
+    "titles": [
+      "Mobile Developer",
+      "Web Developer",
+      "Software Engineer"
+    ],
     "description": "I deliver impressive web solutions optimized for both performance and aesthetics. Let’s bring your ideas to life with a truly professional product.",
     "build": "Build Website",
     "explore": "Explore now"
   },
-
   "about": {
     "name": "Thanh Hiep Nguyen",
     "quote": "Be the best version of yourself.",
@@ -37,10 +54,25 @@
     "education": "University of Transport Ho Chi Minh City",
     "major": "Information Technology",
     "skills": {
-      "languages": ["Javascript", "Java", "C++"],
-      "frameworks": ["Tailwind CSS", "Node.js", "React.js", "Bootstrap"],
-      "databases": ["PostgreSQL", "MySQL"],
-      "others": ["Vietnamese", "English"]
+      "languages": [
+        "Javascript",
+        "Java",
+        "C++"
+      ],
+      "frameworks": [
+        "Tailwind CSS",
+        "Node.js",
+        "React.js",
+        "Bootstrap"
+      ],
+      "databases": [
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "others": [
+        "Vietnamese",
+        "English"
+      ]
     },
     "summary": "I'm a passionate web developer who enjoys building modern web applications. I love working with React, Tailwind CSS, and constantly exploring new technologies.",
     "timeline": [
@@ -70,14 +102,67 @@
   "portfolio": {
     "title": "Collection",
     "description": "Here are some of my design works and personal projects.",
-    "items": [
+    "comingSoon": {
+      "title": "More collections coming soon!",
+      "description": "I'm constantly working on new projects and designs. Check back regularly for updates.",
+      "tags": [
+        "Design",
+        "Development",
+        "Creative"
+      ]
+    },
+    "collections": [
       {
-        "name": "UI App Design",
-        "description": "Designed a user interface for a mobile application."
+        "id": 1,
+        "title": "UI/UX Designs",
+        "description": "Modern and intuitive user interface designs for web and mobile applications.",
+        "icon": "FaPalette",
+        "items": [
+          "Mobile App UI",
+          "Web Dashboard",
+          "E-commerce Design",
+          "Landing Pages"
+        ],
+        "color": "from-purple-500 to-pink-500"
       },
       {
-        "name": "Business Logo",
-        "description": "Created a logo for a tech startup."
+        "id": 2,
+        "title": "Web Development",
+        "description": "Full-stack web applications built with modern technologies and best practices.",
+        "icon": "FaCode",
+        "items": [
+          "React Applications",
+          "Node.js Backend",
+          "Database Design",
+          "API Development"
+        ],
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "id": 3,
+        "title": "Mobile Development",
+        "description": "Cross-platform mobile applications for iOS and Android platforms.",
+        "icon": "FaMobile",
+        "items": [
+          "React Native Apps",
+          "Mobile UI/UX",
+          "App Store Optimization",
+          "Performance"
+        ],
+        "color": "from-green-500 to-teal-500"
+      },
+      {
+        "id": 4,
+        "title": "Desktop Applications",
+        "description": "Native desktop applications for Windows, macOS, and Linux systems.",
+        "icon": "FaDesktop",
+        "items": [
+          "Electron Apps",
+          "System Integration",
+          "User Experience",
+          "Cross-platform"
+        ],
+        "color": "from-orange-500 to-red-500"
       }
     ]
   },
@@ -166,15 +251,83 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Some notable projects I have worked on.",
-    "items": [
+    "description": "Here are some of the projects I've worked on. Each project represents a unique challenge and learning experience.",
+    "categories": [
       {
-        "name": "E-commerce Website",
-        "description": "Built an online store using React and Node.js."
+        "id": "all",
+        "name": "All Projects"
       },
       {
-        "name": "Management App",
-        "description": "A task management app with a user-friendly interface."
+        "id": "frontend",
+        "name": "Frontend"
+      },
+      {
+        "id": "fullstack",
+        "name": "Full Stack"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "E-commerce Platform",
+        "description": "A full-stack e-commerce website with user authentication, product management, shopping cart, and payment integration.",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+        "category": "fullstack",
+        "tech": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Stripe"
+        ],
+        "github": "https://github.com/yourusername/ecommerce",
+        "live": "https://ecommerce-demo.com",
+        "features": [
+          "User Authentication",
+          "Product Catalog",
+          "Shopping Cart",
+          "Payment Processing"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop",
+        "category": "frontend",
+        "tech": [
+          "React",
+          "Firebase",
+          "Tailwind CSS"
+        ],
+        "github": "https://github.com/yourusername/task-manager",
+        "live": "https://task-manager-demo.com",
+        "features": [
+          "Real-time Updates",
+          "Drag & Drop",
+          "Team Collaboration",
+          "Task Categories"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Portfolio Website",
+        "description": "A modern, responsive portfolio website built with React and Vite, featuring dark mode, animations, and multilingual support.",
+        "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+        "category": "frontend",
+        "tech": [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "React Router"
+        ],
+        "github": "https://github.com/yourusername/portfolio",
+        "live": "https://your-portfolio.com",
+        "features": [
+          "Responsive Design",
+          "Dark Mode",
+          "Animations",
+          "Multilingual"
+        ]
       }
     ]
   },

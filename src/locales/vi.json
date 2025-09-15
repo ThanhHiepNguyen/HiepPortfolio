@@ -1,10 +1,22 @@
 {
   "header": {
     "menu": [
-      { "name": "Thông tin", "href": "/about" },
-      { "name": "Bài viết", "href": "/blog" },
-      { "name": "Dự án", "href": "/projects" },
-      { "name": "Bộ sưu tập", "href": "/collection" }
+      {
+        "name": "Thông tin",
+        "href": "/about"
+      },
+      {
+        "name": "Bài viết",
+        "href": "/blog"
+      },
+      {
+        "name": "Dự án",
+        "href": "/projects"
+      },
+      {
+        "name": "Bộ sưu tập",
+        "href": "/collection"
+      }
     ],
     "location": "TP. Hồ Chí Minh, Việt Nam",
     "contact": "Liên hệ",
@@ -13,7 +25,10 @@
         "name": "Facebook",
         "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN"
       },
-      { "name": "Zalo", "href": "https://zalo.me/+84393048626" }
+      {
+        "name": "Zalo",
+        "href": "https://zalo.me/+84393048626"
+      }
     ]
   },
   "home": {
@@ -39,10 +54,25 @@
     "education": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
     "major": "Công nghệ Thông tin",
     "skills": {
-      "languages": ["Javascript", "Java", "C++"],
-      "frameworks": ["Tailwind CSS", "Node.js", "React.js", "Bootstrap"],
-      "databases": ["PostgreSQL", "MySQL"],
-      "others": ["Tiếng Việt", "Tiếng Anh"]
+      "languages": [
+        "Javascript",
+        "Java",
+        "C++"
+      ],
+      "frameworks": [
+        "Tailwind CSS",
+        "Node.js",
+        "React.js",
+        "Bootstrap"
+      ],
+      "databases": [
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "others": [
+        "Tiếng Việt",
+        "Tiếng Anh"
+      ]
     },
     "summary": "Tôi là một lập trình viên với đam mê xây dựng các ứng dụng web hiện đại. Tôi yêu thích làm việc với React, Tailwind CSS và luôn không ngừng học hỏi những công nghệ mới.",
     "timeline": [
@@ -72,14 +102,67 @@
   "portfolio": {
     "title": "Bộ sưu tập",
     "description": "Dưới đây là một số tác phẩm thiết kế và dự án cá nhân của tôi.",
-    "items": [
+    "comingSoon": {
+      "title": "Sẽ có thêm bộ sưu tập sớm!",
+      "description": "Tôi đang liên tục làm việc trên các dự án và thiết kế mới. Hãy quay lại thường xuyên để cập nhật.",
+      "tags": [
+        "Thiết kế",
+        "Phát triển",
+        "Sáng tạo"
+      ]
+    },
+    "collections": [
       {
-        "name": "Thiết kế UI App",
-        "description": "Thiết kế giao diện cho một ứng dụng di động."
+        "id": 1,
+        "title": "Thiết kế UI/UX",
+        "description": "Thiết kế giao diện người dùng hiện đại và trực quan cho ứng dụng web và di động.",
+        "icon": "FaPalette",
+        "items": [
+          "UI App Di động",
+          "Dashboard Web",
+          "Thiết kế E-commerce",
+          "Trang Landing"
+        ],
+        "color": "from-purple-500 to-pink-500"
       },
       {
-        "name": "Logo Doanh nghiệp",
-        "description": "Thiết kế logo cho một startup công nghệ."
+        "id": 2,
+        "title": "Phát triển Web",
+        "description": "Ứng dụng web full-stack được xây dựng với công nghệ hiện đại và best practices.",
+        "icon": "FaCode",
+        "items": [
+          "Ứng dụng React",
+          "Backend Node.js",
+          "Thiết kế Database",
+          "Phát triển API"
+        ],
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "id": 3,
+        "title": "Phát triển Di động",
+        "description": "Ứng dụng di động đa nền tảng cho iOS và Android.",
+        "icon": "FaMobile",
+        "items": [
+          "App React Native",
+          "UI/UX Di động",
+          "Tối ưu App Store",
+          "Hiệu suất"
+        ],
+        "color": "from-green-500 to-teal-500"
+      },
+      {
+        "id": 4,
+        "title": "Ứng dụng Desktop",
+        "description": "Ứng dụng desktop native cho Windows, macOS và Linux.",
+        "icon": "FaDesktop",
+        "items": [
+          "App Electron",
+          "Tích hợp Hệ thống",
+          "Trải nghiệm Người dùng",
+          "Đa nền tảng"
+        ],
+        "color": "from-orange-500 to-red-500"
       }
     ]
   },
@@ -168,15 +251,83 @@
   },
   "projects": {
     "title": "Dự án",
-    "description": "Một số dự án nổi bật mà tôi đã thực hiện.",
-    "items": [
+    "description": "Dưới đây là một số dự án tôi đã thực hiện. Mỗi dự án đại diện cho một thử thách và trải nghiệm học tập độc đáo.",
+    "categories": [
       {
-        "name": "Website Thương mại",
-        "description": "Xây dựng một website bán hàng với React và Node.js."
+        "id": "all",
+        "name": "Tất cả dự án"
       },
       {
-        "name": "Ứng dụng Quản lý",
-        "description": "Ứng dụng quản lý công việc với giao diện thân thiện."
+        "id": "frontend",
+        "name": "Frontend"
+      },
+      {
+        "id": "fullstack",
+        "name": "Full Stack"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Nền tảng Thương mại điện tử",
+        "description": "Website thương mại điện tử full-stack với xác thực người dùng, quản lý sản phẩm, giỏ hàng và tích hợp thanh toán.",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+        "category": "fullstack",
+        "tech": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Stripe"
+        ],
+        "github": "https://github.com/yourusername/ecommerce",
+        "live": "https://ecommerce-demo.com",
+        "features": [
+          "Xác thực người dùng",
+          "Danh mục sản phẩm",
+          "Giỏ hàng",
+          "Xử lý thanh toán"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Ứng dụng Quản lý Công việc",
+        "description": "Ứng dụng quản lý công việc cộng tác với cập nhật thời gian thực, chức năng kéo thả và tính năng làm việc nhóm.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop",
+        "category": "frontend",
+        "tech": [
+          "React",
+          "Firebase",
+          "Tailwind CSS"
+        ],
+        "github": "https://github.com/yourusername/task-manager",
+        "live": "https://task-manager-demo.com",
+        "features": [
+          "Cập nhật thời gian thực",
+          "Kéo & Thả",
+          "Làm việc nhóm",
+          "Danh mục công việc"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Website Portfolio",
+        "description": "Website portfolio hiện đại, responsive được xây dựng với React và Vite, có chế độ tối, hiệu ứng và hỗ trợ đa ngôn ngữ.",
+        "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+        "category": "frontend",
+        "tech": [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "React Router"
+        ],
+        "github": "https://github.com/yourusername/portfolio",
+        "live": "https://your-portfolio.com",
+        "features": [
+          "Thiết kế responsive",
+          "Chế độ tối",
+          "Hiệu ứng",
+          "Đa ngôn ngữ"
+        ]
       }
     ]
   },
