@@ -4,6 +4,11 @@ import useLanguage from "../hooks/useLanguage.jsx";
 import { FaCalendarAlt, FaClock, FaArrowRight, FaSearch, FaFilter, FaBookOpen } from "react-icons/fa";
 
 function Blog() {
+  const { t } = useLanguage();
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   const slugify = (text) => {
     return text
       .toString()
@@ -15,16 +20,14 @@ function Blog() {
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-");
   };
-  const { t } = useLanguage();
-  const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
 
-  // Get unique categories
-  const categories = ["all", ...new Set(t.blog.posts.map(post => post.category.split(" ")[0]))];
+  if (!t) return null;
+
+  const posts = t?.blog?.posts ?? [];
+  const categories = ["all", ...new Set(posts.map(p => (p.category || "").split(" ")[0]))];
 
   // Filter posts based on search and category
-  const filteredPosts = t.blog.posts.filter(post => {
+  const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.summary.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "all" ||

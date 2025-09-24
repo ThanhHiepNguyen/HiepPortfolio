@@ -17,8 +17,10 @@ function Projects() {
   const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const projects = t.projects.items;
-  const categories = t.projects.categories;
+  if (!t) return null;
+
+  const projects = t?.projects?.items ?? [];
+  const categories = t?.projects?.categories ?? [];
 
   const filteredProjects = selectedCategory === "all"
     ? projects

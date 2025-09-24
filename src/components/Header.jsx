@@ -9,7 +9,11 @@ import enFlag from "../assets/en.png";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 function Header() {
-  const { language, toggleLanguage, t } = useLanguage();
+  const { language, toggleLanguage, t, loading } = useLanguage();
+  const menu = t?.header?.menu ?? [];
+  const contactOptions = t?.header?.contactOptions ?? [];
+  const locationText = t?.header?.location ?? "";
+  const contactText = t?.header?.contact ?? "Contact";
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -92,32 +96,34 @@ function Header() {
             onClick={() => handleNavigate("/")}
           />
 
-          <ul className="hidden md:flex space-x-6">
-            {t.header.menu.map((item) => (
-              <li key={item.name} className="w-[110px] text-center">
-                <button
-                  onClick={() => handleNavigate(item.href)}
-                  className="block hover:text-pink-500 transition duration-200 text-lg font-bold"
-                >
-                  <span
-                    className="relative mx-2 font-bold text-black dark:text-white
+          {!loading && (
+            <ul className="hidden md:flex space-x-6">
+              {menu.map((item) => (
+                <li key={item.name} className="w-[110px] text-center">
+                  <button
+                    onClick={() => handleNavigate(item.href)}
+                    className="block hover:text-pink-500 transition duration-200 text-lg font-bold"
+                  >
+                    <span
+                      className="relative mx-2 font-bold text-black dark:text-white
                     after:content-[''] after:absolute after:left-0 after:-bottom-1 
                     after:w-full after:h-[2px] after:bg-pink-500 
                     after:origin-left after:scale-x-0 hover:after:scale-x-100 
                     after:opacity-0 hover:after:opacity-100 
                     after:transition-all after:duration-300"
-                  >
-                    {item.name}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
+                    >
+                      {item.name}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
 
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex flex-col items-center justify-center w-[220px]">
               <span className="text-base font-medium text-gray-800 dark:text-gray-200">
-                {t.header.location}
+                {locationText}
               </span>
               <span className="text-2xl font-bold text-black dark:text-white">
                 {currentTime}
@@ -129,11 +135,11 @@ function Header() {
                 onClick={toggleContact}
                 className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition-colors duration-300 w-[100px] text-center"
               >
-                {t.header.contact}
+                {contactText}
               </button>
               {isContactOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-dark-700 shadow-lg rounded-md z-20">
-                  {t.header.contactOptions.map((option) => (
+                  {contactOptions.map((option) => (
                     <a
                       key={option.name}
                       href={option.href}
@@ -224,7 +230,7 @@ function Header() {
                 </button>
                 {isContactOpen && (
                   <div className="mt-2 w-32 bg-white dark:bg-dark-700 shadow-lg rounded-md">
-                    {t.header.contactOptions.map((option) => (
+                    {contactOptions.map((option) => (
                       <a
                         key={option.name}
                         href={option.href}

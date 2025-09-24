@@ -2,7 +2,10 @@ import { FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 import useLanguage from "../hooks/useLanguage.jsx";
 
 function Footer() {
-  const { t } = useLanguage();
+  const { t, loading } = useLanguage();
+  if (loading || !t) return <footer className="px-6 py-10 mt-12" />;
+  const menu = t?.header?.menu ?? [];
+  const footer = t?.footer ?? {};
 
   return (
     <footer className="bg-white dark:bg-dark-800 text-gray-900 dark:text-gray-100 px-6 py-10 mt-12">
@@ -12,14 +15,14 @@ function Footer() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{t.footer.name}</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-300">{t.footer.description}</p>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.name}</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-300">{footer.description}</p>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{t.footer.navigation}</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.navigation}</h2>
           <ul className="space-y-2 text-sm">
-            {t.header.menu.map((item) => (
+            {menu.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
@@ -33,8 +36,8 @@ function Footer() {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{t.footer.connect}</h2>
-          <p className="text-sm mb-2 text-gray-600 dark:text-gray-300">{t.footer.email}: nhiep3445@gmail.com</p>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.connect}</h2>
+          <p className="text-sm mb-2 text-gray-600 dark:text-gray-300">{footer.email}: nhiep3445@gmail.com</p>
           <div className="flex space-x-4 mt-3">
             <a
               href="https://github.com/ThanhHiepNguyen"
@@ -66,7 +69,7 @@ function Footer() {
 
       <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-10">
         © {new Date().getFullYear()}
-        {t.footer.name} {t.footer.rights}
+        {footer.name} {footer.rights}
       </div>
     </footer>
   );

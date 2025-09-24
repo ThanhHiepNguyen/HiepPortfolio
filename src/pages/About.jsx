@@ -6,11 +6,13 @@ import { FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function About() {
   const { t } = useLanguage();
-  const about = t.about;
+  const about = t?.about || {};
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (!t) return null;
 
   return (
     <section className="bg-white dark:bg-dark-900 min-h-screen pb-20">

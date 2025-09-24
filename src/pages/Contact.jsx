@@ -4,6 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaCheckCircle, FaExclamationCircle
 
 function Contact() {
   const { t } = useLanguage();
+  if (!t) return null;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -222,7 +223,7 @@ function Contact() {
               </h2>
 
               <div className="space-y-4">
-                {t.header.contactOptions.map((option, index) => (
+                {(t?.header?.contactOptions ?? []).map((option, index) => (
                   <a
                     key={index}
                     href={option.href}

@@ -6,18 +6,19 @@ import LoadingScreen from "../components/LoadingScreen";
 import "../assets/styles/Loader.css";
 
 function Home() {
-  const { t, language } = useLanguage();
+  const { t, language, loading } = useLanguage();
   const [titleIndex, setTitleIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (!t) return;
     setTitleIndex(0); // Reset lại khi language đổi
     const interval = setInterval(() => {
       setTitleIndex((prev) => (prev + 1) % t.home.titles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [t.home.titles.length, language]);
+  }, [t?.home?.titles?.length, language]);
 
   // Ngăn cuộn khi loading
   useEffect(() => {
@@ -30,6 +31,11 @@ function Home() {
       document.body.style.overflow = "auto";
     };
   }, [isLoading]);
+
+  // Show loading screen if Firebase data is still loading
+  if (loading || !t) {
+    return <LoadingScreen />;
+  }
 
   // Chuyển trang có hiệu ứng loading
   const handleNavigate = (path) => {

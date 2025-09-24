@@ -3,6 +3,7 @@ import { FaPalette, FaCode, FaMobile, FaDesktop } from "react-icons/fa";
 
 function Collection() {
   const { t } = useLanguage();
+  if (!t) return null;
 
   // Map icon names to actual components
   const iconMap = {
@@ -12,7 +13,7 @@ function Collection() {
     FaDesktop: FaDesktop
   };
 
-  const collections = t.portfolio.collections.map(collection => ({
+  const collections = (t?.portfolio?.collections ?? []).map(collection => ({
     ...collection,
     icon: iconMap[collection.icon]
   }));
