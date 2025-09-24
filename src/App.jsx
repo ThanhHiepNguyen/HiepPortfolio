@@ -11,6 +11,7 @@ import useLanguage from "./hooks/useLanguage";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./hooks/useTheme";
 
+
 function App() {
   const { language } = useLanguage();
 
