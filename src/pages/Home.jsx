@@ -48,25 +48,43 @@ function Home() {
   return (
     <>
       <div
-        className={`fixed inset-0 z-50 transition-opacity duration-700 ${isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 z-50 transition-opacity duration-700 ${
+          isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       >
         <LoadingScreen />
       </div>
 
       <section
-        className={`relative bg-white dark:bg-dark-900 min-h-screen flex flex-col items-center justify-start pt-[80px] px-4 text-center transition-opacity duration-700 ${isLoading ? "opacity-20 pointer-events-none" : "opacity-100"
-          }`}
-        style={{
-          backgroundImage: `
-      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px)
-    `,
-          backgroundSize: "80px 80px",
-          backgroundPosition: "0 0",
-          backgroundColor: "var(--tw-bg-opacity)",
-        }}
+        className={[
+          "relative min-h-screen flex flex-col items-center justify-start pt-[80px] px-4 text-center",
+
+          "bg-white",
+          "bg-[linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(0,0,0,0.06)_1px,transparent_1px)]",
+          "bg-[size:80px_80px]",
+          "dark:bg-black",
+          "dark:bg-[linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.12)_1px,transparent_1px)]",
+          "dark:bg-[size:80px_80px]",
+        ].join(" ")}
       >
+        {/* Spotlight trung tâm */}
+        <div
+          className="
+      absolute inset-0 z-0 pointer-events-none
+      bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]
+      dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_70%)]
+    "
+        />
+        <div
+          className="
+      absolute inset-0 z-0 pointer-events-none
+      bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.04)_75%)]
+      bg-[size:160px_160px]
+      dark:bg-[linear-gradient(135deg,rgba(255,255,255,0.05)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.05)_75%)]
+      dark:bg-[size:160px_160px]
+    "
+        />
+
         <div
           className="absolute inset-0 z-[-1] pointer-events-none"
           style={{
@@ -78,23 +96,22 @@ function Home() {
             WebkitBackdropFilter: "blur(6px)",
           }}
         />
-
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute top-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-13 rounded-full" />
           <div className="absolute top-[-200px] right-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-10 rounded-full" />
           <div className="absolute bottom-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-2xl opacity-10 rounded-full" />
           <div className="absolute bottom-[-200px] right-[-200px] w-96 h-96 bg-gray-300 dark:bg-dark-500 blur-2xl opacity-10 rounded-full" />
         </div>
-        <div className="max-w-2xl w-full mt-6">
+        <div className="max-w-2xl w-full mt-4.75">
           {/* Tiêu đề chính */}
-          <h1 className="text-6xl font-extrabold text-gray-900 dark:text-white mb-4 flex items-center justify-center gap-3 flex-wra whitespace-nowrap">
+          <h1 className="text-6xl font-extrabold text-gray-900 dark:text-white mb-3 flex items-center justify-center gap-3 flex-wra whitespace-nowrap">
             <span>{t.home.welcome}</span>
             <img
               src={avatar}
               alt="Avatar"
               className="h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white dark:border-dark-700 shadow-md"
             />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
+            <span className="text-transparent h-18.5 text-[66px] bg-clip-text bg-gradient-to-r p from-pink-500 to-red-500 drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">
               {t.home.name}
             </span>
           </h1>
@@ -102,7 +119,7 @@ function Home() {
             <span>{t.home.rolePrefix}</span>
 
             <span
-              className="px-4 py-3 bg-gray-100 dark:bg-dark-700 rounded-xl shadow text-black dark:text-white transition-all duration-500 overflow-hidden inline-block"
+              className="px-3 py-3 bg-gray-100 dark:bg-dark-700 rounded-xl shadow text-black dark:text-white transition-all duration-500 overflow-hidden inline-block"
               style={{ minWidth: "550px", textAlign: "center" }} // điều chỉnh độ rộng tại đây
             >
               <span key={titleIndex} className="wipe-text inline-block">
@@ -111,7 +128,7 @@ function Home() {
             </span>
           </h2>
 
-          <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold mb-10 leading-relaxed mt-10">
+          <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold mb-10 leading-relaxed mt-10.25">
             {t.home.description}
           </p>
 

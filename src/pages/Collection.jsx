@@ -5,17 +5,11 @@ function Collection() {
   const { t } = useLanguage();
   if (!t) return null;
 
-  // Map icon names to actual components
-  const iconMap = {
-    FaPalette: FaPalette,
-    FaCode: FaCode,
-    FaMobile: FaMobile,
-    FaDesktop: FaDesktop
-  };
+  const iconMap = { FaPalette, FaCode, FaMobile, FaDesktop };
 
-  const collections = (t?.portfolio?.collections ?? []).map(collection => ({
-    ...collection,
-    icon: iconMap[collection.icon]
+  const collections = (t?.portfolio?.collections ?? []).map((c) => ({
+    ...c,
+    icon: iconMap[c.icon],
   }));
 
   return (
@@ -31,43 +25,53 @@ function Collection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {collections.map((collection) => (
-            <div
-              key={collection.id}
-              className="bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className={`bg-gradient-to-r ${collection.color} p-6 text-white`}>
-                <div className="flex items-center gap-4">
-                  <div className="bg-white bg-opacity-20 p-3 rounded-lg">
-                    <collection.icon className="text-2xl" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">{collection.title}</h3>
-                    <p className="text-white text-opacity-90 text-sm mt-1">
-                      {collection.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-                  Featured Works:
-                </h4>
-                <div className="space-y-2">
-                  {collection.items.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors"
-                    >
-                      <div className={`w-2 h-2 bg-gradient-to-r ${collection.color} rounded-full`}></div>
-                      <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
+          {collections.map((collection) => {
+            const Icon = collection.icon;
+            return (
+              <div
+                key={collection.id}
+                className="bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                {/* Header gradient: không ép text trắng, dùng light/dark */}
+                <div className={`bg-gradient-to-r ${collection.color} p-6`}>
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-lg bg-black/10 dark:bg-white/20">
+                      <Icon className="text-2xl" />
                     </div>
-                  ))}
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {collection.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-white/90 text-sm mt-1">
+                        {collection.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
+                    Featured Works:
+                  </h4>
+                  <div className="space-y-2">
+                    {collection.items.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors"
+                      >
+                        <div
+                          className={`w-2 h-2 bg-gradient-to-r ${collection.color} rounded-full`}
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="text-center mt-16">
@@ -80,8 +84,13 @@ function Collection() {
             </p>
             <div className="flex justify-center space-x-4">
               {t.portfolio.comingSoon.tags.map((tag, index) => (
-                <div key={index} className="bg-pink-100 dark:bg-pink-900 px-4 py-2 rounded-lg">
-                  <span className="text-pink-600 dark:text-pink-400 text-sm font-medium">{tag}</span>
+                <div
+                  key={index}
+                  className="bg-pink-100 dark:bg-pink-900 px-4 py-2 rounded-lg"
+                >
+                  <span className="text-pink-600 dark:text-pink-400 text-sm font-medium">
+                    {tag}
+                  </span>
                 </div>
               ))}
             </div>

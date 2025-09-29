@@ -1,11 +1,26 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-dark-50: #f9fafb;
+  --color-dark-100: #f3f4f6;
+  --color-dark-200: #e5e7eb;
+  --color-dark-300: #d1d5db;
+  --color-dark-400: #9ca3af;
+  --color-dark-500: #6b7280;
+  --color-dark-600: #4b5563;
+  --color-dark-700: #374151;
+  --color-dark-800: #1f2937;
+  --color-dark-900: #0a0a0a;
+  --color-dark-950: #000000;
+}
 
 @keyframes wipeIn {
   from {
     transform: scaleX(0);
     transform-origin: left;
   }
+
   to {
     transform: scaleX(1);
     transform-origin: left;

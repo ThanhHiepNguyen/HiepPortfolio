@@ -87,7 +87,7 @@ function Header() {
     <>
       {isLoading && <LoadingScreen />}
 
-      <nav className="bg-white dark:bg-dark-800 text-gray-800 dark:text-gray-200 px-4 sticky top-0 z-10 shadow-md dark:shadow-dark-700">
+      <nav className="bg-white dark:bg-dark-950 text-gray-800 dark:text-gray-200 px-4 sticky top-0 z-10 shadow-md dark:shadow-dark-700">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
           <img
             src={logo}

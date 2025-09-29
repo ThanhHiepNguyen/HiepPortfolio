@@ -8,19 +8,25 @@ function Footer() {
   const footer = t?.footer ?? {};
 
   return (
-    <footer className="bg-white dark:bg-dark-800 text-gray-900 dark:text-gray-100 px-6 py-10 mt-12">
+    <footer className="bg-white dark:bg-dark-950 text-gray-900 dark:text-gray-100 px-6 py-10 mt-12">
       <div className="max-w-7xl mx-auto">
         <hr className="border-gray-300 dark:border-dark-600 mb-6" />
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.name}</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-300">{footer.description}</p>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+            {footer.name}
+          </h2>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            {footer.description}
+          </p>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.navigation}</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+            {footer.navigation}
+          </h2>
           <ul className="space-y-2 text-sm">
             {menu.map((item) => (
               <li key={item.name}>
@@ -36,8 +42,12 @@ function Footer() {
         </div>
 
         <div>
-          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{footer.connect}</h2>
-          <p className="text-sm mb-2 text-gray-600 dark:text-gray-300">{footer.email}: nhiep3445@gmail.com</p>
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+            {footer.connect}
+          </h2>
+          <p className="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            {footer.email}: nhiep3445@gmail.com
+          </p>
           <div className="flex space-x-4 mt-3">
             <a
               href="https://github.com/ThanhHiepNguyen"
