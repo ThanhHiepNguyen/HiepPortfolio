@@ -144,48 +144,53 @@ function Home() {
           <div className="absolute bottom-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-2xl opacity-10 rounded-full" />
           <div className="absolute bottom-[-200px] right-[-200px] w-96 h-96 bg-gray-300 dark:bg-dark-500 blur-2xl opacity-10 rounded-full" />
         </div>
-        <div className="max-w-2xl w-full mt-4.75">
+        <div className="max-w-2xl w-full -mt-5 px-2 md:px-0">
           {/* Tiêu đề chính */}
-          <h1 className="text-6xl font-extrabold text-gray-900 dark:text-white mb-3 flex items-center justify-center gap-3 flex-wra whitespace-nowrap">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4 -mt-1
+               flex items-baseline justify-center gap-3 flex-wrap md:flex-nowrap
+               whitespace-normal md:whitespace-nowrap leading-tight">
             <span>{t.home.welcome}</span>
+
             <img
               src={avatar}
               alt="Avatar"
-              className="h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white dark:border-dark-700 shadow-md"
+              className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full border-2 border-white dark:border-dark-700 shadow-md shrink-0 align-middle"
             />
-            <span className="text-transparent h-18.5 text-[66px] bg-clip-text bg-gradient-to-r p from-pink-500 to-red-500 drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">
+
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
               {t.home.name}
             </span>
           </h1>
-          <h2 className="text-6xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-2">
+
+          <h2 className="text-3xl sm:text-4xl md:text-[40px] font-extrabold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-2">
             <span>{t.home.rolePrefix}</span>
 
             <span
-              className="px-3 py-3 bg-gray-100 dark:bg-dark-700 rounded-xl shadow text-black dark:text-white transition-all duration-500 overflow-hidden inline-block max-w-full"
+              className="px-3 py-2 sm:py-3 bg-gray-100 dark:bg-dark-700 rounded-xl shadow text-black dark:text-white transition-all duration-500 overflow-hidden inline-block max-w-full"
               style={{ textAlign: "center" }}
             >
-              <span key={titleIndex} className="wipe-text inline-block">
+              <span key={titleIndex} className="wipe-text inline-block md:whitespace-nowrap">
                 {t.home.titles[titleIndex]}
               </span>
             </span>
           </h2>
 
-          <p className="text-lg text-gray-900 dark:text-gray-100 font-semibold mb-10 leading-relaxed mt-10.25">
+          <p className="text-base sm:text-lg text-gray-900 dark:text-gray-100 font-semibold mb-8 sm:mb-10 leading-relaxed mt-8 sm:mt-10.25 px-1 md:px-0">
             {t.home.description}
           </p>
 
-          <div className="flex justify-center gap-4 flex-wrap mt-19">
+          <div className="flex justify-center gap-3 sm:gap-4 flex-wrap mt-12 sm:mt-19">
             <button
               type="button"
               onClick={() => handleNavigate("/projects")}
-              className="bg-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-600 transition duration-300 shadow-md"
+              className="bg-pink-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-pink-600 transition duration-300 shadow-md"
             >
               {t.home.build}
             </button>
             <button
               type="button"
               onClick={() => handleNavigate("/about")}
-              className="bg-white dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-200 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-dark-600 transition duration-300 shadow-sm"
+              className="bg-white dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-200 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-dark-600 transition duration-300 shadow-sm"
             >
               {t.home.explore}
             </button>
@@ -193,7 +198,7 @@ function Home() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2">
           <button
             onClick={scrollToNext}
             className="group bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-dark-600"
