@@ -101,7 +101,7 @@ function Blog() {
           {filteredPosts.map((post, index) => (
             <article
               key={index}
-              onClick={() => navigate(`/blog/${slugify(post.title)}`)}
+              onClick={() => alert('Tính năng đang chuẩn bị cập nhật!')}
               className="group bg-white dark:bg-dark-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-3 hover:scale-105"
             >
               {/* Image Container */}

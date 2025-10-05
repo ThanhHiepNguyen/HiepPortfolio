@@ -3,10 +3,13 @@ import useLanguage from "../hooks/useLanguage.jsx";
 import avatar from "../assets/Hiep.jpg";
 import { MdOutlineEmojiPeople } from "react-icons/md";
 import { FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FiDownload, FiEye } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const about = t?.about || {};
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -87,6 +90,57 @@ function About() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* My CV Section */}
+          <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
+            <h2 className="text-lg font-bold mb-4 text-pink-600 dark:text-pink-400">
+              {t?.mycv?.title || (language === "vi" ? "CV của tôi" : "My CV")}
+            </h2>
+
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-24 h-32 bg-gray-100 dark:bg-dark-700 rounded-lg border-2 border-dashed border-gray-300 dark:border-dark-600 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-8 h-8 bg-pink-500 rounded mx-auto mb-2 flex items-center justify-center">
+                    <FiEye className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {t?.mycv?.previewText || "CV"}
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-gray-800 dark:text-white mb-1">
+                  {t?.mycv?.name || about.name}
+                </h3>
+
+              </div>
+
+              <div className="flex flex-col gap-2 w-full">
+                <button
+                  onClick={() => navigate("/mycv")}
+                  className="flex items-center justify-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-pink-600 transition duration-300 text-sm"
+                >
+                  <FiEye className="w-4 h-4" />
+                  {t?.mycv?.previewButton || (language === "vi" ? "Xem CV" : "Preview CV")}
+                </button>
+                <button
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/cv.pdf';
+                    link.download = 'CV_Hiep.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="flex items-center justify-center gap-2 bg-white dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-600 transition duration-300 text-sm"
+                >
+                  <FiDownload className="w-4 h-4" />
+                  {t?.mycv?.downloadButton || (language === "vi" ? "Tải PDF" : "Download PDF")}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 

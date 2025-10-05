@@ -33,3 +33,15 @@
   animation: wipeIn 0.4s ease-out forwards;
   transform-origin: left;
 }
+
+/* Prevent horizontal scrolling globally */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Add padding for fixed header */
+body {
+  padding-top: 120px;
+  /* Height of header */
+}

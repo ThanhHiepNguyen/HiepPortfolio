@@ -43,6 +43,9 @@ function normalizeTranslation(raw = {}) {
     home.titles = Array.isArray(home.titles) ? home.titles : Object.values(home.titles || {});
     clone.home = home;
 
+    // mycv
+    clone.mycv = clone.mycv || {};
+
     // portfolio
     clone.portfolio = clone.portfolio || {};
     const pf = clone.portfolio;
