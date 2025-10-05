@@ -168,12 +168,12 @@ function Header() {
 
             <button
               onClick={handleChangeLanguage}
-              className="focus:outline-none"
+              className="focus:outline-none flex items-center justify-center"
             >
               <img
                 src={language === "vi" ? enFlag : viFlag}
                 alt="Language Flag"
-                className="h-8 w-8 rounded-full"
+                className="h-7 w-7 md:h-8 md:w-8 rounded-full object-cover shrink-0 ring-1 ring-gray-200 dark:ring-dark-600"
               />
             </button>
 
@@ -257,12 +257,12 @@ function Header() {
                 </button>
                 <button
                   onClick={handleChangeLanguage}
-                  className="focus:outline-none"
+                  className="focus:outline-none flex items-center justify-center"
                 >
                   <img
                     src={language === "vi" ? viFlag : enFlag}
                     alt="Language Flag"
-                    className="h-6 w-6 rounded-full"
+                    className="h-6 w-6 rounded-full object-cover shrink-0 ring-1 ring-gray-200 dark:ring-dark-600"
                   />
                 </button>
               </div>
