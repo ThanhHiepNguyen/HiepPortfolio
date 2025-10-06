@@ -146,21 +146,24 @@ function Home() {
         </div>
         <div className="max-w-2xl w-full -mt-5 px-2 md:px-0">
           {/* Tiêu đề chính */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4 -mt-1
-               flex items-baseline justify-center gap-3 flex-wrap md:flex-nowrap
-               whitespace-normal md:whitespace-nowrap leading-tight">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-3.25 -mt-1
+             flex items-center justify-center gap-3 flex-wrap md:flex-nowrap
+             whitespace-normal md:whitespace-nowrap leading-tight"
+          >
             <span>{t.home.welcome}</span>
 
             <img
               src={avatar}
               alt="Avatar"
-              className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full border-2 border-white dark:border-dark-700 shadow-md shrink-0 align-middle"
+              className="h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full border-2 border-white dark:border-dark-700 shadow-md shrink-0"
             />
 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
               {t.home.name}
             </span>
           </h1>
+
 
           <h2 className="text-3xl sm:text-4xl md:text-[40px] font-extrabold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-2">
             <span>{t.home.rolePrefix}</span>
