@@ -32,6 +32,21 @@ function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasShadow(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(
@@ -87,7 +102,10 @@ function Header() {
     <>
       {isLoading && <LoadingScreen />}
 
-      <nav className="bg-white dark:bg-dark-950 text-gray-800 dark:text-gray-200 px-4 fixed top-0 left-0 right-0 z-50 shadow-md dark:shadow-dark-700">
+      <nav
+        className={`bg-white dark:bg-dark-950 text-gray-800 dark:text-gray-200 px-4 fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${hasShadow ? "shadow-md dark:shadow-dark-700" : "shadow-none"
+          }`}
+      >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
           <img
             src={logo}

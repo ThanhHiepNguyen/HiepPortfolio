@@ -56,7 +56,7 @@ function Collection() {
                   <div className="space-y-2">
                     {collection.items.map((item, index) => (
                       <div
-                        key={index}
+                        key={`${collection.id}-${item}-${index}`}
                         className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-dark-700 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors"
                       >
                         <div
@@ -85,7 +85,7 @@ function Collection() {
             <div className="flex justify-center space-x-4">
               {t.portfolio.comingSoon.tags.map((tag, index) => (
                 <div
-                  key={index}
+                  key={`${tag}-${index}`}
                   className="bg-pink-100 dark:bg-pink-900 px-4 py-2 rounded-lg"
                 >
                   <span className="text-pink-600 dark:text-pink-400 text-sm font-medium">

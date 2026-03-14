@@ -6,6 +6,9 @@ import { FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiDownload, FiEye } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
+const defaultSummary =
+  "Fresh Graduate Node.js Backend Developer with knowledge of RESTful APIs and databases, strong problem-solving skills, and a strong willingness to learn.";
+
 function About() {
   const { t, language } = useLanguage();
   const about = t?.about || {};
@@ -38,7 +41,7 @@ function About() {
         <div className="space-y-6">
           <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
             <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">About me</h2>
-            <p className="text-sm text-gray-700 dark:text-gray-300">{about.summary}</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">{about.summary || defaultSummary}</p>
           </div>
 
           <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
@@ -60,7 +63,7 @@ function About() {
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                  {about.Github}
+                  {about.github || "ThanhHiepNguyen"}
                 </a>
               </li>
             </ul>
@@ -73,7 +76,7 @@ function About() {
 
           <div className="bg-white dark:bg-dark-800 rounded-xl shadow p-5">
             <h2 className="text-lg font-bold mb-2 text-pink-600 dark:text-pink-400">Key Skills</h2>
-            {Object.entries(about.skills).map(([cat, list]) => (
+            {Object.entries(about.skills || {}).map(([cat, list]) => (
               <div key={cat} className="mb-2">
                 <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-1">
                   {cat}

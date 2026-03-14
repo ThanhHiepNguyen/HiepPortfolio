@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useLanguage from "../hooks/useLanguage.jsx";
 import avatar from "../assets/Hiep.jpg";
 import LoadingScreen from "../components/LoadingScreen";
-import { FaCalendarAlt, FaClock, FaArrowRight, FaBookOpen, FaGithub, FaExternalLinkAlt, FaEye, FaPhone, FaEnvelope, FaSkype, FaFacebookMessenger, FaChevronDown } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaArrowRight, FaBookOpen, FaPhone, FaEnvelope, FaSkype, FaFacebookMessenger, FaChevronDown } from "react-icons/fa";
 import "../assets/styles/Loader.css";
 
 function Home() {
@@ -11,7 +11,6 @@ function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [randomPosts, setRandomPosts] = useState([]);
-  const [randomProjects, setRandomProjects] = useState([]);
   const navigate = useNavigate();
 
   // Scroll to top khi component mount (F5/refresh)
@@ -35,14 +34,6 @@ function Home() {
       setRandomPosts(shuffled);
     }
   }, [t?.blog?.posts]);
-
-  // Random projects chỉ khi có data mới (F5/refresh)
-  useEffect(() => {
-    if (t?.projects?.items && t.projects.items.length > 0) {
-      const shuffled = [...t.projects.items].sort(() => Math.random() - 0.5).slice(0, 3);
-      setRandomProjects(shuffled);
-    }
-  }, [t?.projects?.items]);
 
   // Ngăn cuộn khi loading
   useEffect(() => {
@@ -97,52 +88,43 @@ function Home() {
         <LoadingScreen />
       </div>
 
+      {/* Hero Section */}
       <section
-        className={[
-          "relative min-h-screen flex flex-col items-center justify-start pt-[120px] px-4 text-center",
-
-          "bg-white",
-          "bg-[linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(0,0,0,0.06)_1px,transparent_1px)]",
-          "bg-[size:80px_80px]",
-          "dark:bg-black",
-          "dark:bg-[linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.12)_1px,transparent_1px)]",
-          "dark:bg-[size:80px_80px]",
-        ].join(" ")}
+        className="relative min-h-screen flex flex-col items-center justify-start pt-[120px] px-4 text-center bg-white dark:bg-black text-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(180deg, rgba(0,0,0,0.06) 1px, transparent 1px)",
+          backgroundSize: "80px 80px"
+        }}
       >
-        {/* Spotlight trung tâm */}
         <div
-          className="
-      absolute inset-0 z-0 pointer-events-none
-      bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]
-      dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_70%)]
-    "
-        />
-        <div
-          className="
-      absolute inset-0 z-0 pointer-events-none
-      bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.04)_75%)]
-      bg-[size:160px_160px]
-      dark:bg-[linear-gradient(135deg,rgba(255,255,255,0.05)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.05)_75%)]
-      dark:bg-[size:160px_160px]
-    "
-        />
-
-        <div
-          className="absolute inset-0 z-[-1] pointer-events-none"
+          className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            WebkitMaskImage:
-              "radial-gradient(ellipse at center, transparent 20%, black)",
-            maskImage:
-              "radial-gradient(ellipse at center, transparent 20%, black)",
-            backdropFilter: "blur(6px)",
-            WebkitBackdropFilter: "blur(6px)",
+            background:
+              "radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%)"
           }}
         />
-        <div className="pointer-events-none absolute inset-0 z-0">
-          <div className="absolute top-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-13 rounded-full" />
-          <div className="absolute top-[-200px] right-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-10 rounded-full" />
-          <div className="absolute bottom-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-2xl opacity-10 rounded-full" />
-          <div className="absolute bottom-[-200px] right-[-200px] w-96 h-96 bg-gray-300 dark:bg-dark-500 blur-2xl opacity-10 rounded-full" />
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%), linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%)",
+            backgroundSize: "160px 160px",
+            opacity: 0.6
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0 z-[-1]"
+          style={{
+            maskImage: "radial-gradient(transparent 20%, black)",
+            backdropFilter: "blur(6px)"
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 z-[-2]">
+          <div className="absolute top-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-30 rounded-full" />
+          <div className="absolute top-[-200px] right-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-20 rounded-full" />
+          <div className="absolute bottom-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-2xl opacity-20 rounded-full" />
+          <div className="absolute bottom-[-200px] right-[-200px] w-96 h-96 bg-gray-300 dark:bg-dark-500 blur-2xl opacity-20 rounded-full" />
         </div>
         <div className="max-w-2xl w-full -mt-5 px-2 md:px-0">
           {/* Tiêu đề chính */}
@@ -198,26 +180,25 @@ function Home() {
               {t.home.explore}
             </button>
           </div>
-        </div>
-
-        {/* Scroll Down Indicator */}
-        <div className="absolute bottom-10 sm:bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2">
-          <button
-            onClick={scrollToNext}
-            className="group bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-dark-600"
-            aria-label={language === "vi" ? "Cuộn xuống" : "Scroll down"}
-          >
-            <div className="flex flex-col items-center text-gray-700 dark:text-gray-300">
-              <FaChevronDown className="w-5 h-5 animate-bounce" style={{ animationDelay: '0ms' }} />
-              <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-70" style={{ animationDelay: '150ms' }} />
-              <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-40" style={{ animationDelay: '300ms' }} />
-            </div>
-          </button>
+          {/* Scroll Down Indicator */}
+          <div className="absolute bottom-4 sm:bottom-8 md:bottom-35 left-1/2 transform -translate-x-1/2">
+            <button
+              onClick={scrollToNext}
+              className="group bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-dark-600"
+              aria-label={language === "vi" ? "Cuộn xuống" : "Scroll down"}
+            >
+              <div className="flex flex-col items-center text-gray-700 dark:text-gray-300">
+                <FaChevronDown className="w-5 h-5 animate-bounce" style={{ animationDelay: '0ms' }} />
+                <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-70" style={{ animationDelay: '150ms' }} />
+                <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-40" style={{ animationDelay: '300ms' }} />
+              </div>
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Blog Posts Section */}
-      <section className="blog-section bg-gray-50 dark:bg-dark-900 py-20">
+      <section className="blog-section py-20 bg-white dark:bg-dark-900">
         <div className="max-w-7xl mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
@@ -323,167 +304,56 @@ function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="bg-white dark:bg-dark-900 py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full mb-6">
-              <FaGithub className="text-blue-600 dark:text-blue-400" />
-              <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                {language === "vi" ? "Dự án nổi bật" : "Featured Projects"}
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {language === "vi" ? "Dự án của tôi" : "My Projects"}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              {language === "vi"
-                ? "Khám phá các dự án web development và ứng dụng tôi đã thực hiện"
-                : "Explore web development projects and applications I've built"
-              }
-            </p>
-          </div>
-
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {randomProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 hover:opacity-100 transition-opacity duration-300 flex space-x-4">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white dark:bg-dark-700 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors"
-                      >
-                        <FaGithub className="text-gray-800 dark:text-gray-200 text-xl" />
-                      </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white dark:bg-dark-700 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-dark-600 transition-colors"
-                      >
-                        <FaExternalLinkAlt className="text-gray-800 dark:text-gray-200 text-xl" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.slice(0, 4).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 bg-gray-900 dark:bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors text-sm font-medium"
-                    >
-                      <FaGithub />
-                      {language === "vi" ? "Code" : "Code"}
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium"
-                    >
-                      <FaEye />
-                      {language === "vi" ? "Demo" : "Live Demo"}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* View All Button */}
-          <div className="text-center mt-12">
-            <button
-              onClick={() => handleNavigate("/projects")}
-              className="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300 shadow-md"
-            >
-              {language === "vi" ? "Xem tất cả dự án" : "View All Projects"}
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="bg-gray-50 dark:bg-dark-900 py-20">
+      <section className="py-20 bg-white dark:bg-dark-900">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t?.contact?.title || (language === "vi" ? "Liên hệ" : "Get In Touch")}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               {t?.contact?.description || (language === "vi" ? "Hãy thoải mái liên hệ với tôi" : "Feel free to get in touch")}
             </p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="grid gap-8 lg:grid-cols-5">
+            <div className="lg:col-span-2 space-y-6">
+              <div className="rounded-3xl border border-gray-200 dark:border-dark-700 bg-white/90 dark:bg-dark-900/70 p-6 shadow-xl backdrop-blur">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {t?.contact?.availability?.label || (language === "vi" ? "Gọi cho tôi" : "Call me")}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {t?.contact?.availability?.time || (language === "vi" ? "Làm việc từ 8:00 sáng đến 5:00 chiều" : "Available from 8:00am to 5:00pm")}
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="bg-pink-100 dark:bg-pink-900 p-3 rounded-lg">
+                  <div className="bg-pink-100 dark:bg-pink-900 p-3 rounded-2xl">
                     <FaPhone className="text-pink-600 dark:text-pink-400 text-xl" />
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-300 text-lg">
                     {t?.contact?.availability?.phone || "(+84) 393 048 626"}
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="rounded-3xl border border-gray-200 dark:border-dark-700 bg-white/90 dark:bg-dark-900/70 p-6 shadow-xl backdrop-blur">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {t?.contact?.chat?.label || (language === "vi" ? "Trò chuyện với tôi" : "Chat with me")}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {t?.contact?.chat?.message || (language === "vi" ? "Gửi tin nhắn cho tôi qua mạng xã hội" : "Send me a message on social media")}
                 </p>
-
                 <div className="space-y-3">
                   {Object.values(t?.contact?.chat?.options || {}).map((opt, idx) => {
-                    const Icon = opt.icon === "FaSkype" ? FaSkype :
-                      opt.icon === "FaFacebookMessenger" ? FaFacebookMessenger : FaEnvelope;
+                    const Icon =
+                      opt.icon === "FaSkype" ? FaSkype :
+                        opt.icon === "FaFacebookMessenger" ? FaFacebookMessenger :
+                          FaEnvelope;
                     return (
-                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors">
+                      <div
+                        key={idx}
+                        className="flex items-center gap-3 p-3 rounded-2xl bg-gray-50 dark:bg-dark-800 hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
+                      >
                         <div className="bg-pink-100 dark:bg-pink-900 p-2 rounded-lg">
-                          <Icon className="text-pink-600 dark:text-pink-400" />
+                          <Icon className="text-pink-600 dark:text-pink-300" />
                         </div>
                         <span className="text-gray-700 dark:text-gray-300">
                           {opt.text}
@@ -495,69 +365,70 @@ function Home() {
               </div>
             </div>
 
-            {/* Quick Contact Form */}
-            <div className="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                {t?.contact?.form?.title || (language === "vi" ? "Biểu mẫu liên hệ" : "Contact Form")}
-              </h3>
+            <div className="lg:col-span-3">
+              <div className="rounded-3xl border border-pink-200/80 dark:border-pink-900/60 bg-white/90 dark:bg-dark-900/70 p-8 shadow-2xl backdrop-blur">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                  {t?.contact?.form?.title || (language === "vi" ? "Biểu mẫu liên hệ" : "Contact Form")}
+                </h3>
 
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                        {t?.contact?.form?.firstName || (language === "vi" ? "Họ" : "First name")}*
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors dark:bg-dark-700 dark:text-white"
+                        placeholder={t?.contact?.form?.firstName || (language === "vi" ? "Họ" : "First name")}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
+                        {t?.contact?.form?.lastName || (language === "vi" ? "Tên" : "Last name")}*
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors dark:bg-dark-700 dark:text-white"
+                        placeholder={t?.contact?.form?.lastName || (language === "vi" ? "Tên" : "Last name")}
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                      {t?.contact?.form?.firstName || (language === "vi" ? "Họ" : "First name")}*
+                      {t?.contact?.form?.email || (language === "vi" ? "Email" : "Email")}*
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors dark:bg-dark-700 dark:text-white"
-                      placeholder={t?.contact?.form?.firstName || (language === "vi" ? "Họ" : "First name")}
+                      placeholder="your.email@example.com"
                     />
                   </div>
+
                   <div>
                     <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                      {t?.contact?.form?.lastName || (language === "vi" ? "Tên" : "Last name")}*
+                      {t?.contact?.form?.message || (language === "vi" ? "Tin nhắn" : "Message")}*
                     </label>
-                    <input
-                      type="text"
-                      className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors dark:bg-dark-700 dark:text-white"
-                      placeholder={t?.contact?.form?.lastName || (language === "vi" ? "Tên" : "Last name")}
+                    <textarea
+                      rows="4"
+                      className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors resize-none dark:bg-dark-700 dark:text-white"
+                      placeholder={language === "vi" ? "Để lại tin nhắn..." : "Leave me a message..."}
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                    {t?.contact?.form?.email || (language === "vi" ? "Email" : "Email")}*
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors dark:bg-dark-700 dark:text-white"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
-                    {t?.contact?.form?.message || (language === "vi" ? "Tin nhắn" : "Message")}*
-                  </label>
-                  <textarea
-                    rows="4"
-                    className="w-full p-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors resize-none dark:bg-dark-700 dark:text-white"
-                    placeholder={language === "vi" ? "Để lại tin nhắn..." : "Leave me a message..."}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigate("/contact");
-                  }}
-                  className="w-full bg-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-600 transition-colors duration-300"
-                >
-                  {t?.contact?.form?.submit || (language === "vi" ? "Gửi" : "Send message")}
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigate("/contact");
+                    }}
+                    className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-6 rounded-full font-semibold hover:from-pink-600 hover:to-pink-700 transition-colors duration-300"
+                  >
+                    {t?.contact?.form?.submit || (language === "vi" ? "Gửi" : "Send message")}
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

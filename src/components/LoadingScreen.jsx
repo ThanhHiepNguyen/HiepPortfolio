@@ -3,7 +3,7 @@ import "../assets/styles/Loader.css";
 
 export default function LoadingScreen() {
   return (
-    <div className="fixed inset-0 bg-black dark:bg-dark-900 bg-opacity-60 dark:bg-opacity-80 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black dark:bg-dark-900 bg-opacity-60 dark:bg-opacity-80 flex items-center justify-center z-[9999]">
       <div className="loader">
         <img
           src={avatar}
