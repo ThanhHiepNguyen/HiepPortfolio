@@ -69,6 +69,26 @@ function Home() {
     });
   };
 
+  const estimateReadingTime = (text = "") => {
+    const words = text.trim().split(/\s+/).filter(Boolean).length;
+    return `${Math.max(3, Math.ceil(words / 200))} min read`;
+  };
+
+  const slugify = (text = "") =>
+    text
+      .toString()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
+
+  const featuredBlogPost = randomPosts[0];
+  const sideBlogPosts = randomPosts.slice(1, 3);
+  const gridBlogPosts = randomPosts.slice(3, 6);
+
   const scrollToNext = () => {
     const blogSection = document.querySelector('.blog-section');
     if (blogSection) {
@@ -89,111 +109,92 @@ function Home() {
       </div>
 
       {/* Hero Section */}
-      <section
-        className="relative min-h-screen flex flex-col items-center justify-start pt-[120px] px-4 text-center bg-white dark:bg-black text-center overflow-hidden"
-        style={{
-          backgroundImage:
-            "linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(180deg, rgba(0,0,0,0.06) 1px, transparent 1px)",
-          backgroundSize: "80px 80px"
-        }}
-      >
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%)"
-          }}
-        />
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%), linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%)",
-            backgroundSize: "160px 160px",
-            opacity: 0.6
-          }}
-        />
-        <div
-          className="pointer-events-none absolute inset-0 z-[-1]"
-          style={{
-            maskImage: "radial-gradient(transparent 20%, black)",
-            backdropFilter: "blur(6px)"
-          }}
-        />
-        <div className="pointer-events-none absolute inset-0 z-[-2]">
-          <div className="absolute top-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-30 rounded-full" />
-          <div className="absolute top-[-200px] right-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-3xl opacity-20 rounded-full" />
-          <div className="absolute bottom-[-200px] left-[-200px] w-96 h-96 bg-gray-400 dark:bg-dark-600 blur-2xl opacity-20 rounded-full" />
-          <div className="absolute bottom-[-200px] right-[-200px] w-96 h-96 bg-gray-300 dark:bg-dark-500 blur-2xl opacity-20 rounded-full" />
-        </div>
-        <div className="max-w-2xl w-full -mt-5 px-2 md:px-0">
-          {/* Tiêu đề chính */}
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-3.25 -mt-1
-             flex items-center justify-center gap-3 flex-wrap md:flex-nowrap
-             whitespace-normal md:whitespace-nowrap leading-tight"
-          >
-            <span>{t.home.welcome}</span>
+      <section className="relative min-h-screen pt-[120px] px-4 bg-white dark:bg-dark-900 overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(59,130,246,0.06)_1px,transparent_1px),linear-gradient(rgba(59,130,246,0.06)_1px,transparent_1px)] bg-[size:72px_72px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(236,72,153,0.09),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.09),transparent_38%)]" />
 
-            <img
-              src={avatar}
-              alt="Avatar"
-              className="h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full border-2 border-white dark:border-dark-700 shadow-md shrink-0"
-            />
-
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
-              {t.home.name}
-            </span>
-          </h1>
-
-
-          <h2 className="text-3xl sm:text-4xl md:text-[40px] font-extrabold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-2">
-            <span>{t.home.rolePrefix}</span>
-
-            <span
-              className="px-3 py-2 sm:py-3 bg-gray-100 dark:bg-dark-700 rounded-xl shadow text-black dark:text-white transition-all duration-500 overflow-hidden inline-block max-w-full"
-              style={{ textAlign: "center" }}
-            >
-              <span key={titleIndex} className="wipe-text inline-block md:whitespace-nowrap">
-                {t.home.titles[titleIndex]}
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+          <div className="text-left">
+            <p className="text-xs uppercase tracking-[0.35em] text-pink-500 font-semibold mb-4">
+              {language === "vi" ? "Portfolio Cá Nhân" : "Personal Portfolio"}
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
+              <span>{t.home.welcome} </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
+                {t.home.name}
               </span>
-            </span>
-          </h2>
+            </h1>
 
-          <p className="text-base sm:text-lg text-gray-900 dark:text-gray-100 font-semibold mb-8 sm:mb-10 leading-relaxed mt-8 sm:mt-10.25 px-1 md:px-0">
-            {t.home.description}
-          </p>
+            <h2 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white flex items-center gap-2 flex-wrap">
+              <span>{t.home.rolePrefix}</span>
+              <span className="px-6 py-1.5 bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-xl shadow-sm">
+                <span key={titleIndex} className="wipe-text inline-block">
+                  {t.home.titles[titleIndex]}
+                </span>
+              </span>
+            </h2>
 
-          <div className="flex justify-center gap-3 sm:gap-4 flex-wrap mt-12 sm:mt-19">
-            <button
-              type="button"
-              onClick={() => handleNavigate("/projects")}
-              className="bg-pink-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-pink-600 transition duration-300 shadow-md"
-            >
-              {t.home.build}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleNavigate("/about")}
-              className="bg-white dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-200 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-dark-600 transition duration-300 shadow-sm"
-            >
-              {t.home.explore}
-            </button>
+            <p className="mt-7 text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-2xl leading-relaxed bg-white/70 dark:bg-dark-800/60 border border-gray-200 dark:border-dark-700 rounded-2xl p-5 backdrop-blur-sm">
+              {t.home.description}
+            </p>
+
+            <div className="mt-10 flex gap-3 sm:gap-4 flex-wrap">
+              <button
+                type="button"
+                onClick={() => handleNavigate("/projects")}
+                className="bg-pink-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-pink-600 transition duration-300 shadow-md"
+              >
+                {t.home.build}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleNavigate("/about")}
+                className="bg-white dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-200 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-dark-600 transition duration-300 shadow-sm"
+              >
+                {t.home.explore}
+              </button>
+            </div>
           </div>
-          {/* Scroll Down Indicator */}
-          <div className="absolute bottom-4 sm:bottom-8 md:bottom-35 left-1/2 transform -translate-x-1/2">
-            <button
-              onClick={scrollToNext}
-              className="group bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-dark-600"
-              aria-label={language === "vi" ? "Cuộn xuống" : "Scroll down"}
-            >
-              <div className="flex flex-col items-center text-gray-700 dark:text-gray-300">
-                <FaChevronDown className="w-5 h-5 animate-bounce" style={{ animationDelay: '0ms' }} />
-                <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-70" style={{ animationDelay: '150ms' }} />
-                <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-40" style={{ animationDelay: '300ms' }} />
+
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-r from-blue-500/20 to-cyan-500/15 blur-2xl" />
+              <div className="relative w-[360px] md:w-[460px] bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-[2rem] p-5 md:p-6 shadow-xl">
+                <div className="w-full h-[320px] md:h-[360px] rounded-2xl bg-gray-50 dark:bg-dark-700 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={avatar}
+                    alt="Avatar"
+                    className="max-w-full max-h-full rounded-2xl object-contain"
+                  />
+                </div>
+                <div className="mt-4 pt-4 px-2 border-t border-gray-200 dark:border-dark-700 text-center">
+                  <p className="text-[11px] uppercase tracking-[0.28em] text-gray-500 dark:text-gray-400">
+                    {language === "vi" ? "Vai trò chính" : "Primary Focus"}
+                  </p>
+                  <p className="mt-2 text-[22px] leading-tight font-semibold text-gray-900 dark:text-white whitespace-normal">
+                    {language === "vi"
+                      ? "Full-Stack Developer (Node.js, NestJS, ReactJS)"
+                      : "Full-Stack Developer (Node.js, NestJS, ReactJS)"}
+                  </p>
+                </div>
               </div>
-            </button>
+            </div>
           </div>
+        </div>
+
+        {/* Scroll Down Indicator */}
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <button
+            onClick={scrollToNext}
+            className="group bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-dark-600"
+            aria-label={language === "vi" ? "Cuộn xuống" : "Scroll down"}
+          >
+            <div className="flex flex-col items-center text-gray-700 dark:text-gray-300">
+              <FaChevronDown className="w-5 h-5 animate-bounce" style={{ animationDelay: "0ms" }} />
+              <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-70" style={{ animationDelay: "150ms" }} />
+              <FaChevronDown className="w-5 h-5 -mt-1 animate-bounce opacity-40" style={{ animationDelay: "300ms" }} />
+            </div>
+          </button>
         </div>
       </section>
 
@@ -219,77 +220,66 @@ function Home() {
             </p>
           </div>
 
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {randomPosts.map((post, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {featuredBlogPost && (
               <article
-                key={index}
-                onClick={() => alert('Tính năng đang chuẩn bị cập nhật!')}
-                className="group bg-white dark:bg-dark-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-2"
+                onClick={() => handleNavigate(`/blog/${slugify(featuredBlogPost.title)}`)}
+                className="group lg:col-span-7 bg-white dark:bg-dark-800 rounded-3xl border border-gray-100 dark:border-dark-700 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
               >
-                {/* Image Container */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-72 md:h-96 bg-gray-100 dark:bg-dark-700 overflow-hidden">
                   <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-contain bg-gray-100 dark:bg-dark-700 transition-transform duration-700 group-hover:scale-110"
+                    src={featuredBlogPost.image}
+                    alt={featuredBlogPost.title}
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-pink-500 text-white text-xs font-semibold rounded-full shadow-lg">
-                      {post.category.split(" ")[0]}
+                  <div className="absolute top-5 left-5">
+                    <span className="px-3 py-1 bg-pink-500 text-white text-xs font-semibold rounded-full shadow">
+                      {featuredBlogPost.category.split(" ")[0]}
                     </span>
-                  </div>
-
-                  {/* Read More Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white dark:bg-dark-700 px-6 py-3 rounded-full shadow-lg flex items-center gap-2">
-                      <span className="text-sm font-medium text-gray-900 dark:text-white">
-                        {language === "vi" ? "Đọc thêm" : "Read More"}
-                      </span>
-                      <FaArrowRight className="text-pink-500 text-sm" />
-                    </div>
                   </div>
                 </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  {/* Date and Reading Time */}
-                  <div className="flex items-center gap-4 mb-4 text-xs text-gray-500 dark:text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <FaCalendarAlt />
-                      <span>{formatDate(post.date)}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <FaClock />
-                      <span>5 min read</span>
-                    </div>
+                <div className="p-7">
+                  <div className="flex items-center gap-4 mb-3 text-xs text-gray-500 dark:text-gray-400">
+                    <span className="inline-flex items-center gap-1"><FaCalendarAlt />{formatDate(featuredBlogPost.date)}</span>
+                    <span className="inline-flex items-center gap-1"><FaClock />{estimateReadingTime(featuredBlogPost.content || featuredBlogPost.summary || "")}</span>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">
-                    {post.title}
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
+                    {featuredBlogPost.title}
                   </h3>
-
-                  {/* Summary */}
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 leading-relaxed">
-                    {post.summary}
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-3">
+                    {featuredBlogPost.summary}
                   </p>
-
-                  {/* Category */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-900/20 px-3 py-1 rounded-full">
-                      {post.category.split(" ").slice(0, 2).join(" ")}
-                    </span>
-                    <div className="w-8 h-8 bg-pink-100 dark:bg-pink-900 rounded-full flex items-center justify-center group-hover:bg-pink-500 transition-colors duration-300">
-                      <FaArrowRight className="text-pink-500 group-hover:text-white text-xs transition-colors duration-300" />
-                    </div>
-                  </div>
                 </div>
               </article>
-            ))}
+            )}
+
+            <div className="lg:col-span-5 bg-white dark:bg-dark-800 rounded-3xl border border-gray-100 dark:border-dark-700 shadow-lg p-3 md:p-4">
+              <div className="space-y-3">
+                {randomPosts.slice(1, 6).map((post, index) => (
+                  <article
+                    key={`${post.title}-${index}`}
+                    onClick={() => handleNavigate(`/blog/${slugify(post.title)}`)}
+                    className="group grid grid-cols-[110px_1fr_auto] items-center gap-3 rounded-2xl p-2 hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors cursor-pointer"
+                  >
+                    <div className="h-20 rounded-xl overflow-hidden bg-gray-100 dark:bg-dark-700">
+                      <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-1 inline-flex items-center gap-1">
+                        <FaCalendarAlt />
+                        {formatDate(post.date)}
+                      </p>
+                      <h4 className="text-sm md:text-base font-semibold text-gray-900 dark:text-white line-clamp-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
+                        {post.title}
+                      </h4>
+                    </div>
+                    <div className="w-8 h-8 bg-pink-100 dark:bg-pink-900 rounded-full flex items-center justify-center group-hover:bg-pink-500 transition-colors">
+                      <FaArrowRight className="text-pink-500 group-hover:text-white text-xs transition-colors" />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* View All Button */}

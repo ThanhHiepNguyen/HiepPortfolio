@@ -1,0 +1,1334 @@
+{
+  "HiepProfile": {
+    "i18n": {
+      "en": {
+        "about": {
+          "avatar": "../assets/Hiep.jpg",
+          "education": "University of Transport Ho Chi Minh City",
+          "email": "nhiep3445@gmail.com",
+          "github": "ThanhHiepNguyen",
+          "major": "Information Technology",
+          "name": "Thanh Hiep Nguyen",
+          "phone": "(+84) 393048626",
+          "quote": "Be the best version of yourself.",
+          "skills": {
+            "databases": {
+              "-d1": "PostgreSQL",
+              "-d2": "MySQL"
+            },
+            "frameworks": {
+              "-f1": "Tailwind CSS",
+              "-f2": "Node.js",
+              "-f3": "React.js",
+              "-f4": "Bootstrap"
+            },
+            "languages": {
+              "-l1": "Javascript",
+              "-l2": "Java",
+              "-l3": "C++"
+            },
+            "others": {
+              "-o1": "Vietnamese",
+              "-o2": "English"
+            }
+          },
+          "summary": "I'm a passionate web developer who enjoys building modern web applications. I love working with React, Tailwind CSS, and constantly exploring new technologies.",
+          "timeline": {
+            "-tm1": {
+              "major": "Information Technology",
+              "role": "Undergraduate Student",
+              "school": "University of Transport Ho Chi Minh City",
+              "year": "2022 - Present"
+            },
+            "-tm2": {
+              "role": "High School Student",
+              "school": "Ngo Le Tan High School",
+              "year": "2019 - 2022"
+            },
+            "-tm3": {
+              "role": "Secondary School Student",
+              "school": "Cat Thanh Secondary School",
+              "year": "2015 - 2019"
+            },
+            "-tm4": {
+              "role": "Primary School Student",
+              "school": "Chanh Thang Primary School",
+              "year": "2010 - 2015"
+            }
+          }
+        },
+        "blog": {
+          "description": "Sharing my experiences and knowledge about technology and software development.",
+          "posts": {
+            "-bp1": {
+              "category": "ReactJS Roadmap, Frontend Development, JavaScript",
+              "content": "# 🚀 Learn React in 30 Days – A Complete Roadmap for Beginners to Advanced\n\n## 🧠 Introduction\n\nReactJS is one of the most popular libraries for building modern user interfaces. It powers everything from personal portfolios to enterprise dashboards.\n\nIf you are confused about where to start, this roadmap helps you learn React step by step in 30 days.\n\nBy the end, you will know how to build and deploy a real React application.\n\n---\n\n## 📅 Week 1: Build the Foundation\n\n### What to learn\n- React basics and Virtual DOM\n- JSX syntax\n- Functional components\n- Props and component composition\n- Event handling\n\n### Practice ideas\n- Build a profile card component\n- Create a reusable button component\n- Build a simple navigation header\n\n✅ Goal: Understand how React components render and communicate.\n\n---\n\n## ⚙️ Week 2: Core React Skills\n\n### What to learn\n- useState for local state\n- useEffect for side effects\n- Conditional rendering\n- Rendering lists and using keys\n- Controlled forms\n\n### Practice ideas\n- Counter app with increment/decrement\n- To-do list with add/delete\n- Search filter input\n\n✅ Goal: Build interactive UI and handle user input confidently.\n\n---\n\n## 🔗 Week 3: Intermediate to Advanced\n\n### What to learn\n- React Router for SPA navigation\n- Context API for global state\n- Custom hooks for reusable logic\n- Performance basics (memo, useMemo, useCallback)\n\n### Practice ideas\n- Multi-page app with protected routes\n- Theme switcher with Context API\n- Custom hook for form handling\n\n✅ Goal: Structure larger React apps with reusable and scalable code.\n\n---\n\n## 🌐 Week 4: Real-World Development\n\n### What to learn\n- Fetching APIs with async/await\n- Loading and error states\n- Authentication basics\n- Project folder architecture\n- Deployment with Vercel/Netlify\n\n### Practice ideas\n- Product list page from public API\n- Login flow with token storage\n- Deploy production build\n\n✅ Goal: Build and deploy a complete project.\n\n---\n\n## 🛠️ Final Project: Task Management App\n\nCore features:\n- Add, edit, delete tasks\n- Mark tasks as done\n- Filter tasks by status\n- Save data to localStorage or backend API\n\nBonus features:\n- Authentication\n- Dark mode\n- Drag and drop\n\n---\n\n## 💡 Learning Tips\n\n- Practice daily (2–3 focused hours)\n- Build mini projects, not only tutorials\n- Read official docs regularly\n- Debug errors instead of skipping them\n\n---\n\n## 🚨 Common Mistakes\n\n- Learning theory without coding\n- Ignoring JavaScript fundamentals\n- Copying code without understanding why it works\n\n---\n\n## 🎯 Conclusion\n\nLearning React in 30 days is realistic if you stay consistent.\n\nAfter this roadmap, you should be able to:\n- Build component-based UI\n- Manage state and routing\n- Integrate APIs\n- Deploy real projects\n\n### Next steps\n- Next.js\n- TypeScript\n- Backend with Node.js/NestJS\n\n👉 Keep building, keep shipping.",
+              "date": "07/31/2025",
+              "image": "/images/React_30days.png",
+              "summary": "A complete 30-day roadmap to master React from basics to advanced and build real-world applications.",
+              "title": "Learn React in 30 Days"
+            },
+            "-bp10": {
+              "category": "Git, Version Control, Development Workflow",
+              "content": "# 🌿 Basic Git Guide – From Commands to Real-World Workflow\n\n## 🧠 Introduction\n\nGit is one of the most essential tools for developers. It helps you track changes, collaborate with teams, and manage code professionally.\n\n---\n\n## 🚀 What is Git?\n\nGit is a distributed version control system.\n\nIt helps you:\n- Save versions of code\n- Collaborate with others\n- Roll back safely when issues happen\n\n---\n\n## 🔹 Basic Workflow\n\n`Working Directory -> Staging -> Repository`\n\n---\n\n## 🔹 Essential Commands\n\n- `git init`\n- `git clone <repo>`\n- `git status`\n- `git add .`\n- `git commit -m \"feat: ...\"`\n- `git push origin main`\n- `git pull origin main`\n\n---\n\n## 🔹 Branching\n\n- Create: `git checkout -b feature/login`\n- Switch: `git checkout main`\n- Merge: `git merge feature/login`\n\nUse branches for each feature to keep `main` stable.\n\n---\n\n## 🔹 Conflict Resolution\n\nWhen conflicts happen:\n1. Open conflicted files\n2. Resolve manually\n3. Commit again\n\n---\n\n## 🔹 .gitignore\n\nIgnore unnecessary files:\n\n```text\nnode_modules\n.env\n```\n\n---\n\n## 🔹 Commit Convention\n\nUse clear commit prefixes:\n- `feat`\n- `fix`\n- `refactor`\n\nExample:\n\n`git commit -m \"feat(auth): add JWT login\"`\n\n---\n\n## 🔹 Team Workflow\n\n1. Create branch\n2. Implement feature\n3. Commit + push\n4. Open Pull Request\n5. Review + merge\n\n---\n\n## 🚨 Common Mistakes\n\n- Committing secrets\n- Working directly on `main`\n- Vague commit messages\n\n---\n\n## 🎯 Conclusion\n\nGit is not just commands, it is a collaboration workflow. Mastering Git helps you work faster and safer in real projects.\n",
+              "date": "07/31/2025",
+              "image": "/images/Git.png",
+              "summary": "A complete guide to Git, covering essential commands, branching strategies, and real-world collaboration workflows.",
+              "title": "Basic Git Guide"
+            },
+            "-bp11": {
+              "category": "React, Setup, Frontend Development",
+              "content": "# 💻 Creating a React Project in VSCode – From Setup to Professional Workflow\n\n## 🧠 Introduction\n\nStarting React is easy, but setting it up professionally makes your project scalable and maintainable.\n\n---\n\n## 🚀 Prerequisites\n\n- Node.js >= 18\n- npm or yarn\n- VSCode\n\n---\n\n## 🔹 Choose Tooling\n\nUse **Vite** instead of CRA for speed and modern DX.\n\n```bash\nnpm create vite@latest my-app\ncd my-app\nnpm install\nnpm run dev\n```\n\n---\n\n## 🔹 Suggested Project Structure\n\n```text\nsrc/\n ├── components/\n ├── pages/\n ├── hooks/\n ├── services/\n ├── utils/\n ├── assets/\n └── App.jsx\n```\n\n---\n\n## 🔹 Install Core Dependencies\n\n```bash\nnpm install react-router-dom axios\n```\n\nOptional:\n\n```bash\nnpm install @reduxjs/toolkit react-redux\n```\n\n---\n\n## 🔹 Setup Routing\n\nUse `react-router-dom` with `BrowserRouter`, `Routes`, and `Route`.\n\n---\n\n## 🔹 Environment Variables\n\nCreate `.env`:\n\n```text\nVITE_API_URL=http://localhost:3000\n```\n\nUse in code:\n\n`import.meta.env.VITE_API_URL`\n\n---\n\n## 🔹 VSCode Extensions\n\n- ES7+ React Snippets\n- Prettier\n- ESLint\n- Tailwind CSS IntelliSense\n\n---\n\n## 🔹 Code Quality\n\nSet up ESLint + Prettier to keep style consistent and reduce bugs.\n\n---\n\n## 🔹 API Layer Best Practice\n\nCreate centralized `axios` instance in `services/`.\n\n---\n\n## 🔹 Build & Deploy\n\n```bash\nnpm run build\n```\n\nDeploy to Vercel or Netlify.\n\n---\n\n## 🚨 Common Mistakes\n\n- Poor folder structure\n- Hardcoded API URLs\n- Missing env config\n- Ignoring linting\n\n---\n\n## 🎯 Conclusion\n\nA professional setup gives your React project a strong foundation for team collaboration and long-term growth.\n",
+              "date": "07/31/2025",
+              "image": "/images/React_vscode.png",
+              "summary": "A complete guide to setting up a professional React development environment using VSCode, modern tools, and best practices.",
+              "title": "Creating a React Project in VSCode"
+            },
+            "-bp2": {
+              "category": "Performance, Web Optimization, Frontend",
+              "content": "# ⚡ Website Performance Optimization – A Complete Guide\n\n## 🧠 Introduction\n\nIn modern web development, performance is no longer optional — it is a core requirement. Users expect websites to load instantly, and even a delay of a few seconds can significantly impact engagement and conversion rates.\n\nStudies show that:\n- 53% of users leave a website if it takes more than 3 seconds to load\n- Faster websites rank higher on Google\n\nThis guide will walk you through advanced techniques to optimize your website performance.\n\n---\n\n## 🚀 Understanding Performance Metrics\n\nBefore optimizing, you need to measure.\n\n### Core Web Vitals:\n- LCP (Largest Contentful Paint)\n- FID (First Input Delay)\n- CLS (Cumulative Layout Shift)\n\nThese metrics directly impact SEO ranking.\n\n---\n\n## 🖼️ Image Optimization\n\nImages are the largest assets on most websites.\n\n### Best Practices:\n- Use modern formats (WebP, AVIF)\n- Compress images\n- Use responsive images\n\n```html\n<img src=\"image.webp\" loading=\"lazy\" />\n```\n\nLazy loading ensures images load only when needed.\n\n---\n\n## 📦 Code Splitting & Lazy Loading\n\nInstead of loading all JavaScript at once, split your code.\n\n```js\nconst Page = React.lazy(() => import('./Page'));\n```\n\nBenefits:\n- Faster initial load\n- Better user experience\n\n---\n\n## 🧹 Remove Unused Code\n\nDead code increases bundle size.\n\nTools:\n- Tree shaking\n- PurgeCSS\n\n---\n\n## 🌐 Use CDN\n\nA Content Delivery Network distributes assets globally.\n\nBenefits:\n- Reduced latency\n- Faster content delivery\n\n---\n\n## 🧠 Caching Strategies\n\n### Types of caching:\n- Browser caching\n- Server caching\n- API caching\n\nExample:\n\n```http\nCache-Control: public, max-age=31536000\n```\n\n---\n\n## ⚙️ Backend Optimization\n\nPerformance is not just frontend.\n\n- Optimize database queries\n- Use indexing\n- Implement pagination\n\n---\n\n## 🔍 Performance Tools\n\n- Lighthouse\n- PageSpeed Insights\n- WebPageTest\n\n---\n\n## 🚨 Common Mistakes\n\n- Loading large images\n- Blocking JS\n- Too many API calls\n\n---\n\n## 🎯 Conclusion\n\nPerformance optimization is a continuous process.\n\nA fast website not only improves user experience but also increases SEO ranking and business success.\n",
+              "date": "07/31/2025",
+              "image": "/images/TUHW.png",
+              "summary": "A deep dive into optimizing website performance for speed, SEO, and user experience.",
+              "title": "Website Performance Optimization"
+            },
+            "-bp3": {
+              "category": "Docker, DevOps, Backend",
+              "content": "# 🐳 Beginner’s Guide to Docker – From Zero to Production\n\n## 🧠 Introduction\n\nOne of the biggest problems developers face is environment inconsistency:\n\n\"It works on my machine, but not on yours\"\n\nDocker solves this problem by creating consistent environments.\n\n---\n\n## 🚀 What is Docker?\n\nDocker is a containerization platform that allows you to package your application with all dependencies.\n\n---\n\n## 📦 Key Concepts\n\n### Image\nA blueprint for your application.\n\n### Container\nA running instance of an image.\n\n### Dockerfile\nDefines how to build an image.\n\n---\n\n## 🛠️ Writing Your First Dockerfile\n\n```dockerfile\nFROM node:18\nWORKDIR /app\nCOPY package.json .\nRUN npm install\nCOPY . .\nCMD [\"npm\", \"start\"]\n```\n\n---\n\n## 🔗 Docker Compose\n\nManage multi-container apps.\n\n```yaml\nversion: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n  db:\n    image: postgres\n```\n\n---\n\n## ⚡ Benefits of Docker\n\n- Consistent environments\n- Easy deployment\n- Scalability\n\n---\n\n## 🧠 Real-world Use Case\n\nExample stack:\n- Backend: Node.js\n- Database: PostgreSQL\n- Cache: Redis\n\nAll run via Docker Compose.\n\n---\n\n## 🚀 Docker in Production\n\n- Use smaller base images\n- Multi-stage builds\n- Security best practices\n\n---\n\n## 🚨 Common Mistakes\n\n- Large image size\n- Not using .dockerignore\n- Running containers as root\n\n---\n\n## 🎯 Conclusion\n\nDocker is a must-have skill for modern developers.\n\nIt simplifies development, deployment, and scaling of applications.\n",
+              "date": "07/31/2025",
+              "image": "/images/Docker.png",
+              "summary": "A complete guide to Docker for developers to build, ship, and run applications efficiently.",
+              "title": "Beginner’s Guide to Docker"
+            },
+            "-bp4": {
+              "category": "Backend, API Design, NodeJS",
+              "content": "# 🔗 Understanding RESTful API – From Basics to Best Practices\n\n## 🧠 Introduction\n\nIn modern web development, APIs are the backbone of communication between frontend and backend systems. Whether you're building a simple web app or a large-scale distributed system, understanding how to design a clean and scalable API is essential.\n\nOne of the most widely used standards for API design is REST (Representational State Transfer).\n\nThis article will guide you from the fundamentals of REST to advanced best practices used in real-world applications.\n\n---\n\n## 🚀 What is REST?\n\nREST is an architectural style that defines a set of constraints for creating web services. It is not a protocol, but rather a guideline for designing APIs.\n\nKey idea: Everything is treated as a resource.\n\nExamples:\n- /users\n- /products\n- /orders\n\n---\n\n## 🔹 Core Principles of REST\n\n1) Stateless: each request contains all required information.\n2) Client-Server separation: frontend and backend are independent.\n3) Cacheable responses using headers.\n4) Uniform interface across endpoints.\n\n---\n\n## 🔹 HTTP Methods (CRUD)\n\n- GET: Read\n- POST: Create\n- PUT/PATCH: Update\n- DELETE: Remove\n\nGood endpoint style:\n- GET /users\n- POST /users\n- DELETE /users/:id\n\nUse nouns, not verbs.\n\n---\n\n## 🔹 Status Codes\n\n- 200 OK\n- 201 Created\n- 400 Bad Request\n- 401 Unauthorized\n- 404 Not Found\n- 500 Server Error\n\n---\n\n## 🔹 Request/Response Structure\n\nKeep response format consistent:\n\n```json\n{ \"success\": true, \"data\": {} }\n```\n\nFor errors:\n\n```json\n{ \"success\": false, \"error\": \"message\" }\n```\n\n---\n\n## 🔹 Pagination, Filtering, Sorting\n\nExamples:\n- GET /users?page=1&limit=10\n- GET /users?role=admin\n- GET /users?sort=createdAt_desc\n\nThese are critical for scalable APIs.\n\n---\n\n## 🔹 Authentication & Authorization\n\nMost APIs use JWT:\n\n```http\nAuthorization: Bearer <token>\n```\n\nCombine with RBAC/permissions for secure access control.\n\n---\n\n## 🔥 Best Practices\n\n- Versioning (`/api/v1/...`)\n- Input validation (Joi/Zod)\n- Rate limiting\n- API documentation (Swagger/Postman)\n- Centralized error handling\n\n---\n\n## 🎯 Conclusion\n\nA good RESTful API is clean, scalable, and maintainable. Mastering REST design is a key step for backend and full-stack developers.\n",
+              "date": "07/31/2025",
+              "image": "/images/Rest.png",
+              "summary": "A comprehensive guide to designing clean, scalable, and maintainable RESTful APIs.",
+              "title": "Understanding RESTful API"
+            },
+            "-bp5": {
+              "category": "NextJS, React, Fullstack",
+              "content": "# ⚡ Introduction to Next.js – From React to Production-Ready Apps\n\n## 🧠 Introduction\n\nIf you have experience with React, you might have noticed some limitations when building real-world applications:\n\n- SEO is difficult\n- Initial load can be slow\n- Routing needs manual setup\n- Performance optimization requires extra work\n\nThis is where Next.js comes in.\n\nNext.js is a powerful React framework that helps you build fast, scalable, and SEO-friendly applications out of the box.\n\n---\n\n## 🚀 What is Next.js?\n\nNext.js is a full-stack React framework developed by Vercel that provides:\n\n- Server-side rendering (SSR)\n- Static site generation (SSG)\n- File-based routing\n- API routes\n- Built-in optimization\n\nIn short: Next.js makes React production-ready.\n\n---\n\n## 🔹 Why Use Next.js?\n\n### 1. SEO Optimization\nReact apps are client-side rendered by default, which makes indexing harder.\n\n### 2. Better Performance\n- Automatic code splitting\n- Image optimization\n- Faster initial load\n\n### 3. Fullstack Capabilities\nYou can build frontend and backend in one project with API routes.\n\n---\n\n## 🔹 File-based Routing\n\n```text\npages/\n ├── index.js       -> /\n ├── about.js       -> /about\n └── blog/[id].js   -> /blog/:id\n```\n\nNo need to install React Router for basic routing.\n\n---\n\n## 🔹 Data Fetching Methods\n\n### SSR (`getServerSideProps`)\nFetch data on each request. Good for dynamic/SEO-critical pages.\n\n### SSG (`getStaticProps`)\nFetch data at build time. Great for speed and mostly static content.\n\n### ISR (`revalidate`)\nRefresh static pages without full rebuild.\n\n---\n\n## 🔹 API Routes\n\nYou can create backend endpoints inside Next.js (`pages/api`).\n\nThis makes it easier to build fullstack applications quickly.\n\n---\n\n## 🔹 Built-in Optimization\n\n- `next/image` for automatic image optimization\n- Automatic per-page code splitting\n- Smart production build optimizations\n\n---\n\n## 🔹 Deployment\n\nNext.js is optimized for Vercel:\n- Push code to GitHub\n- Connect repository to Vercel\n- Deploy instantly\n\n---\n\n## 🚨 Common Mistakes\n\n- Using SSR for every page\n- Confusing client-side and server-side logic\n- Not selecting the right data fetching strategy\n\n---\n\n## 🎯 Conclusion\n\nNext.js is one of the best ways to build modern React applications with better SEO, performance, and fullstack capability.\n\nMastering Next.js is a major step from React developer to production-ready engineer.\n",
+              "date": "07/31/2025",
+              "image": "/images/Next.png",
+              "summary": "A complete guide to Next.js, covering SSR, SSG, routing, and building production-ready React applications.",
+              "title": "Introduction to Next.js for React Developers"
+            },
+            "-bp6": {
+              "category": "SEO, Frontend, React, NextJS",
+              "content": "# 🔍 SEO Optimization for React Websites – From Basics to Advanced\n\n## 🧠 Introduction\n\nSearch Engine Optimization (SEO) is one of the most important aspects of modern web development. No matter how beautiful your website is, if users cannot find it on Google, it has little value.\n\nFor React developers, SEO can be challenging because React applications are typically client-side rendered.\n\nThis article will guide you through practical techniques to improve SEO in React and Next.js applications.\n\n---\n\n## 🚀 Why SEO Matters\n\n- Increases organic traffic\n- Improves visibility on search engines\n- Enhances user trust and credibility\n\n---\n\n## ⚠️ The Problem with React (CSR)\n\nIn a traditional React app:\n\n- HTML is mostly empty initially\n- Content is rendered by JavaScript\n\nSearch engines may struggle to index your content.\n\n---\n\n## 🔹 Solution 1: Server-Side Rendering (SSR)\n\nUsing Next.js, you can render HTML on the server.\n\n```js\nexport async function getServerSideProps() {\n  return { props: {} };\n}\n```\n\nBenefits:\n- Better SEO\n- Faster initial load\n\n---\n\n## 🔹 Solution 2: Static Site Generation (SSG)\n\nPre-render pages at build time.\n\n```js\nexport async function getStaticProps() {\n  return { props: {} };\n}\n```\n\nBest for:\n- Blogs\n- Landing pages\n\n---\n\n## 🔹 Meta Tags Optimization\n\nMeta tags are critical for SEO.\n\nExample with Next.js:\n\n```js\nimport Head from 'next/head';\n\n<Head>\n  <title>My Website</title>\n  <meta name=\"description\" content=\"Best website\" />\n</Head>\n```\n\nImportant tags:\n- title\n- description\n- keywords\n\n---\n\n## 🔹 Semantic HTML\n\nUse meaningful HTML tags:\n\n```html\n<header></header>\n<main></main>\n<article></article>\n<footer></footer>\n```\n\nHelps search engines understand your content.\n\n---\n\n## 🔹 URL Structure\n\nGood URL:\n\n`/blog/react-seo-guide`\n\nBad URL:\n\n`/blog?id=123`\n\n---\n\n## 🔹 Performance Optimization (SEO factor)\n\nGoogle ranks faster websites higher.\n\nTechniques:\n- Lazy loading\n- Code splitting\n- Optimize images\n\n---\n\n## 🔹 Image SEO\n\n```html\n<img src=\"img.jpg\" alt=\"React SEO Guide\" />\n```\n\nAlways include alt text.\n\n---\n\n## 🔹 Sitemap & Robots.txt\n\nSitemap helps search engines index your pages.\n\n- /sitemap.xml\n- /robots.txt\n\n---\n\n## 🔹 Internal Linking\n\nLink between pages to improve SEO.\n\n---\n\n## 🔹 Tools for SEO\n\n- Google Search Console\n- Lighthouse\n- Ahrefs\n\n---\n\n## 🚨 Common Mistakes\n\n- Missing meta tags\n- Poor performance\n- No SSR/SSG\n- Duplicate content\n\n---\n\n## 🎯 Conclusion\n\nSEO is not just marketing — it is a technical skill every frontend developer should master.\n\nBy applying these techniques, you can improve ranking, increase traffic, and build professional-grade applications.\n",
+              "date": "07/31/2025",
+              "image": "/images/Seo.png",
+              "summary": "A complete guide to improving SEO for React and Next.js applications, including technical SEO, performance, and best practices.",
+              "title": "SEO Optimization for React Websites"
+            },
+            "-bp7": {
+              "category": "Redux, React, State Management",
+              "content": "# 🧠 State Management with Redux Toolkit – From Basics to Scalable Architecture\n\n## 🧠 Introduction\n\nAs your React application grows, managing state becomes increasingly complex. Passing data through multiple components (prop drilling) can make your code hard to maintain and scale.\n\nThis is where state management solutions come in — and Redux Toolkit is the modern standard.\n\nIn this guide, you will learn how to use Redux Toolkit effectively in real-world applications.\n\n---\n\n## 🚀 What is Redux?\n\nRedux is a predictable state container for JavaScript applications.\n\nIt helps you:\n- Manage global state\n- Keep data consistent\n- Debug easily\n\n---\n\n## ⚠️ Problems with Traditional Redux\n\nOld Redux had issues:\n- Too much boilerplate\n- Complex setup\n- Hard to maintain\n\nRedux Toolkit solves these problems.\n\n---\n\n## 🔥 What is Redux Toolkit?\n\nRedux Toolkit (RTK) is the official, recommended way to write Redux logic.\n\nIt provides:\n- Simpler API\n- Built-in best practices\n- Less boilerplate\n\n---\n\n## 🔹 Core Concepts\n\n### 1. Store\nGlobal state container.\n\n### 2. Slice\nA slice contains state and reducers.\n\n### 3. Provider\nWrap app with `Provider` to use Redux store everywhere.\n\n---\n\n## 🔹 Using State in Components\n\nUse `useSelector` to read state and `useDispatch` to dispatch actions.\n\n---\n\n## 🔹 Async Logic with createAsyncThunk\n\nUse `createAsyncThunk` to handle async API requests cleanly.\n\n---\n\n## 🔹 Handling Async State\n\nUse `extraReducers` to manage pending/fulfilled/rejected states.\n\n---\n\n## 🔹 Folder Structure Best Practice\n\n```text\nsrc/\n ├── app/\n │    └── store.js\n ├── features/\n │    └── user/\n │         ├── userSlice.js\n │         └── userAPI.js\n```\n\n---\n\n## 🔹 When to Use Redux?\n\nUse Redux when:\n- Global state is large\n- Many components share data\n- Business logic is complex\n\nAvoid Redux for very small/simple apps.\n\n---\n\n## 🔥 Advanced Tips\n\n- Normalize state\n- Create reusable selectors\n- Split slices by feature\n- Keep side effects isolated\n\n---\n\n## 🚨 Common Mistakes\n\n- Overusing Redux\n- Storing unnecessary data\n- Mixing UI logic and business logic\n\n---\n\n## 🎯 Conclusion\n\nRedux Toolkit is one of the best choices for state management in modern React apps. It reduces boilerplate and improves scalability.\n\nMastering RTK is an important step toward becoming a professional frontend developer.\n",
+              "date": "07/31/2025",
+              "image": "/images/React_30days.png",
+              "summary": "A complete guide to managing state in modern React applications using Redux Toolkit.",
+              "title": "State Management with Redux Toolkit"
+            },
+            "-bp8": {
+              "category": "Firebase, Fullstack, Deployment",
+              "content": "# 🔥 Deploying Fullstack Apps with Firebase – From Zero to Production\n\n## 🧠 Introduction\n\nBuilding a fullstack application traditionally requires setting up multiple services:\n\n- Backend server\n- Database\n- Authentication system\n- Hosting\n\nThis process can be complex and time-consuming.\n\nFirebase simplifies everything by providing a complete Backend-as-a-Service (BaaS) platform.\n\nWith Firebase, you can build and deploy fullstack apps quickly without managing servers.\n\n---\n\n## 🚀 What is Firebase?\n\nFirebase is a platform developed by Google that provides tools for building web and mobile applications.\n\nCore services:\n- Authentication\n- Firestore (database)\n- Hosting\n- Cloud Functions\n\n---\n\n## 🔹 Firebase Architecture Overview\n\nTypical fullstack setup:\n- Frontend: React / Next.js\n- Backend: Firebase services\n- Database: Firestore\n\nNo traditional backend is required for many use cases.\n\n---\n\n## 🔹 Setting Up Firebase Project\n\nSteps:\n1. Go to Firebase Console\n2. Create a new project\n3. Register your web app\n4. Get config\n\nExample:\n\n```js\nconst firebaseConfig = {\n  apiKey: \"xxx\",\n  authDomain: \"xxx\",\n  projectId: \"xxx\"\n};\n```\n\n---\n\n## 🔹 Authentication\n\nFirebase provides built-in authentication.\n\nCommon methods:\n- Email/Password\n- Google\n- Facebook\n\n---\n\n## 🔹 Firestore Database\n\nFirestore is a NoSQL cloud database for storing app data.\n\nYou can add, read, update, and delete documents easily.\n\n---\n\n## 🔹 Real-time Data\n\nFirestore supports real-time listeners for live UI updates.\n\nUseful for chat apps, task boards, and dashboards.\n\n---\n\n## 🔹 Hosting & Deployment\n\nFirebase Hosting makes deployment simple.\n\n```bash\nnpm install -g firebase-tools\nfirebase login\nfirebase init\nfirebase deploy\n```\n\nYour app can be live in minutes.\n\n---\n\n## 🔹 Cloud Functions\n\nUse serverless functions for backend logic such as webhooks, scheduled jobs, and secure operations.\n\n---\n\n## ⚖️ Pros & Cons\n\n### Pros\n- Fast development\n- No server management\n- Good scalability for many products\n\n### Cons\n- Vendor lock-in\n- Less flexibility than custom backend\n\n---\n\n## 🚨 Common Mistakes\n\n- Weak Firestore security rules\n- Storing sensitive logic on client side\n- Overusing real-time listeners\n\n---\n\n## 🎯 Conclusion\n\nFirebase is one of the fastest ways to build and deploy fullstack applications, especially for MVPs and startup products.\n\nMastering Firebase helps you ship real-world apps quickly.\n",
+              "date": "07/31/2025",
+              "image": "/images/Full.png",
+              "summary": "A complete guide to building and deploying fullstack applications using Firebase, including authentication, database, and hosting.",
+              "title": "Deploying Fullstack Apps with Firebase"
+            },
+            "-bp9": {
+              "category": "Security, Web Development, Backend",
+              "content": "# 🔐 Basic Security Techniques in Web Development – From Fundamentals to Best Practices\n\n## 🧠 Introduction\n\nSecurity is one of the most critical aspects of web development. A single vulnerability can lead to data leaks, account takeovers, and financial loss.\n\nBoth frontend and backend developers should understand security fundamentals.\n\n---\n\n## 🚀 Why Security Matters\n\n- Protect user data\n- Prevent attacks\n- Maintain trust\n\nSecurity is a requirement, not an option.\n\n---\n\n## 🔹 Common Attacks\n\n### 1) XSS\nInjecting malicious scripts into pages.\n\nPrevention:\n- Escape user input\n- Sanitize HTML (DOMPurify)\n- Avoid unsafe HTML rendering\n\n### 2) SQL Injection\nManipulating queries.\n\nPrevention:\n- Use ORM/parameterized queries\n\n### 3) CSRF\nForged requests from authenticated users.\n\nPrevention:\n- CSRF token\n- SameSite cookies\n\n### 4) Auth attacks\nWeak passwords and brute force.\n\nPrevention:\n- `bcrypt` hashing\n- Rate limiting\n\n---\n\n## 🔹 Secure Authentication\n\n- Hash passwords (`bcrypt`)\n- Use JWT carefully\n- Never put sensitive secrets in token payload\n\n---\n\n## 🔹 Secure API Practices\n\n- Validate input (Joi/Zod)\n- Use HTTPS\n- Limit request size\n- Apply security headers\n\n---\n\n## 🔹 Environment Variables\n\nNever hardcode secrets. Keep `JWT_SECRET`, DB credentials, and API keys in environment variables.\n\n---\n\n## 🔹 CORS & Rate Limiting\n\n- Restrict allowed origins\n- Limit requests per IP to reduce abuse\n\n---\n\n## 🔥 Best Practices\n\n- Validate all incoming data\n- Keep dependencies updated\n- Log suspicious behavior\n- Review OWASP Top 10 regularly\n\n---\n\n## 🚨 Common Mistakes\n\n- Hardcoding secrets\n- Trusting client-side data\n- No validation layer\n- Ignoring security headers\n\n---\n\n## 🎯 Conclusion\n\nSecurity is a mindset, not a one-time feature. Mastering basic security techniques helps you build trustworthy applications and stand out as a developer.\n",
+              "date": "07/31/2025",
+              "image": "/images/Security.png",
+              "summary": "A comprehensive guide to essential web security practices for frontend and backend developers.",
+              "title": "Basic Security Techniques in Web Development"
+            }
+          },
+          "title": "Blog"
+        },
+        "contact": {
+          "availability": {
+            "label": "Call me",
+            "phone": "(+84) 393 048 626",
+            "time": "Available from 8:00am to 5:00pm."
+          },
+          "chat": {
+            "label": "Chat with me",
+            "message": "Send me a message on social media.",
+            "options": {
+              "-op1": {
+                "icon": "FaSkype",
+                "text": "Start a live chat."
+              },
+              "-op2": {
+                "icon": "FaEnvelope",
+                "text": "Shoot me an email."
+              },
+              "-op3": {
+                "icon": "FaFacebookMessenger",
+                "text": "Message me on Zalo."
+              }
+            }
+          },
+          "description": "Feel free to reach out via the form below or through my social channels.",
+          "form": {
+            "email": "Email",
+            "firstName": "First name",
+            "lastName": "Last name",
+            "message": "Message",
+            "name": "Full Name",
+            "submit": "Send",
+            "title": "Contact Form"
+          },
+          "title": "Contact"
+        },
+        "footer": {
+          "connect": "Connect",
+          "description": "Web developer passionate about building high-quality products.",
+          "email": "Email",
+          "name": "Thanh Hiep Nguyen",
+          "navigation": "Navigation",
+          "rights": "All rights reserved."
+        },
+        "header": {
+          "contact": "Contact",
+          "contactOptions": {
+            "-c1": {
+              "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN",
+              "name": "Facebook"
+            },
+            "-c2": {
+              "href": "https://zalo.me/+84393048626",
+              "name": "Zalo"
+            }
+          },
+          "location": "Ho Chi Minh City, Vietnam",
+          "menu": {
+            "-m1": {
+              "href": "/about",
+              "name": "About"
+            },
+            "-m2": {
+              "href": "/blog",
+              "name": "Blog"
+            },
+            "-m3": {
+              "href": "/projects",
+              "name": "Projects"
+            },
+            "-m4": {
+              "href": "/collection",
+              "name": "Collection"
+            }
+          }
+        },
+        "home": {
+          "build": "Build Website",
+          "description": "I deliver impressive web solutions optimized for both performance and aesthetics. Let’s bring your ideas to life with a truly professional product.",
+          "explore": "Explore now",
+          "name": "Thanh Hiep!",
+          "rolePrefix": "I'm a",
+          "titles": {
+            "-t1": "Mobile Developer",
+            "-t2": "Web Developer",
+            "-t3": "Software Engineer"
+          },
+          "welcome": "Hi, I'm"
+        },
+        "portfolio": {
+          "collections": [
+            null,
+            {
+              "color": "from-pink-500 to-rose-500",
+              "description": "Product-ready backend and frontend modules crafted for e-commerce and service-based applications.",
+              "icon": "FaPalette",
+              "items": {
+                "-i1": "Auth & RBAC Flows",
+                "-i2": "Shopping Cart Journeys",
+                "-i3": "Order Management UX",
+                "-i4": "Admin Dashboard UI"
+              },
+              "title": "Product Features"
+            },
+            {
+              "color": "from-blue-500 to-indigo-500",
+              "description": "Scalable full-stack solutions with strong backend architecture and practical business workflows.",
+              "icon": "FaCode",
+              "items": {
+                "-i1": "RESTful API Services",
+                "-i2": "Node.js / NestJS Systems",
+                "-i3": "PostgreSQL + Prisma Design",
+                "-i4": "React Admin Panels"
+              },
+              "title": "Full-stack Engineering"
+            },
+            {
+              "color": "from-emerald-500 to-teal-500",
+              "description": "Reliable system and payment workflows for real-world production environments.",
+              "icon": "FaMobile",
+              "items": {
+                "-i1": "Payment Integrations (VNPay/MoMo)",
+                "-i2": "Booking & Refund Logic",
+                "-i3": "Redis Cart & Session Flows",
+                "-i4": "Transaction-safe Services"
+              },
+              "title": "Business Workflows"
+            },
+            {
+              "color": "from-orange-500 to-amber-500",
+              "description": "Deployment-focused tooling and operations support for smooth team collaboration and delivery.",
+              "icon": "FaDesktop",
+              "items": {
+                "-i1": "Docker & Docker Compose",
+                "-i2": "Postman API Testing",
+                "-i3": "Git Workflow & Versioning",
+                "-i4": "Project Tracking (Jira/Confluence)"
+              },
+              "title": "DevOps & Delivery"
+            }
+          ],
+          "comingSoon": {
+            "description": "I'm constantly working on new projects and designs. Check back regularly for updates.",
+            "tags": {
+              "-tg1": "Design",
+              "-tg2": "Development",
+              "-tg3": "Creative"
+            },
+            "title": "More collections coming soon!"
+          },
+          "description": "Here are some of my design works and personal projects.",
+          "title": "Collection"
+        },
+        "projects": {
+          "categories": {
+            "all": {
+              "id": "all",
+              "name": "All Projects"
+            },
+            "backend": {
+              "id": "backend",
+              "name": "Backend"
+            },
+            "fullstack": {
+              "id": "fullstack",
+              "name": "Full Stack"
+            }
+          },
+          "description": "Here are some of the projects I've worked on. Each project represents a real-world system I helped build or lead.",
+          "items": [
+            {
+              "category": "fullstack",
+              "description": "Built a multi-shop cart with voucher logic, VNPay & COD payment flows, and RBAC-protected dashboards for admins and shops.",
+              "features": {
+                "-f1": "Per-shop voucher handling",
+                "-f2": "Order lifecycle (pending → completed)",
+                "-f3": "VNPay & COD integration",
+                "-f4": "Admin and shop dashboards"
+              },
+              "github": "https://github.com/ThanhHiepNguyen/FoodNow.git",
+              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+              "live": "https://github.com/ThanhHiepNguyen/FoodNow.git",
+              "tech": {
+                "-t1": "Node.js",
+                "-t2": "Express.js",
+                "-t3": "PostgreSQL",
+                "-t4": "Prisma ORM",
+                "-t5": "JWT",
+                "-t6": "React",
+                "-t7": "Tailwind CSS"
+              },
+              "title": "FoodNow"
+            },
+            {
+              "category": "backend",
+              "description": "Developed Booking, Payment, and Gateway services for an EV station rental platform with transactions, penalty/refund logic, and third-party payments.",
+              "features": {
+                "-f1": "API Gateway with centralized routing",
+                "-f2": "Booking service with penalties & refunds",
+                "-f3": "VNPay & MoMo payment state handling",
+                "-f4": "Secure inter-service communication"
+              },
+              "github": "https://github.com/duongcao04/ev-station-based-rental-system.git",
+              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+              "live": "https://github.com/duongcao04/ev-station-based-rental-system.git",
+              "tech": {
+                "-t1": "Node.js",
+                "-t2": "Express.js",
+                "-t3": "PostgreSQL",
+                "-t4": "JWT",
+                "-t5": "Axios",
+                "-t6": "Docker"
+              },
+              "title": "EV Station-based Rental System"
+            },
+            {
+              "category": "backend",
+              "description": "Delivered a modular NestJS e-commerce backend covering Auth, Product, Cart, Order, Payment, and Review modules with Redis caching and Prisma.",
+              "features": {
+                "-f1": "NestJS modules for Auth, Product, Cart, Order, Payment, Review",
+                "-f2": "JWT authentication + RBAC",
+                "-f3": "Redis-based shopping cart with COD flow",
+                "-f4": "Product review & rating APIs"
+              },
+              "github": "https://github.com/ThanhHiepNguyen/Vitify.git",
+              "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=500&h=300&fit=crop",
+              "live": "https://github.com/ThanhHiepNguyen/Vitify.git",
+              "tech": {
+                "-t1": "NestJS",
+                "-t2": "Node.js",
+                "-t3": "TypeScript",
+                "-t4": "PostgreSQL",
+                "-t5": "Prisma ORM",
+                "-t6": "Redis"
+              },
+              "title": "Vitify"
+            }
+          ],
+          "title": "Projects"
+        }
+      },
+      "vi": {
+        "about": {
+          "avatar": "../assets/Hiep.jpg",
+          "education": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
+          "email": "nhiep3445@gmail.com",
+          "github": "ThanhHiepNguyen",
+          "major": "Công nghệ Thông tin",
+          "name": "Nguyễn Thành Hiệp",
+          "phone": "(+84) 393048626",
+          "quote": "Hãy là phiên bản tốt nhất của chính bạn.",
+          "skills": {
+            "databases": {
+              "-d1": "PostgreSQL",
+              "-d2": "MySQL"
+            },
+            "frameworks": {
+              "-f1": "Tailwind CSS",
+              "-f2": "Node.js",
+              "-f3": "React.js",
+              "-f4": "Bootstrap"
+            },
+            "languages": {
+              "-l1": "Javascript",
+              "-l2": "Java",
+              "-l3": "C++"
+            },
+            "others": {
+              "-o1": "Tiếng Việt",
+              "-o2": "Tiếng Anh"
+            }
+          },
+          "summary": "Tôi là một lập trình viên với đam mê xây dựng các ứng dụng web hiện đại. Tôi yêu thích làm việc với React, Tailwind CSS và luôn không ngừng học hỏi những công nghệ mới.",
+          "timeline": {
+            "-tm1": {
+              "major": "Công nghệ Thông tin",
+              "role": "Sinh viên",
+              "school": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
+              "year": "2022 - Nay"
+            },
+            "-tm2": {
+              "role": "Học sinh",
+              "school": "Trường Trung học Phổ thông Ngô Lê Tân",
+              "year": "2019 - 2022"
+            },
+            "-tm3": {
+              "role": "Học sinh",
+              "school": "Trường Trung học Cơ sở Cát Thành",
+              "year": "2015 - 2019"
+            },
+            "-tm4": {
+              "role": "Học sinh",
+              "school": "Trường Tiểu học Chánh Thắng",
+              "year": "2010 - 2015"
+            }
+          }
+        },
+        "blog": {
+          "description": "Chia sẻ kinh nghiệm và kiến thức của tôi về công nghệ và phát triển phần mềm.",
+          "posts": {
+            "-bp1": {
+              "category": "Lộ trình ReactJS, Frontend Development, JavaScript",
+              "content": "# 🚀 Học React trong 30 ngày – Lộ trình đầy đủ từ cơ bản đến nâng cao\n\n## 🧠 Giới thiệu\n\nReactJS là một trong những thư viện phổ biến nhất để xây dựng giao diện web hiện đại. Từ portfolio cá nhân đến dashboard doanh nghiệp, React đều có thể đáp ứng tốt.\n\nNếu bạn chưa biết bắt đầu từ đâu, lộ trình 30 ngày này sẽ giúp bạn học theo từng bước rõ ràng.\n\nMục tiêu cuối cùng: tự xây dựng và deploy được một dự án React hoàn chỉnh.\n\n---\n\n## 📅 Tuần 1: Xây nền tảng\n\n### Nội dung cần học\n- React là gì, Virtual DOM là gì\n- JSX và cách viết đúng\n- Functional Component\n- Props và cách tách component\n- Xử lý sự kiện\n\n### Bài tập thực hành\n- Tạo profile card\n- Viết button component tái sử dụng\n- Làm phần header điều hướng đơn giản\n\n✅ Mục tiêu: Hiểu cách component hoạt động và giao tiếp dữ liệu.\n\n---\n\n## ⚙️ Tuần 2: Kỹ năng cốt lõi\n\n### Nội dung cần học\n- useState để quản lý state cục bộ\n- useEffect cho side effects\n- Conditional rendering\n- List rendering + key\n- Form controlled component\n\n### Bài tập thực hành\n- Counter app\n- To-do list thêm/xóa/sửa\n- Ô tìm kiếm lọc dữ liệu\n\n✅ Mục tiêu: Làm được giao diện tương tác đầy đủ.\n\n---\n\n## 🔗 Tuần 3: Trung cấp đến nâng cao\n\n### Nội dung cần học\n- React Router cho SPA\n- Context API để quản lý state toàn cục\n- Custom Hooks để tái sử dụng logic\n- Tối ưu hiệu năng (memo, useMemo, useCallback)\n\n### Bài tập thực hành\n- App nhiều trang có route bảo vệ\n- Theme switcher bằng Context API\n- Hook xử lý form dùng lại nhiều nơi\n\n✅ Mục tiêu: Tổ chức app React theo hướng mở rộng tốt.\n\n---\n\n## 🌐 Tuần 4: Làm dự án thực tế\n\n### Nội dung cần học\n- Gọi API bằng async/await\n- Quản lý loading/error state\n- Authentication cơ bản\n- Tổ chức cấu trúc thư mục dự án\n- Deploy bằng Vercel/Netlify\n\n### Bài tập thực hành\n- Trang danh sách sản phẩm từ API\n- Luồng đăng nhập cơ bản\n- Deploy bản production\n\n✅ Mục tiêu: Hoàn thành một dự án có thể đưa vào portfolio.\n\n---\n\n## 🛠️ Dự án cuối: Task Management App\n\nTính năng chính:\n- Thêm, sửa, xóa task\n- Đánh dấu hoàn thành\n- Lọc theo trạng thái\n- Lưu dữ liệu localStorage hoặc API\n\nTính năng nâng cao:\n- Đăng nhập\n- Dark mode\n- Kéo thả task\n\n---\n\n## 💡 Mẹo học nhanh hơn\n\n- Học đều mỗi ngày 2–3 giờ\n- Tự làm mini project, không chỉ xem tutorial\n- Đọc tài liệu chính thức thường xuyên\n- Chủ động debug lỗi\n\n---\n\n## 🚨 Lỗi phổ biến\n\n- Học lý thuyết mà không code\n- Bỏ qua nền tảng JavaScript\n- Copy code mà không hiểu logic\n\n---\n\n## 🎯 Kết luận\n\nHọc React trong 30 ngày là hoàn toàn khả thi nếu bạn kiên trì.\n\nSau lộ trình này, bạn có thể:\n- Xây giao diện theo component\n- Quản lý state và routing\n- Tích hợp API\n- Deploy dự án thực tế\n\n### Học tiếp gì sau React?\n- Next.js\n- TypeScript\n- Backend với Node.js/NestJS\n\n👉 Cứ học đều và xây dự án thật mỗi tuần.",
+              "date": "31/07/2025",
+              "image": "/images/React_30days.png",
+              "summary": "Lộ trình React 30 ngày đầy đủ giúp bạn đi từ nền tảng đến làm dự án thực tế và deploy production.",
+              "title": "Học React trong 30 ngày"
+            },
+            "-bp10": {
+              "category": "Git, Version Control, Development Workflow",
+              "content": "# 🌿 Hướng dẫn Git cơ bản – Từ lệnh nền tảng đến workflow thực tế\n\n## 🧠 Giới thiệu\n\nGit là công cụ bắt buộc với lập trình viên hiện đại, giúp theo dõi thay đổi, làm việc nhóm và quản lý mã nguồn chuyên nghiệp.\n\n---\n\n## 🚀 Git là gì?\n\nGit là hệ thống quản lý phiên bản phân tán.\n\nGit giúp bạn:\n- Lưu các phiên bản code\n- Làm việc nhóm hiệu quả\n- Rollback an toàn khi có lỗi\n\n---\n\n## 🔹 Quy trình cơ bản\n\n`Working Directory -> Staging -> Repository`\n\n---\n\n## 🔹 Các lệnh quan trọng\n\n- `git init`\n- `git clone <repo>`\n- `git status`\n- `git add .`\n- `git commit -m \"feat: ...\"`\n- `git push origin main`\n- `git pull origin main`\n\n---\n\n## 🔹 Branching\n\n- Tạo branch: `git checkout -b feature/login`\n- Chuyển branch: `git checkout main`\n- Gộp branch: `git merge feature/login`\n\nLuôn tách branch theo từng feature để giữ `main` ổn định.\n\n---\n\n## 🔹 Xử lý conflict\n\n1. Mở file bị conflict\n2. Resolve thủ công\n3. Commit lại\n\n---\n\n## 🔹 .gitignore\n\nKhông commit file không cần thiết:\n\n```text\nnode_modules\n.env\n```\n\n---\n\n## 🔹 Quy ước commit message\n\nNên dùng prefix:\n- `feat`\n- `fix`\n- `refactor`\n\nVí dụ:\n\n`git commit -m \"feat(auth): add JWT login\"`\n\n---\n\n## 🔹 Workflow team thực tế\n\n1. Tạo branch\n2. Làm feature\n3. Commit + push\n4. Tạo Pull Request\n5. Review + merge\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Commit secrets\n- Code trực tiếp trên `main`\n- Commit message mơ hồ\n\n---\n\n## 🎯 Kết luận\n\nGit không chỉ là tập lệnh, mà là workflow cộng tác. Thành thạo Git giúp bạn làm việc nhóm hiệu quả và an toàn hơn trong dự án thật.\n",
+              "date": "31/07/2025",
+              "image": "/images/Git.png",
+              "summary": "Hướng dẫn đầy đủ về Git, bao gồm lệnh quan trọng, chiến lược branch và quy trình làm việc nhóm thực tế.",
+              "title": "Hướng dẫn sử dụng Git cơ bản"
+            },
+            "-bp11": {
+              "category": "React, Setup, Frontend Development",
+              "content": "# 💻 Tạo dự án React trên VSCode – Thiết lập chuyên nghiệp từ đầu\n\n## 🧠 Giới thiệu\n\nBắt đầu React rất nhanh, nhưng setup bài bản mới giúp dự án dễ mở rộng và dễ bảo trì.\n\n---\n\n## 🚀 Điều kiện cần\n\n- Node.js >= 18\n- npm hoặc yarn\n- VSCode\n\n---\n\n## 🔹 Chọn công cụ tạo dự án\n\nƯu tiên **Vite** thay cho CRA vì nhanh, nhẹ và hiện đại.\n\n```bash\nnpm create vite@latest my-app\ncd my-app\nnpm install\nnpm run dev\n```\n\n---\n\n## 🔹 Cấu trúc thư mục gợi ý\n\n```text\nsrc/\n ├── components/\n ├── pages/\n ├── hooks/\n ├── services/\n ├── utils/\n ├── assets/\n └── App.jsx\n```\n\n---\n\n## 🔹 Cài dependencies cần thiết\n\n```bash\nnpm install react-router-dom axios\n```\n\nTùy nhu cầu có thể thêm Redux Toolkit.\n\n---\n\n## 🔹 Routing\n\nDùng `react-router-dom` với `BrowserRouter`, `Routes`, `Route`.\n\n---\n\n## 🔹 Environment Variables\n\nTạo `.env`:\n\n```text\nVITE_API_URL=http://localhost:3000\n```\n\nSử dụng trong code:\n\n`import.meta.env.VITE_API_URL`\n\n---\n\n## 🔹 Extensions nên cài trong VSCode\n\n- ES7+ React Snippets\n- Prettier\n- ESLint\n- Tailwind CSS IntelliSense\n\n---\n\n## 🔹 Chuẩn hóa code\n\nThiết lập ESLint + Prettier để giữ code thống nhất và giảm lỗi.\n\n---\n\n## 🔹 API Layer\n\nTạo `axios` instance riêng trong `services/` để dễ tái sử dụng.\n\n---\n\n## 🔹 Build & Deploy\n\n```bash\nnpm run build\n```\n\nDeploy bằng Vercel hoặc Netlify.\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Cấu trúc thư mục lộn xộn\n- Hardcode API URL\n- Thiếu env config\n- Bỏ qua linting\n\n---\n\n## 🎯 Kết luận\n\nSetup chuẩn ngay từ đầu là nền tảng của ứng dụng React chuyên nghiệp, giúp team làm việc nhanh và dự án mở rộng tốt hơn.\n",
+              "date": "31/07/2025",
+              "image": "/images/React_vscode.png",
+              "summary": "Hướng dẫn đầy đủ thiết lập môi trường React chuyên nghiệp trên VSCode với công cụ hiện đại và best practices.",
+              "title": "Hướng dẫn tạo dự án React trên VSCode"
+            },
+            "-bp2": {
+              "category": "Performance, Web Optimization, Frontend",
+              "content": "# ⚡ Tối ưu hiệu suất website – Hướng dẫn đầy đủ\n\n## 🧠 Giới thiệu\n\nTrong phát triển web hiện đại, hiệu suất không còn là lựa chọn mà là yêu cầu bắt buộc. Người dùng mong đợi trang web tải nhanh, và chỉ vài giây chậm trễ cũng có thể làm giảm tỷ lệ chuyển đổi.\n\nMột số thống kê quan trọng:\n- 53% người dùng rời trang nếu tải quá 3 giây\n- Website nhanh hơn thường có thứ hạng Google tốt hơn\n\nBài viết này sẽ đi qua các kỹ thuật quan trọng để tối ưu hiệu suất website.\n\n---\n\n## 🚀 Hiểu các chỉ số hiệu suất\n\nTrước khi tối ưu, bạn cần đo lường.\n\n### Core Web Vitals:\n- LCP (Largest Contentful Paint)\n- FID (First Input Delay)\n- CLS (Cumulative Layout Shift)\n\nĐây là các chỉ số ảnh hưởng trực tiếp đến SEO.\n\n---\n\n## 🖼️ Tối ưu hình ảnh\n\nHình ảnh thường là tài nguyên nặng nhất trên website.\n\n### Best Practices:\n- Dùng định dạng hiện đại (WebP, AVIF)\n- Nén ảnh trước khi tải lên\n- Dùng ảnh responsive\n\n```html\n<img src=\"image.webp\" loading=\"lazy\" />\n```\n\nLazy loading giúp ảnh chỉ tải khi cần thiết.\n\n---\n\n## 📦 Code Splitting & Lazy Loading\n\nKhông tải toàn bộ JavaScript ngay từ đầu.\n\n```js\nconst Page = React.lazy(() => import('./Page'));\n```\n\nLợi ích:\n- Tăng tốc lần tải đầu\n- Cải thiện trải nghiệm người dùng\n\n---\n\n## 🧹 Loại bỏ code không dùng\n\nCode thừa làm bundle lớn hơn cần thiết.\n\nCông cụ nên dùng:\n- Tree shaking\n- PurgeCSS\n\n---\n\n## 🌐 Sử dụng CDN\n\nCDN phân phối tài nguyên qua nhiều máy chủ toàn cầu.\n\nLợi ích:\n- Giảm độ trễ\n- Tăng tốc tải nội dung\n\n---\n\n## 🧠 Chiến lược cache\n\n### Các loại cache:\n- Browser caching\n- Server caching\n- API caching\n\nVí dụ:\n\n```http\nCache-Control: public, max-age=31536000\n```\n\n---\n\n## ⚙️ Tối ưu backend\n\nHiệu suất không chỉ nằm ở frontend.\n\n- Tối ưu query database\n- Tạo index đúng cách\n- Dùng pagination\n\n---\n\n## 🔍 Công cụ đo hiệu suất\n\n- Lighthouse\n- PageSpeed Insights\n- WebPageTest\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Ảnh quá nặng\n- JavaScript chặn render\n- Gọi API quá nhiều\n\n---\n\n## 🎯 Kết luận\n\nTối ưu hiệu suất là quá trình liên tục.\n\nMột website nhanh không chỉ giúp trải nghiệm người dùng tốt hơn mà còn cải thiện SEO và hiệu quả kinh doanh.\n",
+              "date": "31/07/2025",
+              "image": "/images/TUHW.png",
+              "summary": "Hướng dẫn chuyên sâu giúp tối ưu tốc độ, SEO và trải nghiệm người dùng cho website.",
+              "title": "Tối ưu hiệu suất website"
+            },
+            "-bp3": {
+              "category": "Docker, DevOps, Backend",
+              "content": "# 🐳 Hướng dẫn Docker cho người mới – Từ zero đến production\n\n## 🧠 Giới thiệu\n\nMột trong những vấn đề lớn nhất của lập trình viên là môi trường không đồng nhất:\n\n\"Máy mình chạy được, máy bạn thì không\"\n\nDocker ra đời để giải quyết triệt để vấn đề đó bằng container.\n\n---\n\n## 🚀 Docker là gì?\n\nDocker là nền tảng container hóa giúp đóng gói ứng dụng cùng toàn bộ dependencies để chạy nhất quán ở mọi môi trường.\n\n---\n\n## 📦 Khái niệm quan trọng\n\n### Image\nBản mẫu để tạo ứng dụng.\n\n### Container\nMột instance đang chạy của image.\n\n### Dockerfile\nFile định nghĩa cách build image.\n\n---\n\n## 🛠️ Dockerfile đầu tiên\n\n```dockerfile\nFROM node:18\nWORKDIR /app\nCOPY package.json .\nRUN npm install\nCOPY . .\nCMD [\"npm\", \"start\"]\n```\n\n---\n\n## 🔗 Docker Compose\n\nQuản lý ứng dụng nhiều container dễ dàng.\n\n```yaml\nversion: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n  db:\n    image: postgres\n```\n\n---\n\n## ⚡ Lợi ích của Docker\n\n- Môi trường đồng nhất\n- Deploy nhanh và ổn định\n- Dễ mở rộng hệ thống\n\n---\n\n## 🧠 Ứng dụng thực tế\n\nVí dụ stack:\n- Backend: Node.js\n- Database: PostgreSQL\n- Cache: Redis\n\nTất cả chạy bằng Docker Compose.\n\n---\n\n## 🚀 Docker trong production\n\n- Chọn base image nhỏ\n- Dùng multi-stage build\n- Áp dụng best practices bảo mật\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Image quá nặng\n- Không dùng .dockerignore\n- Chạy container bằng root\n\n---\n\n## 🎯 Kết luận\n\nDocker là kỹ năng quan trọng với lập trình viên hiện đại.\n\nNó giúp đơn giản hóa phát triển, triển khai và mở rộng ứng dụng.\n",
+              "date": "31/07/2025",
+              "image": "/images/Docker.png",
+              "summary": "Hướng dẫn đầy đủ giúp developer build, ship và run ứng dụng hiệu quả với Docker.",
+              "title": "Hướng dẫn sử dụng Docker cho người mới bắt đầu"
+            },
+            "-bp4": {
+              "category": "Backend, API Design, NodeJS",
+              "content": "# 🔗 Tìm hiểu RESTful API – Từ cơ bản đến best practices\n\n## 🧠 Giới thiệu\n\nTrong phát triển web hiện đại, API là cầu nối giữa frontend và backend. Dù là ứng dụng nhỏ hay hệ thống lớn, thiết kế API sạch và dễ mở rộng luôn rất quan trọng.\n\nREST (Representational State Transfer) là chuẩn thiết kế API được dùng phổ biến nhất hiện nay.\n\nBài viết này giúp bạn nắm từ nền tảng đến các best practices thực tế.\n\n---\n\n## 🚀 REST là gì?\n\nREST là phong cách kiến trúc để thiết kế web services, không phải protocol.\n\nÝ tưởng cốt lõi: mọi thứ được biểu diễn dưới dạng resource.\n\nVí dụ:\n- /users\n- /products\n- /orders\n\n---\n\n## 🔹 Nguyên tắc chính\n\n1) Stateless: mỗi request phải đủ thông tin.\n2) Client-Server tách biệt.\n3) Có thể cache qua header.\n4) Interface đồng nhất giữa các endpoint.\n\n---\n\n## 🔹 HTTP Methods (CRUD)\n\n- GET: đọc dữ liệu\n- POST: tạo mới\n- PUT/PATCH: cập nhật\n- DELETE: xóa\n\nThiết kế endpoint tốt:\n- GET /users\n- POST /users\n- DELETE /users/:id\n\nNên dùng danh từ thay vì động từ.\n\n---\n\n## 🔹 Status Codes quan trọng\n\n- 200 OK\n- 201 Created\n- 400 Bad Request\n- 401 Unauthorized\n- 404 Not Found\n- 500 Server Error\n\n---\n\n## 🔹 Chuẩn hóa request/response\n\nNên dùng format thống nhất:\n\n```json\n{ \"success\": true, \"data\": {} }\n```\n\nKhi lỗi:\n\n```json\n{ \"success\": false, \"error\": \"message\" }\n```\n\n---\n\n## 🔹 Pagination, Filtering, Sorting\n\nVí dụ:\n- GET /users?page=1&limit=10\n- GET /users?role=admin\n- GET /users?sort=createdAt_desc\n\nĐây là phần bắt buộc nếu muốn API mở rộng tốt.\n\n---\n\n## 🔹 Authentication & Authorization\n\nPhổ biến nhất là JWT:\n\n```http\nAuthorization: Bearer <token>\n```\n\nKết hợp RBAC để kiểm soát quyền truy cập.\n\n---\n\n## 🔥 Best Practices nâng cao\n\n- Versioning (`/api/v1/...`)\n- Validation (Joi/Zod)\n- Rate limiting\n- Tài liệu API (Swagger/Postman)\n- Xử lý lỗi tập trung\n\n---\n\n## 🎯 Kết luận\n\nRESTful API tốt cần sạch, dễ mở rộng và dễ bảo trì. Thành thạo REST là bước quan trọng để trở thành backend/full-stack developer chuyên nghiệp.\n",
+              "date": "31/07/2025",
+              "image": "/images/Rest.png",
+              "summary": "Hướng dẫn toàn diện giúp bạn thiết kế RESTful API sạch, dễ mở rộng và dễ bảo trì.",
+              "title": "Tìm hiểu về RESTful API"
+            },
+            "-bp5": {
+              "category": "NextJS, React, Fullstack",
+              "content": "# ⚡ Giới thiệu Next.js – Từ React đến ứng dụng sẵn sàng production\n\n## 🧠 Giới thiệu\n\nNếu bạn đã dùng React, bạn sẽ thấy một số hạn chế khi làm dự án thực tế:\n- SEO khó tối ưu\n- Tốc độ tải lần đầu có thể chậm\n- Routing phải tự cấu hình nhiều\n- Tối ưu hiệu năng tốn thêm công\n\nNext.js giải quyết các vấn đề này rất tốt.\n\nNext.js là framework React mạnh mẽ giúp bạn xây ứng dụng nhanh, dễ mở rộng và thân thiện SEO.\n\n---\n\n## 🚀 Next.js là gì?\n\nNext.js là framework full-stack cho React do Vercel phát triển, cung cấp:\n- SSR\n- SSG\n- File-based routing\n- API routes\n- Tối ưu hiệu năng sẵn có\n\nNói ngắn gọn: Next.js giúp React sẵn sàng cho production.\n\n---\n\n## 🔹 Vì sao nên dùng Next.js?\n\n### 1. SEO tốt hơn\nNext.js hỗ trợ SSR/SSG nên nội dung dễ được search engine index hơn.\n\n### 2. Hiệu năng tốt hơn\n- Tự động code splitting\n- Tối ưu ảnh\n- Tăng tốc tải trang ban đầu\n\n### 3. Khả năng fullstack\nBạn có thể làm cả frontend và backend trong cùng một project.\n\n---\n\n## 🔹 File-based Routing\n\n```text\npages/\n ├── index.js       -> /\n ├── about.js       -> /about\n └── blog/[id].js   -> /blog/:id\n```\n\nKhông cần cấu hình React Router cho các route cơ bản.\n\n---\n\n## 🔹 Data Fetching quan trọng\n\n### SSR (`getServerSideProps`)\nLấy data theo mỗi request, phù hợp nội dung thay đổi liên tục.\n\n### SSG (`getStaticProps`)\nLấy data lúc build, phù hợp trang ít thay đổi và cần tốc độ cao.\n\n### ISR (`revalidate`)\nCập nhật trang static mà không cần build lại toàn bộ.\n\n---\n\n## 🔹 API Routes\n\nBạn có thể tạo endpoint backend ngay trong Next.js (`pages/api`), giúp làm fullstack nhanh hơn.\n\n---\n\n## 🔹 Tối ưu built-in\n\n- `next/image` để tối ưu ảnh tự động\n- Code splitting theo từng trang\n- Build tối ưu cho production\n\n---\n\n## 🔹 Deploy\n\nNext.js rất hợp với Vercel:\n- Push code lên GitHub\n- Kết nối với Vercel\n- Deploy nhanh\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Dùng SSR cho mọi trang\n- Nhầm logic client/server\n- Chọn sai chiến lược lấy data\n\n---\n\n## 🎯 Kết luận\n\nNext.js là lựa chọn rất tốt để xây ứng dụng React hiện đại với SEO tốt, hiệu năng cao và khả năng fullstack.\n\nThành thạo Next.js sẽ giúp bạn tiến từ React developer lên production-ready engineer.\n",
+              "date": "31/07/2025",
+              "image": "/images/Next.png",
+              "summary": "Hướng dẫn đầy đủ về Next.js với SSR, SSG, routing và cách xây dựng ứng dụng React sẵn sàng production.",
+              "title": "Giới thiệu về Next.js cho lập trình viên React"
+            },
+            "-bp6": {
+              "category": "SEO, Frontend, React, NextJS",
+              "content": "# 🔍 Tối ưu SEO cho website React – Từ cơ bản đến nâng cao\n\n## 🧠 Giới thiệu\n\nSEO là một phần cực kỳ quan trọng trong phát triển web hiện đại. Website đẹp nhưng không xuất hiện trên Google thì rất khó tiếp cận người dùng.\n\nVới lập trình viên React, SEO thường khó hơn vì ứng dụng thường render phía client (CSR).\n\nBài viết này tổng hợp các kỹ thuật thực tế để tối ưu SEO cho React và Next.js.\n\n---\n\n## 🚀 Vì sao SEO quan trọng?\n\n- Tăng organic traffic\n- Tăng khả năng hiển thị trên công cụ tìm kiếm\n- Tăng độ tin cậy sản phẩm\n\n---\n\n## ⚠️ Vấn đề của React (CSR)\n\nTrong app React truyền thống:\n- HTML ban đầu thường rỗng\n- Nội dung render bằng JavaScript\n\nĐiều này khiến bot tìm kiếm index nội dung khó hơn.\n\n---\n\n## 🔹 Giải pháp 1: SSR\n\nDùng Next.js để render HTML phía server.\n\n```js\nexport async function getServerSideProps() {\n  return { props: {} };\n}\n```\n\nLợi ích:\n- SEO tốt hơn\n- Tải lần đầu nhanh hơn\n\n---\n\n## 🔹 Giải pháp 2: SSG\n\nPre-render trang ngay lúc build.\n\n```js\nexport async function getStaticProps() {\n  return { props: {} };\n}\n```\n\nPhù hợp cho:\n- Blog\n- Landing page\n\n---\n\n## 🔹 Tối ưu Meta Tags\n\nMeta tags rất quan trọng cho SEO.\n\nVí dụ với Next.js:\n\n```js\nimport Head from 'next/head';\n\n<Head>\n  <title>My Website</title>\n  <meta name=\"description\" content=\"Best website\" />\n</Head>\n```\n\nCác thẻ quan trọng:\n- title\n- description\n- keywords\n\n---\n\n## 🔹 Semantic HTML\n\nƯu tiên dùng thẻ có ngữ nghĩa:\n\n```html\n<header></header>\n<main></main>\n<article></article>\n<footer></footer>\n```\n\nGiúp công cụ tìm kiếm hiểu nội dung tốt hơn.\n\n---\n\n## 🔹 Cấu trúc URL\n\nURL tốt:\n\n`/blog/react-seo-guide`\n\nURL chưa tốt:\n\n`/blog?id=123`\n\n---\n\n## 🔹 Tối ưu hiệu năng (yếu tố SEO)\n\nGoogle ưu tiên website tải nhanh.\n\nKỹ thuật nên áp dụng:\n- Lazy loading\n- Code splitting\n- Tối ưu ảnh\n\n---\n\n## 🔹 Image SEO\n\n```html\n<img src=\"img.jpg\" alt=\"React SEO Guide\" />\n```\n\nLuôn thêm `alt` cho ảnh.\n\n---\n\n## 🔹 Sitemap và Robots.txt\n\n- /sitemap.xml\n- /robots.txt\n\nGiúp bot tìm kiếm thu thập dữ liệu chính xác hơn.\n\n---\n\n## 🔹 Internal Linking\n\nLiên kết nội bộ giữa các trang giúp cải thiện SEO tổng thể.\n\n---\n\n## 🔹 Công cụ hỗ trợ SEO\n\n- Google Search Console\n- Lighthouse\n- Ahrefs\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Thiếu meta tags\n- Hiệu năng kém\n- Không dùng SSR/SSG khi cần\n- Nội dung trùng lặp\n\n---\n\n## 🎯 Kết luận\n\nSEO không chỉ là marketing, mà là kỹ năng kỹ thuật frontend rất quan trọng.\n\nÁp dụng đúng các kỹ thuật trên sẽ giúp bạn tăng thứ hạng, tăng traffic và xây dựng sản phẩm chuyên nghiệp hơn.\n",
+              "date": "31/07/2025",
+              "image": "/images/Seo.png",
+              "summary": "Hướng dẫn đầy đủ giúp tối ưu SEO cho ứng dụng React và Next.js, bao gồm technical SEO, hiệu năng và best practices.",
+              "title": "Tối ưu SEO cho website React"
+            },
+            "-bp7": {
+              "category": "Redux, React, State Management",
+              "content": "# 🧠 Quản lý state với Redux Toolkit – Từ cơ bản đến kiến trúc mở rộng\n\n## 🧠 Giới thiệu\n\nKhi ứng dụng React lớn dần, việc quản lý state trở nên phức tạp. Truyền props qua nhiều tầng component (prop drilling) làm code khó bảo trì và khó mở rộng.\n\nĐó là lý do cần giải pháp state management, và Redux Toolkit là chuẩn hiện đại nhất hiện nay.\n\nBài viết này giúp bạn sử dụng Redux Toolkit hiệu quả trong dự án thực tế.\n\n---\n\n## 🚀 Redux là gì?\n\nRedux là thư viện quản lý state có tính dự đoán cho ứng dụng JavaScript.\n\nRedux giúp bạn:\n- Quản lý global state\n- Giữ dữ liệu nhất quán\n- Debug thuận tiện hơn\n\n---\n\n## ⚠️ Vấn đề của Redux truyền thống\n\nRedux cũ thường gặp:\n- Nhiều boilerplate\n- Cấu hình phức tạp\n- Khó bảo trì\n\nRedux Toolkit ra đời để giải quyết các vấn đề này.\n\n---\n\n## 🔥 Redux Toolkit là gì?\n\nRedux Toolkit (RTK) là cách chính thức được khuyến nghị để viết logic Redux.\n\nRTK cung cấp:\n- API đơn giản hơn\n- Best practices tích hợp sẵn\n- Ít boilerplate hơn\n\n---\n\n## 🔹 Khái niệm cốt lõi\n\n### 1. Store\nNơi chứa global state của ứng dụng.\n\n### 2. Slice\nMỗi slice gồm state và reducers theo từng feature.\n\n### 3. Provider\nBọc app bằng `Provider` để dùng store trong toàn bộ ứng dụng.\n\n---\n\n## 🔹 Dùng state trong component\n\nDùng `useSelector` để đọc state, và `useDispatch` để gọi action.\n\n---\n\n## 🔹 Xử lý async với createAsyncThunk\n\n`createAsyncThunk` giúp xử lý API bất đồng bộ rõ ràng và gọn code.\n\n---\n\n## 🔹 Quản lý trạng thái async\n\nDùng `extraReducers` cho các trạng thái pending/fulfilled/rejected.\n\n---\n\n## 🔹 Cấu trúc thư mục nên dùng\n\n```text\nsrc/\n ├── app/\n │    └── store.js\n ├── features/\n │    └── user/\n │         ├── userSlice.js\n │         └── userAPI.js\n```\n\n---\n\n## 🔹 Khi nào nên dùng Redux?\n\nNên dùng khi:\n- Global state lớn\n- Nhiều component dùng chung dữ liệu\n- Logic nghiệp vụ phức tạp\n\nKhông cần Redux cho app quá nhỏ và state đơn giản.\n\n---\n\n## 🔥 Mẹo nâng cao\n\n- Chuẩn hóa state (normalize)\n- Tạo selectors tái sử dụng\n- Tách slice theo feature\n- Tách side effects khỏi UI logic\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Lạm dụng Redux\n- Lưu dữ liệu không cần thiết\n- Trộn lẫn logic UI và business logic\n\n---\n\n## 🎯 Kết luận\n\nRedux Toolkit là lựa chọn rất tốt để quản lý state trong ứng dụng React hiện đại. Nó giúp giảm boilerplate và tăng khả năng mở rộng.\n\nThành thạo RTK là bước quan trọng để trở thành frontend developer chuyên nghiệp.\n",
+              "date": "31/07/2025",
+              "image": "/images/React_30days.png",
+              "summary": "Hướng dẫn đầy đủ về quản lý state trong ứng dụng React hiện đại với Redux Toolkit.",
+              "title": "Quản lý trạng thái với Redux Toolkit"
+            },
+            "-bp8": {
+              "category": "Firebase, Fullstack, Deployment",
+              "content": "# 🔥 Triển khai ứng dụng fullstack với Firebase – Từ zero đến production\n\n## 🧠 Giới thiệu\n\nKhi xây ứng dụng fullstack theo cách truyền thống, bạn thường phải tự setup nhiều thành phần:\n\n- Backend server\n- Database\n- Authentication\n- Hosting\n\nQuá trình này khá tốn thời gian và dễ phức tạp.\n\nFirebase đơn giản hóa toàn bộ bằng mô hình Backend-as-a-Service (BaaS).\n\nVới Firebase, bạn có thể build và deploy ứng dụng fullstack nhanh mà không cần quản lý server phức tạp.\n\n---\n\n## 🚀 Firebase là gì?\n\nFirebase là nền tảng do Google phát triển, cung cấp bộ công cụ để xây dựng ứng dụng web/mobile.\n\nCác dịch vụ chính:\n- Authentication\n- Firestore (database)\n- Hosting\n- Cloud Functions\n\n---\n\n## 🔹 Kiến trúc Firebase tổng quan\n\nMô hình phổ biến:\n- Frontend: React / Next.js\n- Backend: Firebase services\n- Database: Firestore\n\nNhiều bài toán không cần backend truyền thống.\n\n---\n\n## 🔹 Khởi tạo dự án Firebase\n\nCác bước:\n1. Vào Firebase Console\n2. Tạo project mới\n3. Đăng ký web app\n4. Lấy config\n\nVí dụ:\n\n```js\nconst firebaseConfig = {\n  apiKey: \"xxx\",\n  authDomain: \"xxx\",\n  projectId: \"xxx\"\n};\n```\n\n---\n\n## 🔹 Authentication\n\nFirebase có sẵn hệ thống đăng nhập.\n\nCác phương thức phổ biến:\n- Email/Password\n- Google\n- Facebook\n\n---\n\n## 🔹 Firestore Database\n\nFirestore là NoSQL cloud database để lưu dữ liệu ứng dụng.\n\nBạn có thể thêm, đọc, sửa, xóa document khá dễ dàng.\n\n---\n\n## 🔹 Dữ liệu thời gian thực\n\nFirestore hỗ trợ listener thời gian thực giúp UI cập nhật ngay lập tức.\n\nPhù hợp cho chat app, task board, dashboard realtime.\n\n---\n\n## 🔹 Hosting và Deploy\n\nFirebase Hosting giúp deploy nhanh:\n\n```bash\nnpm install -g firebase-tools\nfirebase login\nfirebase init\nfirebase deploy\n```\n\nỨng dụng có thể online chỉ sau vài phút.\n\n---\n\n## 🔹 Cloud Functions\n\nDùng serverless function cho logic backend như webhook, schedule job, xử lý bảo mật.\n\n---\n\n## ⚖️ Ưu và nhược điểm\n\n### Ưu điểm\n- Tốc độ phát triển nhanh\n- Không phải quản lý server\n- Khả năng mở rộng tốt cho nhiều sản phẩm\n\n### Nhược điểm\n- Vendor lock-in\n- Ít linh hoạt hơn backend tự xây\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Cấu hình Firestore rules chưa chặt\n- Đưa logic nhạy cảm lên client\n- Lạm dụng listener realtime\n\n---\n\n## 🎯 Kết luận\n\nFirebase là một trong những cách nhanh nhất để xây và deploy ứng dụng fullstack, đặc biệt phù hợp MVP và dự án startup.\n\nThành thạo Firebase giúp bạn ship sản phẩm thực tế nhanh hơn.\n",
+              "date": "31/07/2025",
+              "image": "/images/Full.png",
+              "summary": "Hướng dẫn đầy đủ xây dựng và triển khai ứng dụng fullstack với Firebase, gồm authentication, database và hosting.",
+              "title": "Triển khai ứng dụng fullstack với Firebase"
+            },
+            "-bp9": {
+              "category": "Security, Web Development, Backend",
+              "content": "# 🔐 Kỹ thuật bảo mật cơ bản trong web development – Từ nền tảng đến best practices\n\n## 🧠 Giới thiệu\n\nBảo mật là một phần sống còn trong phát triển web, nhưng thường bị bỏ qua ở giai đoạn đầu. Chỉ một lỗ hổng nhỏ cũng có thể gây rò rỉ dữ liệu hoặc chiếm quyền tài khoản.\n\nCả frontend và backend đều cần nắm các nguyên tắc bảo mật cơ bản.\n\n---\n\n## 🚀 Vì sao bảo mật quan trọng?\n\n- Bảo vệ dữ liệu người dùng\n- Ngăn chặn tấn công\n- Duy trì độ tin cậy sản phẩm\n\nBảo mật là yêu cầu bắt buộc.\n\n---\n\n## 🔹 Các tấn công phổ biến\n\n### 1) XSS\nInject script độc hại vào trang.\n\nPhòng tránh:\n- Escape input\n- Sanitize HTML (DOMPurify)\n- Tránh render HTML không an toàn\n\n### 2) SQL Injection\nCan thiệp vào câu truy vấn DB.\n\nPhòng tránh:\n- ORM/parameterized queries\n\n### 3) CSRF\nGiả mạo request từ người dùng đã đăng nhập.\n\nPhòng tránh:\n- CSRF token\n- SameSite cookie\n\n### 4) Tấn công xác thực\nMật khẩu yếu, brute force.\n\nPhòng tránh:\n- Hash mật khẩu bằng `bcrypt`\n- Rate limiting\n\n---\n\n## 🔹 Xác thực an toàn\n\n- Hash password\n- Dùng JWT đúng cách\n- Không nhét dữ liệu nhạy cảm vào token\n\n---\n\n## 🔹 Bảo mật API\n\n- Validate input (Joi/Zod)\n- Bắt buộc HTTPS\n- Giới hạn request size\n- Bật security headers\n\n---\n\n## 🔹 Biến môi trường\n\nKhông hardcode secret. Lưu `JWT_SECRET`, DB credentials, API keys vào biến môi trường.\n\n---\n\n## 🔹 CORS & Rate Limiting\n\n- Giới hạn domain được phép gọi API\n- Giới hạn số request/IP để chống abuse\n\n---\n\n## 🔥 Best Practices\n\n- Validate mọi input\n- Cập nhật dependencies thường xuyên\n- Log hành vi bất thường\n- Theo dõi OWASP Top 10\n\n---\n\n## 🚨 Lỗi thường gặp\n\n- Hardcode secrets\n- Tin dữ liệu từ client\n- Thiếu validation\n- Bỏ qua security headers\n\n---\n\n## 🎯 Kết luận\n\nBảo mật là tư duy, không phải tính năng thêm sau. Nắm vững các kỹ thuật cơ bản sẽ giúp bạn xây ứng dụng đáng tin cậy và chuyên nghiệp hơn.\n",
+              "date": "31/07/2025",
+              "image": "/images/Security.png",
+              "summary": "Hướng dẫn toàn diện về các thực hành bảo mật web quan trọng dành cho cả frontend và backend developer.",
+              "title": "Các kỹ thuật bảo mật cơ bản trong lập trình web"
+            }
+          },
+          "title": "Bài viết"
+        },
+        "contact": {
+          "availability": {
+            "label": "Gọi cho tôi",
+            "phone": "(+84) 393 048 626",
+            "time": "Làm việc từ 8:00 sáng đến 5:00 chiều."
+          },
+          "chat": {
+            "label": "Trò chuyện với tôi",
+            "message": "Gửi tin nhắn cho tôi qua mạng xã hội.",
+            "options": {
+              "-op1": {
+                "icon": "FaSkype",
+                "text": "Bắt đầu trò chuyện trực tiếp."
+              },
+              "-op2": {
+                "icon": "FaEnvelope",
+                "text": "Gửi email cho tôi."
+              },
+              "-op3": {
+                "icon": "FaFacebookMessenger",
+                "text": "Nhắn tin qua Zalo."
+              }
+            }
+          },
+          "description": "Hãy thoải mái liên hệ với tôi qua biểu mẫu bên dưới hoặc qua các kênh mạng xã hội.",
+          "form": {
+            "email": "Email",
+            "firstName": "Họ",
+            "lastName": "Tên",
+            "message": "Tin nhắn",
+            "name": "Họ và tên",
+            "submit": "Gửi",
+            "title": "Biểu mẫu liên hệ"
+          },
+          "title": "Liên hệ"
+        },
+        "footer": {
+          "connect": "Kết nối",
+          "description": "Lập trình viên web đam mê sáng tạo sản phẩm chất lượng.",
+          "email": "Email",
+          "name": "Nguyễn Thành Hiệp",
+          "navigation": "Điều hướng",
+          "rights": "Mọi quyền được bảo lưu."
+        },
+        "header": {
+          "contact": "Liên hệ",
+          "contactOptions": {
+            "-c1": {
+              "href": "https://www.facebook.com/thanhno.nguyen.946?locale=vi_VN",
+              "name": "Facebook"
+            },
+            "-c2": {
+              "href": "https://zalo.me/+84393048626",
+              "name": "Zalo"
+            }
+          },
+          "location": "TP. Hồ Chí Minh, Việt Nam",
+          "menu": {
+            "-m1": {
+              "href": "/about",
+              "name": "Thông tin"
+            },
+            "-m2": {
+              "href": "/blog",
+              "name": "Bài viết"
+            },
+            "-m3": {
+              "href": "/projects",
+              "name": "Dự án"
+            },
+            "-m4": {
+              "href": "/collection",
+              "name": "Bộ sưu tập"
+            }
+          }
+        },
+        "home": {
+          "build": "Xây Dựng Website",
+          "description": "Tôi mang đến những giải pháp web ấn tượng, tối ưu cả về hiệu suất lẫn thẩm mỹ. Cùng nhau hiện thực hóa ý tưởng của bạn thành sản phẩm chuyên nghiệp.",
+          "explore": "Khám phá ngay",
+          "name": "Thành Hiệp!",
+          "rolePrefix": "Tôi là một",
+          "titles": {
+            "-t1": "Lập trình viên Di động",
+            "-t2": "Lập trình viên Web",
+            "-t3": "Kỹ sư Phần Mềm"
+          },
+          "welcome": "Xin chào, Tôi là"
+        },
+        "learningSeries": [
+          {
+            "description": "Comprehensive daily journey through React fundamentals, hooks, advanced patterns, and ecosystem tools.",
+            "lessons": [
+              {
+                "concepts": [
+                  "JSX syntax",
+                  "Components and props",
+                  "Rendering elements"
+                ],
+                "examples": [
+                  "Render greeting component using JSX",
+                  "Pass props to a Card component"
+                ],
+                "outcome": "Read JSX clearly and build simple reusable components.",
+                "title": "React Fundamentals and JSX"
+              },
+              {
+                "concepts": [
+                  "useState hook",
+                  "Event wiring",
+                  "Controlled inputs"
+                ],
+                "examples": [
+                  "Create counter with buttons",
+                  "Manage form fields with state"
+                ],
+                "outcome": "Handle interactive stateful UI in React applications.",
+                "title": "State and Event Handling"
+              },
+              {
+                "concepts": [
+                  "useEffect dependencies",
+                  "Cleanup logic",
+                  "API fetches"
+                ],
+                "examples": [
+                  "Load data from API on mount",
+                  "Set up interval cleanup"
+                ],
+                "outcome": "Model component lifecycle using useEffect.",
+                "title": "Effect Hook and Lifecycle"
+              },
+              {
+                "concepts": [
+                  "Custom hook patterns",
+                  "Composable logic",
+                  "Sharing stateful behavior"
+                ],
+                "examples": [
+                  "useWindowSize hook",
+                  "useInput hook"
+                ],
+                "outcome": "Encapsulate stateful behavior for reuse across components.",
+                "title": "Reusable Logic via Custom Hooks"
+              },
+              {
+                "concepts": [
+                  "Context provider/consumer",
+                  "Reducing prop drilling",
+                  "Context + useReducer"
+                ],
+                "examples": [
+                  "Theme toggler via context",
+                  "Auth context with reducer"
+                ],
+                "outcome": "Share global state cleanly with Context API.",
+                "title": "React Context and Global State"
+              },
+              {
+                "concepts": [
+                  "memo and useMemo",
+                  "useCallback",
+                  "Virtual DOM diffing"
+                ],
+                "examples": [
+                  "Memoize expensive calculations",
+                  "Prevent unnecessary renders"
+                ],
+                "outcome": "Optimize rendering performance.",
+                "title": "Performance Optimizations"
+              },
+              {
+                "concepts": [
+                  "Dynamic routes",
+                  "Nested routes",
+                  "Navigation imperative/ declarative"
+                ],
+                "examples": [
+                  "Build multi-page SPA with params",
+                  "Protect routes via guards"
+                ],
+                "outcome": "Manage client-side navigation confidently.",
+                "title": "React Router Deep Dive"
+              },
+              {
+                "concepts": [
+                  "Validation strategies",
+                  "Form libraries",
+                  "Accessibility"
+                ],
+                "examples": [
+                  "React Hook Form login",
+                  "Custom validation rules"
+                ],
+                "outcome": "Create robust, accessible forms.",
+                "title": "Form Management"
+              },
+              {
+                "concepts": [
+                  "Jest + Testing Library",
+                  "Mocking hooks",
+                  "Accessibility assertions"
+                ],
+                "examples": [
+                  "Snapshot testing Button",
+                  "Test async data fetching"
+                ],
+                "outcome": "Confidently test component behavior.",
+                "title": "Testing React Components"
+              },
+              {
+                "concepts": [
+                  "Build scripts",
+                  "Static hosting",
+                  "CI/CD basics"
+                ],
+                "examples": [
+                  "Deploy Vite app to Netlify",
+                  "Automation preview deploy"
+                ],
+                "outcome": "Ship React apps to production.",
+                "title": "Deploying React Apps"
+              }
+            ],
+            "topic": "Learn React in 30 Days"
+          },
+          {
+            "description": "Step-by-step Git journey from setup to branching, collaboration, and recovery.",
+            "lessons": [
+              {
+                "concepts": [
+                  "git config user info",
+                  "git init",
+                  "git status"
+                ],
+                "examples": [
+                  "Initialize repo for project",
+                  "Configure username/email"
+                ],
+                "outcome": "Set up Git for local projects.",
+                "title": "Git Setup & Initialization"
+              },
+              {
+                "concepts": [
+                  "git add",
+                  "git commit",
+                  "git diff"
+                ],
+                "examples": [
+                  "Stage and commit features",
+                  "Inspect diff before committing"
+                ],
+                "outcome": "Capture meaningful snapshots of code.",
+                "title": "Tracking Changes"
+              },
+              {
+                "concepts": [
+                  "git remote add",
+                  "git push",
+                  "git pull"
+                ],
+                "examples": [
+                  "Push local branch to GitHub",
+                  "Pull updates from upstream"
+                ],
+                "outcome": "Synchronize code with remote hosting.",
+                "title": "Remote Repositories"
+              },
+              {
+                "concepts": [
+                  "git branch",
+                  "git checkout",
+                  "delete branches"
+                ],
+                "examples": [
+                  "Create feature branch",
+                  "Switch between branches"
+                ],
+                "outcome": "Organize work via branches.",
+                "title": "Branching Workflow"
+              },
+              {
+                "concepts": [
+                  "git merge",
+                  "merge conflicts",
+                  "use mergetool"
+                ],
+                "examples": [
+                  "Merge feature into main",
+                  "Resolve conflict scenario"
+                ],
+                "outcome": "Merge safely and handle conflicts.",
+                "title": "Merging & Conflict Resolution"
+              },
+              {
+                "concepts": [
+                  "git rebase",
+                  "interactive rebase",
+                  "rebasing pitfalls"
+                ],
+                "examples": [
+                  "Rebase feature onto updated main",
+                  "Pick and squash commits"
+                ],
+                "outcome": "Keep history clean with rebasing.",
+                "title": "Rebasing Basics"
+              },
+              {
+                "concepts": [
+                  "git stash",
+                  "stash pop",
+                  "git commit --amend"
+                ],
+                "examples": [
+                  "Stash work before switching branch",
+                  "Fix commit message"
+                ],
+                "outcome": "Manage work-in-progress safely.",
+                "title": "Stashing & Amending"
+              },
+              {
+                "concepts": [
+                  "git reset",
+                  "git checkout --",
+                  "git revert"
+                ],
+                "examples": [
+                  "Unstage accidentally added file",
+                  "Revert published commit"
+                ],
+                "outcome": "Recover from accidental changes.",
+                "title": "Undoing Mistakes"
+              },
+              {
+                "concepts": [
+                  "git tag",
+                  "annotated tags",
+                  "git push --tags"
+                ],
+                "examples": [
+                  "Tag release v1.0",
+                  "Push tag to remote"
+                ],
+                "outcome": "Mark versions and deployments.",
+                "title": "Tagging & Releases"
+              },
+              {
+                "concepts": [
+                  "Fork & pull request",
+                  "code review",
+                  "git fetch"
+                ],
+                "examples": [
+                  "Open PR on GitHub",
+                  "Sync with upstream master"
+                ],
+                "outcome": "Contribute to shared repositories effectively.",
+                "title": "Collaborative Workflows"
+              }
+            ],
+            "topic": "Basic Git Guide"
+          },
+          {
+            "description": "Guide to scaffold, configure, and extend a React workspace using VSCode’s tooling.",
+            "lessons": [
+              {
+                "concepts": [
+                  "npm create vite",
+                  "project templates",
+                  "initial file structure"
+                ],
+                "examples": [
+                  "Generate Vite + React + TypeScript project",
+                  "Explore src/main.jsx entry"
+                ],
+                "outcome": "Set up modern React project in seconds.",
+                "title": "Scaffolding with Vite"
+              },
+              {
+                "concepts": [
+                  "settings.json",
+                  "editorconfig",
+                  "recommended extensions"
+                ],
+                "examples": [
+                  "Configure prettier + ESLint",
+                  "Add path aliases"
+                ],
+                "outcome": "Maintain consistent formatting and linting.",
+                "title": "VSCode Workspace Setup"
+              },
+              {
+                "concepts": [
+                  "JSX completion",
+                  "React refactorings",
+                  "Emmet for components"
+                ],
+                "examples": [
+                  "Install React snippets",
+                  "Generate component boilerplate quickly"
+                ],
+                "outcome": "Speed up React coding with shortcuts.",
+                "title": "React Snippets & Emmet"
+              },
+              {
+                "concepts": [
+                  "launch.json",
+                  "breakpoints",
+                  "Debug console"
+                ],
+                "examples": [
+                  "Attach debugger to Vite dev server",
+                  "Inspect component props"
+                ],
+                "outcome": "Diagnose runtime issues efficiently.",
+                "title": "Debugging in VSCode"
+              },
+              {
+                "concepts": [
+                  "npm scripts",
+                  "shell integration",
+                  "environment variables"
+                ],
+                "examples": [
+                  "Run dev/test/build scripts",
+                  "Load .env in dev server"
+                ],
+                "outcome": "Control builds and tests without leaving VSCode.",
+                "title": "Integrated Terminal Workflows"
+              },
+              {
+                "concepts": [
+                  "Testing Library",
+                  "Jest",
+                  "Code lens for tests"
+                ],
+                "examples": [
+                  "Run component tests from gutter",
+                  "Inspect coverage hints"
+                ],
+                "outcome": "Validate components directly in the editor.",
+                "title": "Testing in VSCode"
+              },
+              {
+                "concepts": [
+                  "Source Control pane",
+                  "stash & cherry-pick",
+                  "inline diffs"
+                ],
+                "examples": [
+                  "Stage/commit from UI",
+                  "Resolve merges using VSCode"
+                ],
+                "outcome": "Manage version control visually.",
+                "title": "Git Integration in VSCode"
+              },
+              {
+                "concepts": [
+                  "Custom file templates",
+                  "VSCode tasks",
+                  "Scaffolding scripts"
+                ],
+                "examples": [
+                  "Create component generator script",
+                  "Bind tasks to keyboard shortcuts"
+                ],
+                "outcome": "Generate consistent files with automation.",
+                "title": "Templating & Component Generators"
+              },
+              {
+                "concepts": [
+                  "Live Share extension",
+                  "Collaborative editing",
+                  "Shared terminals"
+                ],
+                "examples": [
+                  "Share dev server with teammate",
+                  "Co-debugging session"
+                ],
+                "outcome": "Pair program within VSCode.",
+                "title": "Workspace Live Share"
+              },
+              {
+                "concepts": [
+                  "GitHub Actions integration",
+                  "Cloud deployments",
+                  "VSCode deploy extensions"
+                ],
+                "examples": [
+                  "Push build via action",
+                  "Use VSCode Azure extension"
+                ],
+                "outcome": "Ship React projects directly from VSCode.",
+                "title": "Deployment from VSCode"
+              }
+            ],
+            "topic": "Creating a React Project in VSCode"
+          },
+          {
+            "description": "Improve loading speed and runtime efficiency for web interfaces.",
+            "lessons": [
+              {
+                "concepts": [
+                  "Lighthouse metrics",
+                  "WebPageTest",
+                  "Browser devtools"
+                ],
+                "examples": [
+                  "Analyze LCP/CLS in Chrome",
+                  "Capture waterfall charts"
+                ],
+                "outcome": "Know where bottlenecks live.",
+                "title": "Measuring Performance"
+              },
+              {
+                "concepts": [
+                  "Image formats",
+                  "SVG sprites",
+                  "Static imports"
+                ],
+                "examples": [
+                  "Serve WebP images",
+                  "Lazy-load hero visuals"
+                ],
+                "outcome": "Reduce payload size significantly.",
+                "title": "Optimizing Assets"
+              },
+              {
+                "concepts": [
+                  "Dynamic import",
+                  "Route-based split",
+                  "Suspense"
+                ],
+                "examples": [
+                  "Split vendor chunk",
+                  "Lazy-load component"
+                ],
+                "outcome": "Load only needed code.",
+                "title": "Code Splitting & Lazy Loading"
+              },
+              {
+                "concepts": [
+                  "HTTP cache headers",
+                  "Service workers",
+                  "Cache busting"
+                ],
+                "examples": [
+                  "Set Cache-Control for assets",
+                  "Use Workbox precache"
+                ],
+                "outcome": "Leverage browser caching.",
+                "title": "Caching Strategies"
+              },
+              {
+                "concepts": [
+                  "Render-blocking CSS",
+                  "Font loading",
+                  "Preload hints"
+                ],
+                "examples": [
+                  "Inline critical CSS",
+                  "Use font-display swap"
+                ],
+                "outcome": "Accelerate first paint.",
+                "title": "Critical Rendering Path"
+              },
+              {
+                "concepts": [
+                  "Tree shaking",
+                  "Minification",
+                  "Avoid reflows"
+                ],
+                "examples": [
+                  "Analyze bundle with rollup",
+                  "Debounce scroll handlers"
+                ],
+                "outcome": "Trim JS execution cost.",
+                "title": "Optimizing JavaScript"
+              },
+              {
+                "concepts": [
+                  "LCP, FID, CLS",
+                  "Real user metrics",
+                  "Performance budget"
+                ],
+                "examples": [
+                  "Integrate web-vitals library",
+                  "Set budgets in CI"
+                ],
+                "outcome": "Track and enforce performance goals.",
+                "title": "Web Vitals Monitoring"
+              },
+              {
+                "concepts": [
+                  "Service worker caching",
+                  "Manifest",
+                  "Offline support"
+                ],
+                "examples": [
+                  "Create PWA install prompt",
+                  "Cache API responses"
+                ],
+                "outcome": "Deliver resilient experiences.",
+                "title": "Progressive Web Apps"
+              },
+              {
+                "concepts": [
+                  "SSR vs SPA",
+                  "Edge caching",
+                  "Hydration cost"
+                ],
+                "examples": [
+                  "Compare SSR build time",
+                  "Use streaming to improve FID"
+                ],
+                "outcome": "Understand SSR tradeoffs.",
+                "title": "Server-side Rendering Benefits"
+              },
+              {
+                "concepts": [
+                  "CI performance tests",
+                  "Synthetic monitoring",
+                  "Alerts"
+                ],
+                "examples": [
+                  "Run Lighthouse CI",
+                  "Slack alerts for regressions"
+                ],
+                "outcome": "Guard performance over time.",
+                "title": "Monitoring & Automation"
+              }
+            ],
+            "topic": "Website Performance Optimization"
+          }
+        ],
+        "portfolio": {
+          "collections": [
+            null,
+            {
+              "color": "from-purple-500 to-pink-500",
+              "description": "Thiết kế giao diện người dùng hiện đại và trực quan cho ứng dụng web và di động.",
+              "icon": "FaPalette",
+              "items": {
+                "-i1": "UI App Di động",
+                "-i2": "Dashboard Web",
+                "-i3": "Thiết kế E-commerce",
+                "-i4": "Trang Landing"
+              },
+              "title": "Thiết kế UI/UX"
+            },
+            {
+              "color": "from-blue-500 to-cyan-500",
+              "description": "Ứng dụng web full-stack được xây dựng với công nghệ hiện đại và best practices.",
+              "icon": "FaCode",
+              "items": {
+                "-i1": "Ứng dụng React",
+                "-i2": "Backend Node.js",
+                "-i3": "Thiết kế Database",
+                "-i4": "Phát triển API"
+              },
+              "title": "Phát triển Web"
+            },
+            {
+              "color": "from-green-500 to-teal-500",
+              "description": "Ứng dụng di động đa nền tảng cho iOS và Android.",
+              "icon": "FaMobile",
+              "items": {
+                "-i1": "App React Native",
+                "-i2": "UI/UX Di động",
+                "-i3": "Tối ưu App Store",
+                "-i4": "Hiệu suất"
+              },
+              "title": "Phát triển Di động"
+            },
+            {
+              "color": "from-orange-500 to-red-500",
+              "description": "Ứng dụng desktop native cho Windows, macOS và Linux.",
+              "icon": "FaDesktop",
+              "items": {
+                "-i1": "App Electron",
+                "-i2": "Tích hợp Hệ thống",
+                "-i3": "Trải nghiệm Người dùng",
+                "-i4": "Đa nền tảng"
+              },
+              "title": "Ứng dụng Desktop"
+            }
+          ],
+          "comingSoon": {
+            "description": "Tôi đang liên tục làm việc trên các dự án và thiết kế mới. Hãy quay lại thường xuyên để cập nhật.",
+            "tags": {
+              "-tg1": "Thiết kế",
+              "-tg2": "Phát triển",
+              "-tg3": "Sáng tạo"
+            },
+            "title": "Sẽ có thêm bộ sưu tập sớm!"
+          },
+          "description": "Dưới đây là một số tác phẩm thiết kế và dự án cá nhân của tôi.",
+          "title": "Bộ sưu tập"
+        },
+        "projects": {
+          "categories": {
+            "all": {
+              "id": "all",
+              "name": "Tất cả dự án"
+            },
+            "backend": {
+              "id": "backend",
+              "name": "Backend"
+            },
+            "fullstack": {
+              "id": "fullstack",
+              "name": "Full Stack"
+            }
+          },
+          "description": "Dưới đây là một vài dự án tôi đã thực hiện, mỗi dự án thể hiện kỹ năng xây dựng hệ thống thực tế.",
+          "items": [
+            {
+              "category": "fullstack",
+              "description": "Xây dựng hệ thống FoodNow gồm giỏ hàng đa cửa hàng, voucher, thanh toán VNPay & COD, và dashboard bảo mật.",
+              "features": {
+                "-f1": "Voucher theo từng cửa hàng",
+                "-f2": "Luồng đơn hàng từ pending đến completed",
+                "-f3": "Tích hợp VNPay & COD",
+                "-f4": "Dashboard cho admin và shop"
+              },
+              "github": "https://github.com/ThanhHiepNguyen/FoodNow.git",
+              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+              "live": "https://github.com/ThanhHiepNguyen/FoodNow.git",
+              "tech": {
+                "-t1": "Node.js",
+                "-t2": "Express.js",
+                "-t3": "PostgreSQL",
+                "-t4": "Prisma ORM",
+                "-t5": "JWT",
+                "-t6": "React",
+                "-t7": "Tailwind CSS"
+              },
+              "title": "FoodNow"
+            },
+            {
+              "category": "backend",
+              "description": "Chịu trách nhiệm backend cho API Gateway, Booking, Payment của hệ thống thuê trạm EV với giao dịch, phạt và hoàn tiền.",
+              "features": {
+                "-f1": "Gateway tập trung định tuyến",
+                "-f2": "Booking với penalty & refund",
+                "-f3": "Xử lý trạng thái thanh toán VNPay & MoMo",
+                "-f4": "Bảo mật giao tiếp giữa dịch vụ"
+              },
+              "github": "https://github.com/duongcao04/ev-station-based-rental-system.git",
+              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+              "live": "https://github.com/duongcao04/ev-station-based-rental-system.git",
+              "tech": {
+                "-t1": "Node.js",
+                "-t2": "Express.js",
+                "-t3": "PostgreSQL",
+                "-t4": "JWT",
+                "-t5": "Axios",
+                "-t6": "Docker"
+              },
+              "title": "Hệ thống Thuê trạm EV"
+            },
+            {
+              "category": "backend",
+              "description": "Phát triển backend NestJS cho Vitify với Auth, Product, Cart, Order, Payment và Review kết nối Prisma + Redis.",
+              "features": {
+                "-f1": "Các module NestJS (Auth, Product, Cart, Order, Payment, Review)",
+                "-f2": "JWT + RBAC",
+                "-f3": "Giỏ hàng Redis và flow COD",
+                "-f4": "API đánh giá sản phẩm"
+              },
+              "github": "https://github.com/ThanhHiepNguyen/Vitify.git",
+              "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=500&h=300&fit=crop",
+              "live": "https://github.com/ThanhHiepNguyen/Vitify.git",
+              "tech": {
+                "-t1": "NestJS",
+                "-t2": "Node.js",
+                "-t3": "TypeScript",
+                "-t4": "PostgreSQL",
+                "-t5": "Prisma ORM",
+                "-t6": "Redis"
+              },
+              "title": "Vitify"
+            }
+          ],
+          "title": "Dự án"
+        }
+      }
+    }
+  }
+}

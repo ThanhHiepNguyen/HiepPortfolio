@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Collection from "./pages/Collection";
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import MyCV from "./pages/MyCV";
@@ -42,6 +43,7 @@ function App() {
             <Route path="/about" element={<About key={language} />} />
             <Route path="/collection" element={<Collection key={language} />} />
             <Route path="/blog" element={<Blog key={language} />} />
+            <Route path="/blog/:slug" element={<BlogDetail key={language} />} />
             <Route path="/projects" element={<Projects key={language} />} />
             <Route path="/source-code" element={<Projects key={language} />} />
             <Route path="/mycv" element={<MyCV key={language} />} />
