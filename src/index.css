@@ -42,6 +42,5 @@ body {
 
 /* Add padding for fixed header */
 body {
-  padding-top: 120px;
-  /* Height of header */
+  /* padding-top: 120px; Moved to App.jsx so it can be conditionally removed on the Graduation page */
 }

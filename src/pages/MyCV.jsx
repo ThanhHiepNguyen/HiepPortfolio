@@ -49,7 +49,7 @@ const contactDetails = [
 const educationHistory = [
     {
         institution: "University of Transport Ho Chi Minh City",
-        period: "09/2022 - Present",
+        period: "09/2022 - 2026",
         degree: "Bachelor - Information Technology",
         note: "Final-year student | GPA: 3.33/4.0"
     }
@@ -99,6 +99,13 @@ const skills = [
 ];
 
 const experiences = [
+    {
+        company: "Nhat Minh TT Joint Stock Company",
+        role: "Employee",
+        period: "2026 - Present",
+        summary: "Currently working at Nhat Minh TT Joint Stock Company",
+        focus: []
+    },
     {
         company: "IriTech, Inc.",
         role: "Mobile Developer",

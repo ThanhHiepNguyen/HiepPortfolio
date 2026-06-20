@@ -38,7 +38,7 @@
               "major": "Information Technology",
               "role": "Undergraduate Student",
               "school": "University of Transport Ho Chi Minh City",
-              "year": "2022 - Present"
+              "year": "2022 - 2026"
             },
             "-tm2": {
               "role": "High School Student",
@@ -54,6 +54,11 @@
               "role": "Primary School Student",
               "school": "Chanh Thang Primary School",
               "year": "2010 - 2015"
+            },
+            "-tm0": {
+              "role": "Employee",
+              "school": "Nhat Minh TT Joint Stock Company",
+              "year": "2026 - Present"
             }
           }
         },
@@ -331,7 +336,7 @@
                 "-f4": "Admin and shop dashboards"
               },
               "github": "https://github.com/ThanhHiepNguyen/FoodNow.git",
-              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+              "image": "/images/foodnow.png",
               "live": "https://github.com/ThanhHiepNguyen/FoodNow.git",
               "tech": {
                 "-t1": "Node.js",
@@ -354,7 +359,7 @@
                 "-f4": "Secure inter-service communication"
               },
               "github": "https://github.com/duongcao04/ev-station-based-rental-system.git",
-              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+              "image": "/images/ev_station.png",
               "live": "https://github.com/duongcao04/ev-station-based-rental-system.git",
               "tech": {
                 "-t1": "Node.js",
@@ -376,7 +381,7 @@
                 "-f4": "Product review & rating APIs"
               },
               "github": "https://github.com/ThanhHiepNguyen/Vitify.git",
-              "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=500&h=300&fit=crop",
+              "image": "/images/vitify.png",
               "live": "https://github.com/ThanhHiepNguyen/Vitify.git",
               "tech": {
                 "-t1": "NestJS",
@@ -429,7 +434,7 @@
               "major": "Công nghệ Thông tin",
               "role": "Sinh viên",
               "school": "Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh",
-              "year": "2022 - Nay"
+              "year": "2022 - 2026"
             },
             "-tm2": {
               "role": "Học sinh",
@@ -445,6 +450,11 @@
               "role": "Học sinh",
               "school": "Trường Tiểu học Chánh Thắng",
               "year": "2010 - 2015"
+            },
+            "-tm0": {
+              "role": "Nhân viên",
+              "school": "CÔNG TY CỔ PHẦN NHẬT MINH TT",
+              "year": "2026 - Nay"
             }
           }
         },
@@ -1268,7 +1278,7 @@
                 "-f4": "Dashboard cho admin và shop"
               },
               "github": "https://github.com/ThanhHiepNguyen/FoodNow.git",
-              "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+              "image": "/images/foodnow.png",
               "live": "https://github.com/ThanhHiepNguyen/FoodNow.git",
               "tech": {
                 "-t1": "Node.js",
@@ -1291,7 +1301,7 @@
                 "-f4": "Bảo mật giao tiếp giữa dịch vụ"
               },
               "github": "https://github.com/duongcao04/ev-station-based-rental-system.git",
-              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+              "image": "/images/ev_station.png",
               "live": "https://github.com/duongcao04/ev-station-based-rental-system.git",
               "tech": {
                 "-t1": "Node.js",
@@ -1313,7 +1323,7 @@
                 "-f4": "API đánh giá sản phẩm"
               },
               "github": "https://github.com/ThanhHiepNguyen/Vitify.git",
-              "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=500&h=300&fit=crop",
+              "image": "/images/vitify.png",
               "live": "https://github.com/ThanhHiepNguyen/Vitify.git",
               "tech": {
                 "-t1": "NestJS",

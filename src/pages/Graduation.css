@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@300;400;500;600&family=Big+Shoulders+Display:wght@400;600;700;800&display=swap');
+
+
+.grad-root {
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  perspective: 1200px;
+}
+
+
+.grad-bg-gradient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(120, 80, 200, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at center, #0f0c1d 0%, #050410 50%, #020108 100%);
+  pointer-events: none;
+}
+
+
+.grad-stars-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grad-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(0.3px);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+.grad-shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(240, 208, 128, 0.8), #fff);
+  border-radius: 999px;
+  transform: rotate(-45deg);
+  transform-origin: right center;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
+}
+
+
+.grad-orbs-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.grad-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+}
+
+
+.grad-confetti-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.grad-confetti-piece {
+  position: absolute;
+  top: 0;
+}
+
+
+.grad-step-layer {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 16px;
+  width: 100%;
+}
+
+
+.grad-water-scene {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.grad-water-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  width: 100%;
+}
+
+
+.grad-ripple-line-wrap {
+  position: relative;
+  width: min(400px, 80vw);
+  height: 2px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grad-ripple-ring {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.6), transparent);
+  transform-origin: center;
+}
+
+.grad-intro-text-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.grad-intro-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 4vw, 3.2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.8rem;
+  max-width: 900px;
+}
+
+.grad-intro-word {
+  display: inline-block;
+  opacity: 0;
+  background: linear-gradient(160deg, #ffffff 30%, #c4b5fd 70%, #fde68a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+}
+
+
+.grad-countdown-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 40px;
+  width: 100%;
+  gap: 0;
+}
+
+/* Title row */
+.grad-countdown-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.grad-countdown-ornament {
+  font-size: 10px;
+  color: rgba(212, 175, 55, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.grad-countdown-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  background: linear-gradient(160deg, #fff 40%, #fde68a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-countdown-sub {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 48px;
+}
+
+.grad-countdown-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  color: rgba(212, 175, 55, 0.85);
+  margin-bottom: 44px;
+  text-shadow: 0 0 24px rgba(212, 175, 55, 0.25);
+}
+
+/* -- Flip Clock -- */
+.grad-flip-sep-wrap {
+  display: flex;
+  align-items: center;
+  height: clamp(80px, 15vw, 128px);
+  margin-bottom: 34px;
+}
+
+.grad-flip-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.grad-flip-sep {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: rgba(212, 175, 55, 0.75);
+  line-height: 1;
+
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.grad-flip-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.grad-flip-card {
+  position: relative;
+  width: clamp(72px, 13vw, 110px);
+  height: clamp(80px, 15vw, 128px);
+  background: linear-gradient(175deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.grad-flip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.7), transparent);
+}
+
+.grad-flip-top,
+.grad-flip-bottom {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.grad-flip-card.flipping .grad-flip-top {
+  animation: flip-out 0.3s ease-in forwards;
+}
+
+.grad-flip-card.flipping .grad-flip-bottom {
+  animation: flip-in 0.3s ease-out 0.15s forwards;
+
+}
+
+@keyframes flip-out {
+  0% {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-20px) rotateX(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-in {
+  0% {
+    transform: translateY(20px) rotateX(30deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+}
+
+.grad-flip-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Date row */
+.grad-countdown-date-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.grad-countdown-date-bar {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.35));
+}
+
+.grad-countdown-date-row .grad-countdown-date-bar:last-child {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.35), transparent);
+}
+
+.grad-countdown-date {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.14em;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.grad-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.1);
+}
+
+.grad-cta-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(251, 191, 36, 0.12));
+  box-shadow: 0 8px 32px rgba(251, 191, 36, 0.25);
+}
+
+.grad-cta-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+.grad-input-wrap {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 16px;
+}
+
+.grad-input-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.01em;
+}
+
+.grad-input-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.grad-input-field-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.grad-input-field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(251, 191, 36, 0.3);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 12px;
+  transition: border-color 0.3s;
+}
+
+.grad-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.grad-input-field:focus {
+  border-bottom-color: rgba(251, 191, 36, 0.7);
+}
+
+
+.grad-card-outer {
+  position: relative;
+  z-index: 30;
+  width: 92%;
+  max-width: 780px;
+}
+
+.grad-card {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 100px -20px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(212, 175, 55, 0.2);
+  /* fixed height so inner layout works */
+  height: clamp(338px, 58.5vw, 488px);
+}
+
+/* Background image */
+.grad-card-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/nen.png');
+  background-size: cover;
+  background-position: 75% center;
+}
+
+/* Gradient overlay â€” dark on left, fades right */
+.grad-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg,
+      rgba(4, 3, 16, 0.93) 0%,
+      rgba(4, 3, 16, 0.82) 38%,
+      rgba(4, 3, 16, 0.25) 62%,
+      transparent 100%);
+}
+
+/* Shimmer sweep */
+.grad-card-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, transparent 38%, rgba(255, 255, 255, 0.03) 50%, transparent 62%);
+  background-size: 200% 100%;
+  animation: grad-shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes grad-shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 220% 0;
+  }
+}
+
+/* Inner: position absolute so it fills card fully */
+.grad-card-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Left column */
+.grad-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(26px, 4%, 52px) clamp(28px, 5.5%, 62px);
+  width: 56%;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* Year tag */
+.grad-card-year {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(10px, 1.5vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: rgba(212, 175, 55, 0.65);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* Eyebrow */
+.grad-eyebrow {
+  font-size: clamp(10px, 1.4vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.9);
+  margin-bottom: 8px;
+  width: 260px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Guest name */
+.grad-guest-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3.1vw, 1.75rem);
+  font-weight: 600;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 16px;
+  line-height: 1.25;
+  width: 260px;
+  text-align: center;
+}
+
+/* Divider */
+.grad-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  width: 260px;
+}
+
+.grad-divider-bar {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.7), transparent);
+}
+
+.grad-divider-bar:last-child {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.35));
+}
+
+.grad-divider-diamond {
+  width: 4px;
+  height: 4px;
+  background: rgba(212, 175, 55, 0.9);
+  transform: rotate(45deg);
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  flex-shrink: 0;
+}
+
+/* Sub label */
+.grad-card-sublabel {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 1.3vw, 0.94rem);
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+/* Main name â€” hero */
+.grad-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3.8vw, 2.4rem);
+  font-weight: 700;
+  background: linear-gradient(130deg, #ffffff 15%, #fde68a 55%, #c9a227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* Info list */
+.grad-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.grad-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.grad-info-label {
+  color: rgba(212, 175, 55, 0.95);
+  font-size: clamp(0.6rem, 1.1vw, 0.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.grad-info-text {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+}
+
+.grad-info-subtext {
+  display: block;
+  font-size: clamp(0.65rem, 1vw, 0.8rem);
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 1px;
+}
+
+/* Map button */
+.grad-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(10px, 1.4vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.grad-map-btn:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.65);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.18);
+  color: #fff;
+}
+
+/* Guest name highlight inline */
+.grad-guest-name {
+  font-weight: 700;
+  font-style: normal;
+  background: linear-gradient(90deg, #fde68a, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 480px) {
+  .grad-card {
+    height: 380px; /* Fixed height for mobile to keep horizontal aspect */
+  }
+
+  .grad-card-bg {
+    background-position: 70% center;
+  }
+
+  .grad-card-overlay {
+    background: linear-gradient(
+      105deg,
+      rgba(4, 3, 16, 0.95) 0%,
+      rgba(4, 3, 16, 0.88) 55%,
+      rgba(4, 3, 16, 0.25) 75%,
+      transparent 100%
+    );
+  }
+
+  .grad-card-inner {
+    padding: 0;
+  }
+
+  .grad-card-left {
+    width: 62%; /* Give text slightly more room on mobile */
+    padding: 24px 16px;
+    align-items: flex-start; /* Left align everything within the 62% column */
+    justify-content: center;
+  }
+
+  .grad-eyebrow,
+  .grad-guest-headline,
+  .grad-divider {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .grad-eyebrow {
+    font-size: 0.55rem;
+    white-space: normal; /* Allow wrapping if needed */
+    margin-bottom: 6px;
+  }
+
+  .grad-guest-headline {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .grad-divider {
+    margin-bottom: 12px;
+  }
+
+  .grad-main-title {
+    font-size: 1.1rem;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    white-space: normal;
+  }
+
+  .grad-info-list {
+    text-align: left;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .grad-info-item {
+    align-items: flex-start;
+  }
+
+  .grad-info-label {
+    font-size: 0.55rem;
+  }
+
+  .grad-info-text {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+
+  .grad-info-subtext {
+    font-size: 0.55rem;
+  }
+
+  .grad-map-btn {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+
+  .grad-avatar-ring {
+    width: 88px;
+    height: 88px;
+  }
+
+  .grad-avatar-badge {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Flip clock */
+  .grad-flip-card {
+    width: 62px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .grad-flip-top,
+  .grad-flip-bottom {
+    font-size: 1.9rem;
+  }
+
+  .grad-flip-sep {
+    font-size: 1.8rem;
+    padding-top: 4px;
+  }
+
+  .grad-flip-row {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .grad-countdown-sub {
+    margin-bottom: 32px;
+  }
+
+  .grad-countdown-date-row {
+    margin-bottom: 32px;
+  }
+
+  .grad-info-row {
+    flex-direction: row;
+  }
+
+  .grad-info-tile {
+    padding: 14px 8px;
+  }
+
+  .grad-info-main {
+    font-size: 11px;
+  }
+
+  .grad-info-sub {
+    font-size: 10px;
+  }
+}
