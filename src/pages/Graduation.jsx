@@ -202,7 +202,15 @@ const Graduation = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [cardHover, setCardHover] = useState({ rotateX: 0, rotateY: 0 });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const cardRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleNameSubmit = async (e) => {
     e.preventDefault();
@@ -255,8 +263,8 @@ const Graduation = () => {
     <div ref={scope} className="grad-root">
       {/* Background layers */}
       <div className="grad-bg-gradient" />
-      <StarsBackground />
-      <ParticleOrbs />
+      {!isMobile && <StarsBackground />}
+      {!isMobile && <ParticleOrbs />}
 
 
       <AnimatePresence mode="wait">
@@ -374,10 +382,10 @@ const Graduation = () => {
             <motion.div
               ref={cardRef}
               className="grad-card"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={() => setCardHover({ rotateX: 0, rotateY: 0 })}
-              animate={{ rotateX: cardHover.rotateX, rotateY: cardHover.rotateY, y: [-4, 4, -4] }}
-              transition={{
+              onMouseMove={isMobile ? undefined : handleMouseMove}
+              onMouseLeave={isMobile ? undefined : () => setCardHover({ rotateX: 0, rotateY: 0 })}
+              animate={isMobile ? { rotateX: 0, rotateY: 0, y: 0 } : { rotateX: cardHover.rotateX, rotateY: cardHover.rotateY, y: [-4, 4, -4] }}
+              transition={isMobile ? {} : {
                 rotateX: { type: 'spring', stiffness: 120, damping: 20 },
                 rotateY: { type: 'spring', stiffness: 120, damping: 20 },
                 y: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
